@@ -366,8 +366,6 @@
             layers = <COLE QWERTY GAME>;
         };
 
-
-
     };
 
     keymap {
