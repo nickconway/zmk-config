@@ -38,18 +38,19 @@
   continue-list = <UNDERSCORE MINUS BACKSPACE>;
 };
 
-#define AS(keycode) &as LS(keycode) keycode
+#define AS(keycode) &ASM##keycode
 #define ASR(keycode) &asr LS(keycode) keycode
 #define ASP(keycode) &asp LS(keycode) keycode
-
 #define SK(KEY) &nk KEY KEY
 
 / {
 
     #include "behaviors.dtsi"
     #include "macros.dtsi"
-    #include "combos.dtsi"
-    // #include "autoshift.dtsi"
+    combos {
+        #include "combos.dtsi"
+    };
+    #include "autoshift.dtsi"
 
     keymap {
 
@@ -58,10 +59,10 @@
         default_layer {
             label = "  COLE  ";
             bindings = <
-                &m1         &wing   ASR(W)  AS(F)   AS(P)   AS(B)           AS(J) AS(L)     AS(U)       ASR(Y)      ASP(QUOT)   ASP(MINUS)
-                &ptd        AS(A)   AS(R)   AS(S)   AS(T)   AS(G)           AS(M) &atn      AS(E)       AS(I)       AS(O)       &rptd
-                ASP(GRAVE)  ASP(Z)  ASR(X)  AS(C)   &dcv    &vcd            AS(K) AS(H)     AS(CMMA)    ASR(DOT)    ASP(SLASH)  ASP(SEMI)
-                        &lt FUNCR ESC &lt NUMR BKSP &lt SYMR DEL            &lt MEDIAL ENTER &lt NAVL SPC &lt MOUSEL TAB
+                &m1         &wing   AS(W)  AS(F)   AS(P)   AS(B)           AS(J) AS(L)     AS(U)       AS(Y)      AS(QUOT)   AS(MINUS)
+                &ptd        AS(A)   AS(R)  AS(S)   AS(T)   AS(G)           AS(M) &atn      AS(E)       AS(I)       AS(O)       &rptd
+                AS(GRAVE)   AS(Z)   AS(X)  AS(C)   &dcv    &vcd            AS(K) AS(H)     AS(CMMA)    AS(DOT)    AS(SLASH)  AS(SEMI)
+                        &lt FUNCR ESC &lt NUMR BKSP &lt SYMR DEL           &lt MEDIAL ENTER &lt NAVL SPC &lt MOUSEL TAB
             >;
         };
 
@@ -88,9 +89,9 @@
         gametype {
             label = " GAMET ";
             bindings = <
-                &m1         &wing   ASR(W)  AS(F)   AS(P)   AS(B)           AS(J) AS(L) AS(U)       ASR(Y)      ASP(QUOT)   ASP(MINUS)
-                &ptd        ASP(A)  ASR(R)  AS(S)   AS(T)   AS(G)           AS(M) &atn  AS(E)       &ati        ASP(O)      &rptd
-                ASP(GRAVE)  ASP(Z)  ASR(X)  AS(C)   &dcv    &vcd            AS(K) AS(H) AS(CMMA)    ASR(DOT)    &sltd       ASP(SEMI)
+                &m1         &wing   AS(W)  AS(F)   AS(P)   AS(B)           AS(J) AS(L) AS(U)       AS(Y)      AS(QUOT)   AS(MINUS)
+                &ptd        AS(A)  AS(R)  AS(S)   AS(T)   AS(G)           AS(M) &atn  AS(E)       &ati        AS(O)      &rptd
+                AS(GRAVE)  AS(Z)  AS(X)  AS(C)   &dcv    &vcd            AS(K) AS(H) AS(CMMA)    AS(DOT)    &sltd       AS(SEMI)
                         &lt FUNCR ESC &lt NUMR BKSP &lt SYMR DEL            &m2 &lt NAVL SPC &lt MOUSEL TAB
             >;
         };
@@ -138,9 +139,9 @@
         number {
             label = "  NUM   ";
             bindings = <
-                &bootloader &trans      &trans      &trans      &trans              &reset                 AS(LBKT)     AS(N7)  AS(N8)  ASR(N9)  ASP(RBKT)    &trans
+                &bootloader &trans      &trans      &trans      &trans              &reset                 AS(LBKT)     AS(N7)  AS(N8)  AS(N9)  AS(RBKT)    &trans
                 &trans      SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)           &trans                 AS(EQUAL)    AS(N4)  AS(N5)  AS(N6)   AS(SEMI)     &trans
-                &trans      &trans      &trans      &trans      &kp LG(LC(LEFT))    &trans                 AS(GRAVE)    AS(N1)  AS(N2)  ASR(N3)  ASP(BSLH)    &trans
+                &trans      &trans      &trans      &trans      &kp LG(LC(LEFT))    &trans                 AS(GRAVE)    AS(N1)  AS(N2)  AS(N3)  AS(BSLH)    &trans
                                                                     &trans  &trans  &trans                 AS(MINUS) AS(N0)  AS(MINUS)
             >;
         };
