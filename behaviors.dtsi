@@ -1,0 +1,230 @@
+bht: balanced_hold_tap {
+    compatible = "zmk,behavior-hold-tap";
+    label = "BALANCED_HOLD_TAP";
+    #binding-cells = <2>;
+    flavor = "balanced";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <200>;
+    bindings = <&kp>, <&kp>;
+};
+
+altq: altq {
+
+    compatible = "zmk,behavior-mod-morph";
+    label = "ALT_Q";
+    #binding-cells = <0>;
+    bindings = <ASP(Q)>, <&kp F4>;
+    mods = <(MOD_LALT)>;
+
+};
+
+wing: wing {
+
+    compatible = "zmk,behavior-mod-morph";
+    label = "WIN_GRAVE";
+    #binding-cells = <0>;
+    bindings = <&altq>, <&kp GRAVE>;
+    mods = <(MOD_LGUI)>;
+
+};
+
+atn: atn {
+
+    compatible = "zmk,behavior-mod-morph";
+    label = "ALT_TAB_N";
+    #binding-cells = <0>;
+    bindings = <AS(N)>, <&kp TAB>;
+    mods = <(MOD_LALT)>;
+
+};
+
+ati: ati {
+
+    compatible = "zmk,behavior-mod-morph";
+    label = "ALT_I";
+    #binding-cells = <0>;
+    bindings = <ASR(I)>, <&kp LSHIFT>;
+    mods = <(MOD_LALT)>;
+
+};
+
+dcv: dcv {
+
+    compatible = "zmk,behavior-mod-morph";
+    label = "D_C_V";
+    #binding-cells = <0>;
+    bindings = <AS(D)>, <&kp V>;
+    mods = <(MOD_LCTL)>;
+
+};
+
+vcd: vcd {
+
+    compatible = "zmk,behavior-mod-morph";
+    label = "V_C_D";
+    #binding-cells = <0>;
+    bindings = <AS(V)>, <&kp D>;
+    mods = <(MOD_LCTL)>;
+
+};
+
+as: auto_shift {
+
+    compatible = "zmk,behavior-hold-tap";
+    label = "AUTO_SHIFT";
+    #binding-cells = <2>;
+    tapping-term-ms = <175>;
+    quick-tap-ms = <300>;
+    flavor = "tap-preferred";
+    bindings = <&kp>, <&kp>;
+
+};
+
+asr: auto_shift_ring {
+
+    compatible = "zmk,behavior-hold-tap";
+    label = "AUTO_SHIFT_RING";
+    #binding-cells = <2>;
+    tapping-term-ms = <200>;
+    quick-tap-ms = <300>;
+    flavor = "tap-preferred";
+    bindings = <&kp>, <&kp>;
+
+};
+
+asp: auto_shift_pinky {
+
+    compatible = "zmk,behavior-hold-tap";
+    label = "AUTO_SHIFT_PINKY";
+    #binding-cells = <2>;
+    tapping-term-ms = <225>;
+    quick-tap-ms = <300>;
+    flavor = "tap-preferred";
+    bindings = <&kp>, <&kp>;
+
+};
+
+lhm: lhm {
+
+    compatible = "zmk,behavior-hold-tap";
+    label = "HOMEROW_MODS_LEFT";
+    #binding-cells = <2>;
+    tapping-term-ms = <180>;
+    quick-tap-ms = <300>;
+    flavor = "tap-preferred";
+    bindings = <&kp>, <&kp>;
+    //hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
+    retro-tap;
+
+};
+
+rhm: rhm {
+
+    compatible = "zmk,behavior-hold-tap";
+    label = "HOMEROW_MODS_RIGHT";
+    #binding-cells = <2>;
+    tapping-term-ms = <180>;
+    quick-tap-ms = <300>;
+    flavor = "tap-preferred";
+    bindings = <&kp>, <&kp>;
+    //hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
+    retro-tap;
+
+};
+
+nk: not_so_sticky_key {
+    compatible = "zmk,behavior-hold-tap";
+    label = "not so sticky key";
+    #binding-cells = <2>;
+    tapping-term-ms = <200>;
+    flavor = "tap-preferred";
+    bindings = <&kp>, <&sk>;
+};
+
+lhma: lhma {
+    compatible = "zmk,behavior-tap-dance";
+    label = "lhma";
+    #binding-cells = <0>;
+    tapping-term-ms = <100>;
+    bindings = <AS(A)>, <&lhm LSHIFT A>;
+};
+
+lhmr: lhmr {
+    compatible = "zmk,behavior-tap-dance";
+    label = "lhmr";
+    #binding-cells = <0>;
+    tapping-term-ms = <100>;
+    bindings = <AS(R)>, <&lhm LGUI R>;
+};
+
+lhms: lhms {
+    compatible = "zmk,behavior-tap-dance";
+    label = "lhms";
+    #binding-cells = <0>;
+    tapping-term-ms = <100>;
+    bindings = <AS(S)>, <&lhm LALT S>;
+};
+
+lhmt: lhmt {
+    compatible = "zmk,behavior-tap-dance";
+    label = "lhmt";
+    #binding-cells = <0>;
+    tapping-term-ms = <100>;
+    bindings = <AS(T)>, <&lhm LCTRL T>;
+};
+
+rhmo: rhmo {
+    compatible = "zmk,behavior-tap-dance";
+    label = "rhmo";
+    #binding-cells = <0>;
+    tapping-term-ms = <100>;
+    bindings = <AS(O)>, <&rhm LSHIFT O>;
+};
+
+rhmi: rhmi {
+    compatible = "zmk,behavior-tap-dance";
+    label = "rhmi";
+    #binding-cells = <0>;
+    tapping-term-ms = <100>;
+    bindings = <AS(I)>, <&rhm LGUI I>;
+};
+
+rhme: rhme {
+    compatible = "zmk,behavior-tap-dance";
+    label = "rhme";
+    #binding-cells = <0>;
+    tapping-term-ms = <100>;
+    bindings = <AS(E)>, <&rhm LALT E>;
+};
+
+rhmn: rhmn {
+    compatible = "zmk,behavior-tap-dance";
+    label = "rhmn";
+    #binding-cells = <0>;
+    tapping-term-ms = <100>;
+    bindings = <AS(N)>, <&rhm LCTRL &atn>;
+};
+
+ptd: ptd {
+    compatible = "zmk,behavior-tap-dance";
+    label = "ptd";
+    #binding-cells = <0>;
+    tapping-term-ms = <250>;
+    bindings = <&kp LPAR>, <&kp LBKT>, <&kp LBRC>;
+};
+
+rptd: rptd {
+    compatible = "zmk,behavior-tap-dance";
+    label = "rptd";
+    #binding-cells = <0>;
+    tapping-term-ms = <250>;
+    bindings = <&kp RPAR>, <&kp RBKT>, <&kp RBRC>;
+};
+
+sltd: sltd {
+    compatible = "zmk,behavior-tap-dance";
+    label = "sltd";
+    #binding-cells = <0>;
+    tapping-term-ms = <250>;
+    bindings = <&kp FSLH>, <&kp BSLH>;
+};
