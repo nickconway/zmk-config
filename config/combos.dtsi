@@ -1,6 +1,5 @@
-compatible = "zmk,combos";
-
 combo_hmrl_shift {
+    compatible = "zmk,combos";
     timeout-ms = <50>;
     key-positions = <13 25>;
     bindings = <&kp LSHFT>;
@@ -8,6 +7,7 @@ combo_hmrl_shift {
 };
 
 combo_hmrl_gui {
+    compatible = "zmk,combos";
     timeout-ms = <50>;
     key-positions = <14 26>;
     bindings = <&kp LGUI>;
@@ -15,6 +15,7 @@ combo_hmrl_gui {
 };
 
 combo_hmrl_alt {
+    compatible = "zmk,combos";
     timeout-ms = <50>;
     key-positions = <15 27>;
     bindings = <&kp LALT>;
@@ -22,6 +23,7 @@ combo_hmrl_alt {
 };
 
 combo_hmrl_ctrl {
+    compatible = "zmk,combos";
     timeout-ms = <50>;
     key-positions = <16 28>;
     bindings = <&kp LCTL>;
@@ -29,6 +31,7 @@ combo_hmrl_ctrl {
 };
 
 combo_hmrr_ctrl {
+    compatible = "zmk,combos";
     timeout-ms = <50>;
     key-positions = <19 31>;
     bindings = <&kp LCTL>;
@@ -36,6 +39,7 @@ combo_hmrr_ctrl {
 };
 
 combo_hmrr_alt {
+    compatible = "zmk,combos";
     timeout-ms = <50>;
     key-positions = <20 32>;
     bindings = <&kp LALT>;
@@ -43,6 +47,7 @@ combo_hmrr_alt {
 };
 
 combo_hmrr_gui {
+    compatible = "zmk,combos";
     timeout-ms = <50>;
     key-positions = <21 33>;
     bindings = <&kp LGUI>;
@@ -50,6 +55,7 @@ combo_hmrr_gui {
 };
 
 combo_hmrr_shift {
+    compatible = "zmk,combos";
     timeout-ms = <50>;
     key-positions = <22 34>;
     bindings = <&kp LSHFT>;

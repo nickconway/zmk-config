@@ -46,17 +46,10 @@
 
 / {
 
-    behaviors {
-        #include "behaviors.dtsi"
-    };
-
-    macros {
-        #include "macros.dtsi"
-    };
-
-    combos {
-        #include "combos.dtsi"
-    };
+    #include "behaviors.dtsi"
+    #include "macros.dtsi"
+    #include "combos.dtsi"
+    // #include "autoshift.dtsi"
 
     keymap {
 
@@ -66,7 +59,7 @@
             label = "  COLE  ";
             bindings = <
                 &m1         &wing   ASR(W)  AS(F)   AS(P)   AS(B)           AS(J) AS(L)     AS(U)       ASR(Y)      ASP(QUOT)   ASP(MINUS)
-                &ptd        &ASA    AS(R)   AS(S)   AS(T)   AS(G)           AS(M) &atn      AS(E)       AS(I)       AS(O)       &rptd
+                &ptd        AS(A)   AS(R)   AS(S)   AS(T)   AS(G)           AS(M) &atn      AS(E)       AS(I)       AS(O)       &rptd
                 ASP(GRAVE)  ASP(Z)  ASR(X)  AS(C)   &dcv    &vcd            AS(K) AS(H)     AS(CMMA)    ASR(DOT)    ASP(SLASH)  ASP(SEMI)
                         &lt FUNCR ESC &lt NUMR BKSP &lt SYMR DEL            &lt MEDIAL ENTER &lt NAVL SPC &lt MOUSEL TAB
             >;

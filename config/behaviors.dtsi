@@ -1,13 +1,3 @@
-hua: hua {
-    compatible = "zmk,behavior-hold-tap";
-    label = "hua";
-    #binding-cells = <2>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <175>;
-    quick-tap-ms = <200>;
-    bindings = <&ASBA>, <&none>;
-};
-
 bht: balanced_hold_tap {
     compatible = "zmk,behavior-hold-tap";
     label = "BALANCED_HOLD_TAP";
