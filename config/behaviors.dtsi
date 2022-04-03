@@ -99,4 +99,40 @@ sltd: sltd {
     #binding-cells = <0>;
     tapping-term-ms = <250>;
     bindings = <&kp FSLH>, <&kp BSLH>;
+};,
+
+as: auto_shift {
+
+    compatible = "zmk,behavior-hold-tap";
+    label = "AUTO_SHIFT";
+    #binding-cells = <2>;
+    tapping-term-ms = <175>;
+    quick-tap-ms = <300>;
+    flavor = "tap-preferred";
+    bindings = <&kp>, <&kp>;
+
 };
+
+asr: auto_shift_ring {
+
+    compatible = "zmk,behavior-hold-tap";
+    label = "AUTO_SHIFT_RING";
+    #binding-cells = <2>;
+    tapping-term-ms = <200>;
+    quick-tap-ms = <300>;
+    flavor = "tap-preferred";
+    bindings = <&kp>, <&kp>;
+
+};
+
+asp: auto_shift_pinky {
+
+    compatible = "zmk,behavior-hold-tap";
+    label = "AUTO_SHIFT_PINKY";
+    #binding-cells = <2>;
+    tapping-term-ms = <225>;
+    quick-tap-ms = <300>;
+    flavor = "tap-preferred";
+    bindings = <&kp>, <&kp>;
+
+};,
