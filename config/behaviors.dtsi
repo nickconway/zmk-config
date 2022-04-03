@@ -99,7 +99,7 @@ sltd: sltd {
     #binding-cells = <0>;
     tapping-term-ms = <250>;
     bindings = <&kp FSLH>, <&kp BSLH>;
-};,
+};
 
 as: auto_shift {
 
@@ -135,4 +135,4 @@ asp: auto_shift_pinky {
     flavor = "tap-preferred";
     bindings = <&kp>, <&kp>;
 
-};,
+};

@@ -39,8 +39,13 @@
 };
 
 #define AS(keycode) &ASM##keycode
-#define ASR(keycode) &asr LS(keycode) keycode
-#define ASP(keycode) &asp LS(keycode) keycode
+#define ASR(keycode) &ASMR##keycode
+#define ASP(keycode) &ASMP##keycode
+
+#define ASB(keycode) &asr LS(keycode) keycode
+#define ASBR(keycode) &asr LS(keycode) keycode
+#define ASBP(keycode) &asp LS(keycode) keycode
+
 #define SK(KEY) &nk KEY KEY
 
 / {
@@ -109,8 +114,8 @@
         nav_layer {
             label = "  NAVI  ";
             bindings = <
-                &m3     AS(PG_UP)   AS(HOME)    AS(UP)           AS(END)     AS(INSERT)           &reset  &trans            &trans   &trans      &trans      &bootloader
-                &trans  AS(PG_DN)   AS(LEFT)    AS(DOWN)         AS(RIGHT)   &caps_word           &sleep  SK(LCTL)          SK(LALT) SK(LGUI)    SK(LSHIFT)  &trans
+                &m3     ASB(PG_UP)   ASB(HOME)    ASB(UP)           ASB(END)     ASB(INSERT)           &reset  &trans            &trans   &trans      &trans      &bootloader
+                &trans  ASB(PG_DN)   ASB(LEFT)    ASB(DOWN)         ASB(RIGHT)   &caps_word           &sleep  SK(LCTL)          SK(LALT) SK(LGUI)    SK(LSHIFT)  &trans
                 &trans  &kp LC(Z)   &kp LC(X)   &kp LC(LS(TAB))  &kp LC(TAB) &kp INSERT           &trans  &kp LG(LC(RIGHT)) &trans   &trans      &trans      &trans
                                                            &tog GAME &trans &tog QWERTY           &tog STENO &trans  &tog EM
             >;
