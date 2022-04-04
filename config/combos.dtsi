@@ -1,64 +1,68 @@
-compatible = "zmk,combos";
+combos {
 
-combo_hmrl_shift {
-    timeout-ms = <50>;
-    key-positions = <13 25>;
-    bindings = <&kp LSHFT>;
-    layers = <COLE QWERTY>;
-};
+    compatible = "zmk,combos";
 
-combo_hmrl_gui {
-    timeout-ms = <50>;
-    key-positions = <14 26>;
-    bindings = <&kp LGUI>;
-    layers = <COLE QWERTY>;
-};
+    combo_hmrl_shift {
+        timeout-ms = <50>;
+        key-positions = <13 25>;
+        bindings = <&kp LSHFT>;
+        layers = <COLE QWERTY>;
+    };
 
-combo_hmrl_alt {
-    timeout-ms = <50>;
-    key-positions = <15 27>;
-    bindings = <&kp LALT>;
-    layers = <COLE QWERTY>;
-};
+    combo_hmrl_gui {
+        timeout-ms = <50>;
+        key-positions = <14 26>;
+        bindings = <&kp LGUI>;
+        layers = <COLE QWERTY>;
+    };
 
-combo_hmrl_ctrl {
-    timeout-ms = <50>;
-    key-positions = <16 28>;
-    bindings = <&kp LCTL>;
-    layers = <COLE QWERTY>;
-};
+    combo_hmrl_alt {
+        timeout-ms = <50>;
+        key-positions = <15 27>;
+        bindings = <&kp LALT>;
+        layers = <COLE QWERTY>;
+    };
 
-combo_hmrr_ctrl {
-    timeout-ms = <50>;
-    key-positions = <19 31>;
-    bindings = <&kp LCTL>;
-    layers = <COLE QWERTY GAME>;
-};
+    combo_hmrl_ctrl {
+        timeout-ms = <50>;
+        key-positions = <16 28>;
+        bindings = <&kp LCTL>;
+        layers = <COLE QWERTY>;
+    };
 
-combo_hmrr_alt {
-    timeout-ms = <50>;
-    key-positions = <20 32>;
-    bindings = <&kp LALT>;
-    layers = <COLE QWERTY GAME>;
-};
+    combo_hmrr_ctrl {
+        timeout-ms = <50>;
+        key-positions = <19 31>;
+        bindings = <&kp LCTL>;
+        layers = <COLE QWERTY GAME>;
+    };
 
-combo_hmrr_gui {
-    timeout-ms = <50>;
-    key-positions = <21 33>;
-    bindings = <&kp LGUI>;
-    layers = <COLE QWERTY GAME>;
-};
+    combo_hmrr_alt {
+        timeout-ms = <50>;
+        key-positions = <20 32>;
+        bindings = <&kp LALT>;
+        layers = <COLE QWERTY GAME>;
+    };
 
-combo_hmrr_shift {
-    timeout-ms = <50>;
-    key-positions = <22 34>;
-    bindings = <&kp LSHFT>;
-    layers = <COLE QWERTY GAME>;
-};
+    combo_hmrr_gui {
+        timeout-ms = <50>;
+        key-positions = <21 33>;
+        bindings = <&kp LGUI>;
+        layers = <COLE QWERTY GAME>;
+    };
 
-combo_none {
-    timeout-ms = <50>;
-    key-positions = <13 14 15 16 19 20 21 22>;
-    bindings = <&tog NOTHING>;
-    layers = <COLE NOTHING>;
+    combo_hmrr_shift {
+        timeout-ms = <50>;
+        key-positions = <22 34>;
+        bindings = <&kp LSHFT>;
+        layers = <COLE QWERTY GAME>;
+    };
+
+    combo_none {
+        timeout-ms = <50>;
+        key-positions = <13 14 15 16 19 20 21 22>;
+        bindings = <&tog NOTHING>;
+        layers = <COLE NOTHING>;
+    };
+
 };

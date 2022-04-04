@@ -53,9 +53,7 @@
 
     #include "behaviors.dtsi"
     #include "macros.dtsi"
-    combos {
-        #include "combos.dtsi"
-    };
+    #include "combos.dtsi"
     #include "autoshift.dtsi"
 
     keymap {
