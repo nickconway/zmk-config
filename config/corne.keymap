@@ -40,8 +40,6 @@
 };
 
 #define AS(keycode) &asmm##keycode
-#define ASR(keycode) &ASMR##keycode
-#define ASP(keycode) &ASMP##keycode
 
 #define ASB(keycode) &as LS(keycode) keycode
 #define ASBR(keycode) &asr LS(keycode) keycode
@@ -70,53 +68,13 @@
             >;
         };
 
-        qwerty {
-            label = " QWER  ";
-            bindings = <
-                &kp TAB     &kp Q &kp W &kp E &kp R &kp T           &kp Y &kp U &kp I     &kp O   &kp P     &kp BKSP
-                &tog QWERTY &kp A &kp S &kp D &kp F &kp G           &kp H &kp J &kp K     &kp L   &kp SEMI  &kp ENTER
-                &kp LSHFT   &kp Z &kp X &kp C &kp V &kp B           &kp N &kp M &kp CMMA  &kp DOT &kp FSLH  &kp RSFT
-                                     &trans &trans &trans           &trans &trans &trans
-            >;
-        };
-
-        game {
-            label = " GAME  ";
-            bindings = <
-                &bht TAB ESC    &kp Q  &kp W  &kp F  &kp P  &kp B          &trans  &trans  &trans  &trans  &trans  &trans
-                &kp MINUS       &kp A  &kp R  &kp S  &kp T  &kp G          &trans  &trans  &trans  &trans  &trans  &trans
-                &kp GRAVE       &kp Z  &kp X  &kp C  &kp D  &kp V          &trans  &trans  &trans  &trans  &trans  &trans
-                                       &kp LCTRL &kp SPC &kp LALT          &m2  &trans  &trans
-            >;
-        };
-
-        gametype {
-            label = " GAMET ";
-            bindings = <
-                &m1         &wing   AS(W)  AS(F)   AS(P)   AS(B)           AS(J) AS(L) AS(U)       AS(Y)      AS(QUOT)   AS(MINUS)
-                &ptd        AS(A)  AS(R)  AS(S)   AS(T)   AS(G)           AS(M) &atn  AS(E)       &ati        AS(O)      &rptd
-                AS(GRAVE)  AS(Z)  AS(X)  AS(C)   &dcv    &vcd            AS(K) AS(H) AS(CMMA)    AS(DOT)    &sltd       AS(SEMI)
-                        &lt FUNCR ESC &lt NUMR BKSP &lt SYMR DEL            &m2 &lt NAVL SPC &lt MOUSEL TAB
-            >;
-        };
-
-        steno {
-            label = "  STEN  ";
-            bindings = <
-                &trans   &kp N1 &kp N2   &kp N3  &kp N4  &kp N5          &kp N6  &kp N7 &kp N8   &kp N9  &kp N0      &tog STENO
-                &trans   &kp Q  &kp W    &kp E   &kp R   &kp T           &kp Y   &kp U &kp I     &kp O   &kp P       &kp LBKT
-                &trans   &kp A  &kp S    &kp D   &kp F   &kp G           &kp H   &kp J &kp K     &kp L   &kp SEMI    &kp QUOT
-                                             &kp C &kp C &kp V           &kp N   &kp M &kp M
-            >;
-        };
-
-        nav_layer {
+        nav {
             label = "  NAVI  ";
             bindings = <
                 &m3     ASB(PG_UP)   ASB(HOME)    ASB(UP)           ASB(END)     ASB(INSERT)           &reset  &trans            &trans   &trans      &trans      &bootloader
                 &trans  ASB(PG_DN)   ASB(LEFT)    ASB(DOWN)         ASB(RIGHT)   &caps_word           &sleep  SK(LCTL)          SK(LALT) SK(LGUI)    SK(LSHIFT)  &trans
                 &trans  &kp LC(Z)   &kp LC(X)   &kp LC(LS(TAB))  &kp LC(TAB) &kp INSERT           &trans  &kp LG(LC(RIGHT)) &trans   &trans      &trans      &trans
-                                                           &tog GAME &trans &tog QWERTY           &tog STENO &trans  &tog EM
+                                                                        &trans &trans &trans           &trans &trans  &trans
             >;
         };
 
@@ -167,16 +125,6 @@
                 &trans  &trans  &trans  &trans  &trans  &trans                 &trans  AS(F4)  AS(F5)  AS(F6)  AS(F11)  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans                 &trans  AS(F1)  AS(F2)  AS(F3)  AS(F10)  &trans
                                         &trans  &trans  &trans                 &trans  &trans  &trans
-            >;
-        };
-
-        em {
-            label = "EM     <3";
-            bindings = <
-                &kp TAB     &kp Q &kp W &kp E &kp R &kp T           &kp Y &kp U &kp I     &kp O   &kp P     &kp BKSP
-                &tog EM     &kp A &kp S &kp D &kp F &kp G           &kp H &kp J &kp K     &kp L   &kp SEMI  &kp ENTER
-                &kp LSHFT   &kp Z &kp X &kp C &kp V &kp B           &kp N &kp M &kp CMMA  &kp DOT &kp FSLH  &kp RSFT
-                  &lt FUNCR ESC &lt NUMR SPC &lt SYMR DEL           &lt MEDIAL ENTER &lt NAVL BKSP &lt MOUSEL TAB
             >;
         };
 
