@@ -39,7 +39,7 @@
   continue-list = <UNDERSCORE MINUS BACKSPACE>;
 };
 
-#define AS(keycode) &mm##keycode
+#define AS(keycode) &asmm##keycode
 #define ASR(keycode) &ASMR##keycode
 #define ASP(keycode) &ASMP##keycode
 

@@ -9,9 +9,9 @@
         bindings = <&ASB##letter>, <&none>; \
     }; \
  \
-    mm##letter: mm##letter { \
+    asmm##letter: asmm##letter { \
         compatible = "zmk,behavior-mod-morph"; \
-        label = ZMK_MACRO_STRINGIFY(mm##letter); \
+        label = ZMK_MACRO_STRINGIFY(asmm##letter); \
         #binding-cells = <0>; \
         bindings = <&ASM##letter>, <&as LS(##letter) ##letter>; \
         mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>; \
@@ -56,9 +56,9 @@
         bindings = <&ASB##letter>, <&none>; \
     }; \
  \
-    mm##letter: mm##letter { \
+    asmm##letter: asmm##letter { \
         compatible = "zmk,behavior-mod-morph"; \
-        label = ZMK_MACRO_STRINGIFY(mm##letter); \
+        label = ZMK_MACRO_STRINGIFY(asmm##letter); \
         #binding-cells = <0>; \
         bindings = <&ASM##letter>, <&as LS(##letter) ##letter>; \
         mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>; \
@@ -103,9 +103,9 @@
         bindings = <&ASB##letter>, <&none>; \
     }; \
  \
-    mm##letter: mm##letter { \
+    asmm##letter: asmm##letter { \
         compatible = "zmk,behavior-mod-morph"; \
-        label = ZMK_MACRO_STRINGIFY(mm##letter); \
+        label = ZMK_MACRO_STRINGIFY(asmm##letter); \
         #binding-cells = <0>; \
         bindings = <&ASM##letter>, <&as LS(##letter) ##letter>; \
         mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>; \
