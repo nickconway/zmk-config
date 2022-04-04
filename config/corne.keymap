@@ -16,6 +16,7 @@
 #define SYMR    9
 #define FUNCR   10
 #define EM      11
+#define NOTHING 12
 
 &lt {
     quick-tap-ms = <300>;
@@ -178,6 +179,16 @@
                 &tog EM     &kp A &kp S &kp D &kp F &kp G           &kp H &kp J &kp K     &kp L   &kp SEMI  &kp ENTER
                 &kp LSHFT   &kp Z &kp X &kp C &kp V &kp B           &kp N &kp M &kp CMMA  &kp DOT &kp FSLH  &kp RSFT
                   &lt FUNCR ESC &lt NUMR SPC &lt SYMR DEL           &lt MEDIAL ENTER &lt NAVL BKSP &lt MOUSEL TAB
+            >;
+        };
+
+        nothing {
+            label = "  NOTH  ";
+            bindings = <
+                &none   &none   &none   &none   &none   &none                  &none   &none   &none   &none   &none   &none
+                &none   &none   &none   &none   &none   &none                  &none   &none   &none   &none   &none   &none
+                &none   &none   &none   &none   &none   &none                  &none   &none   &none   &none   &none   &none
+                                        &none   &none   &none                  &none   &none   &none
             >;
         };
 
