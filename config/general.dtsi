@@ -1,0 +1,35 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/mouse.h>
+
+#define COLE    0
+#define NAV     1
+#define MOUSE   2
+#define MEDIA   3
+#define NUM     4
+#define SYM     5
+#define FUN     6
+#define NOTHING 7
+
+&lt {
+    quick-tap-ms = <300>;
+    retro-tap;
+};
+
+&mmv {
+    delay-ms = <0>;
+    acceleration-exponent=<1>;
+    time-to-max-speed-ms = <2000>;
+};
+
+&mwh {
+    delay-ms = <0>;
+    acceleration-exponent=<1>;
+    time-to-max-speed-ms = <100>;
+};
+
+&caps_word {
+  continue-list = <UNDERSCORE MINUS BACKSPACE>;
+};
