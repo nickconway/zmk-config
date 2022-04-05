@@ -139,6 +139,14 @@
         ; \
     };
 
+#define AS(keycode) &asmm##keycode
+#define ASR(keycode) &ASMR##keycode
+#define ASP(keycode) &ASMP##keycode
+
+#define ASB(keycode) &as LS(keycode) keycode
+#define ASBR(keycode) &asr LS(keycode) keycode
+#define ASBP(keycode) &asp LS(keycode) keycode
+
 ASMP(A)
 ASM(B)
 ASM(C)

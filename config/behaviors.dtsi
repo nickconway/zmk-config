@@ -136,3 +136,5 @@ asp: auto_shift_pinky {
     bindings = <&kp>, <&kp>;
 
 };
+
+#define SK(KEY) &nk KEY KEY
