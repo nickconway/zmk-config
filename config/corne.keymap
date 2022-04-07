@@ -67,7 +67,7 @@
                 &trans  &trans  &trans  &trans  &trans  &trans                 &trans  &trans       &trans      &trans      &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans                 &trans  &kp LS(N9)   AS(LBKT)    AS(MINUS)   &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans                 &trans  &kp LS(N0)   AS(RBKT)    AS(MINUS)   &trans  &trans
-                                        &trans  &trans  &trans                 &trans  &trans  &trans
+                                        &trans  &trans  &trans                 &trans  AS(MINUS)  &trans
             >;
         };
 
