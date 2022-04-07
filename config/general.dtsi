@@ -13,8 +13,13 @@
 #define FUN     6
 #define NOTHING 7
 
+#define TAPPING_TERM 175
+#define TAPPING_TERM_RING 200
+#define TAPPING_TERM_PINKY 225
+#define QUICK_TAP_TERM 300
+
 &lt {
-    quick-tap-ms = <300>;
+    quick-tap-ms = <QUICK_TAP_TERM>;
     retro-tap;
 };
 
