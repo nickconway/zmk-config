@@ -13,7 +13,7 @@ altq: altq {
     compatible = "zmk,behavior-mod-morph";
     label = "ALT_Q";
     #binding-cells = <0>;
-    bindings = <&ASMQ>, <&kp F4>;
+    bindings = <&asmmQ>, <&kp F4>;
     mods = <(MOD_LALT)>;
 
 };
@@ -33,17 +33,7 @@ atn: atn {
     compatible = "zmk,behavior-mod-morph";
     label = "ALT_TAB_N";
     #binding-cells = <0>;
-    bindings = <&ASMN>, <&as LS(TAB) TAB>;
-    mods = <(MOD_LALT)>;
-
-};
-
-ati: ati {
-
-    compatible = "zmk,behavior-mod-morph";
-    label = "ALT_I";
-    #binding-cells = <0>;
-    bindings = <&ASMI>, <&kp LSHIFT>;
+    bindings = <&asmmN>, <&as LS(TAB) TAB>;
     mods = <(MOD_LALT)>;
 
 };
@@ -53,7 +43,7 @@ dcv: dcv {
     compatible = "zmk,behavior-mod-morph";
     label = "D_C_V";
     #binding-cells = <0>;
-    bindings = <&ASMD>, <&kp V>;
+    bindings = <&asmmD>, <&asmmV>;
     mods = <(MOD_LCTL)>;
 
 };
@@ -63,7 +53,7 @@ vcd: vcd {
     compatible = "zmk,behavior-mod-morph";
     label = "V_C_D";
     #binding-cells = <0>;
-    bindings = <&ASMV>, <&kp D>;
+    bindings = <&asmmV>, <&asmmD>;
     mods = <(MOD_LCTL)>;
 
 };
