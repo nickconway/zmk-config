@@ -17,7 +17,7 @@
                 &m1         &wing   AS(W)  AS(F)   AS(P)   AS(B)           AS(J) AS(L)     AS(U)       AS(Y)    AS(QUOT)   AS(MINUS)
                 &ptd        AS(A)   AS(R)  AS(S)   AS(T)   AS(G)           AS(M) &atn      AS(E)       AS(I)    AS(O)       &rptd
                 AS(GRAVE)   AS(Z)   AS(X)  AS(C)   &dcv    &vcd            AS(K) AS(H)     AS(CMMA)    AS(DOT)  AS(SLASH)  AS(SEMI)
-                            &lt FUN ESC &lt NUM BKSP &lt SYM DEL           &lt MEDIA ENTER &lt NAV SPC &lt MOUSE TAB
+                            &lt FUN ESC &lt NUM BKSP &lt SYM DEL           &lt MEDIA ENTER &lt NAV SPC &kp TAB
             >;
         };
 
@@ -25,21 +25,21 @@
             label = "  NAVI  ";
             bindings = <
                 &trans  ASB(PG_UP)   ASB(HOME)  ASB(UP)         ASB(END)     ASB(INSERT)            &reset  &trans            &trans   &trans      &trans      &bootloader
-                &trans  ASB(PG_DN)   ASB(LEFT)  ASB(DOWN)       ASB(RIGHT)   &caps_word             &sleep  SK(LCTL)          SK(LALT) SK(LGUI)    SK(LSHIFT)  &trans
+                &trans  ASB(PG_DN)   ASB(LEFT)  ASB(DOWN)       ASB(RIGHT)   &caps_word             &trans  SK(LCTL)          SK(LALT) SK(LGUI)    SK(LSHIFT)  &trans
                 &trans  &kp LC(Z)    &kp LC(X)  &kp LC(LS(TAB)) &kp LC(TAB)  &kp INSERT             &trans  &kp LG(LC(RIGHT)) &trans   &trans      &trans      &trans
                                                                     &trans &trans &trans            &trans &trans &trans
             >;
         };
 
-        mouse {
-            label = "  MOUS  ";
-            bindings = <
-                &trans  &trans  &trans                  &mmv MOVE_VERT(-3000)   &trans                  &trans                 &trans  &trans           &mwh SCROLL_UP      &trans              &trans  &trans
-                &trans  &trans  &mmv MOVE_HOR(-3000)    &mmv MOVE_VERT(3000)    &mmv MOVE_HOR(3000)     &trans                 &trans  &mwh SCROLL_LEFT &mwh SCROLL_DOWN    &mwh SCROLL_RIGHT   &trans  &trans
-                &trans  &trans  &trans                  &trans                  &trans                  &trans                 &trans  &trans           &trans              &trans              &trans  &trans
-                                                                               &mkp RCLK  &mkp LCLK  &mkp RCLK                 &trans  &trans  &trans
-            >;
-        };
+        /* mouse { */
+        /*     label = "  MOUS  "; */
+        /*     bindings = < */
+        /*         &trans  &trans  &trans                  &mmv MOVE_VERT(-3000)   &trans                  &trans                 &trans  &trans           &mwh SCROLL_UP      &trans              &trans  &trans */
+        /*         &trans  &trans  &mmv MOVE_HOR(-3000)    &mmv MOVE_VERT(3000)    &mmv MOVE_HOR(3000)     &trans                 &trans  &mwh SCROLL_LEFT &mwh SCROLL_DOWN    &mwh SCROLL_RIGHT   &trans  &trans */
+        /*         &trans  &trans  &trans                  &trans                  &trans                  &trans                 &trans  &trans           &trans              &trans              &trans  &trans */
+        /*                                                                        &mkp RCLK  &mkp LCLK  &mkp RCLK                 &trans  &trans  &trans */
+        /*     >; */
+        /* }; */
 
         media {
             label = "  MDIA  ";
