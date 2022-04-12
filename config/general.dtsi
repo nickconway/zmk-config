@@ -23,6 +23,10 @@
     retro-tap;
 };
 
+&sk {
+    ignore-modifiers;
+};
+
 /* &mmv { */
 /*     delay-ms = <0>; */
 /*     acceleration-exponent=<1>; */

@@ -57,17 +57,17 @@
                 &bootloader &trans      &trans      &trans      &trans              &reset                 AS(LBKT)     AS(N7)  AS(N8)  AS(N9)  AS(RBKT)    &trans
                 &trans      SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)           &trans                 AS(EQUAL)    AS(N4)  AS(N5)  AS(N6)  AS(SEMI)    &trans
                 &trans      &trans      &trans      &trans      &kp LG(LC(LEFT))    &trans                 AS(GRAVE)    AS(N1)  AS(N2)  AS(N3)  AS(BSLH)    &trans
-                                                                    &trans  &trans  &trans                 AS(MINUS) AS(N0)  AS(MINUS)
+                                                                    &trans  &trans  &trans                 AS(MINUS) AS(N0)  AS(DOT)
             >;
         };
 
         symbol {
             label = "  SYMB  ";
             bindings = <
-                &trans  &trans  &trans  &trans  &trans  &trans                 &trans  &trans       &trans      &trans      &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans                 &trans  &kp LS(N9)   AS(LBKT)    AS(MINUS)   &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans                 &trans  &kp LS(N0)   AS(RBKT)    AS(MINUS)   &trans  &trans
-                                        &trans  &trans  &trans                 &trans  AS(MINUS)  &trans
+                &trans  &trans      &trans      &trans      &trans      &trans                 &trans  &trans       &trans      &trans      &trans  &trans
+                &trans  SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)   &trans                 &trans  &kp LS(N9)   AS(LBKT)    AS(MINUS)   &trans  &trans
+                &trans  &trans      &trans      &trans      &trans      &trans                 &trans  &kp LS(N0)   AS(RBKT)    AS(MINUS)   &trans  &trans
+                                                        &trans  &trans  &trans                 &trans  AS(MINUS)  &trans
             >;
         };
 
