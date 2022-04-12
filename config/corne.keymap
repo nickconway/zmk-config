@@ -17,7 +17,7 @@
                 &m1         &wing   AS(W)  AS(F)   AS(P)   AS(B)           AS(J) AS(L)     AS(U)       AS(Y)    AS(QUOT)   AS(MINUS)
                 &ptd        AS(A)   AS(R)  AS(S)   AS(T)   AS(G)           AS(M) &atn      AS(E)       AS(I)    AS(O)       &rptd
                 AS(GRAVE)   AS(Z)   AS(X)  AS(C)   &dcv    &vcd            AS(K) AS(H)     AS(CMMA)    AS(DOT)  AS(SLASH)  AS(SEMI)
-                            &lt FUN ESC &lt NUM BKSP &lt SYM DEL           &lt MEDIA ENTER &lt NAV SPC AS(TAB)
+                            &lt FUN ESC &lt NUM BKSP &lt SYM DEL           &lt MEDIA RET &lt NAV SPC AS(TAB)
             >;
         };
 
@@ -74,10 +74,10 @@
         function {
             label = "  FUNC  ";
             bindings = <
-                &trans  &trans  &trans  &trans  &trans  &trans                 &trans  AS(F7)  AS(F8)  AS(F9)  AS(F12)  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans                 &trans  AS(F4)  AS(F5)  AS(F6)  AS(F11)  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans                 &trans  AS(F1)  AS(F2)  AS(F3)  AS(F10)  &trans
-                                        &trans  &trans  &trans                 &trans  &trans  &trans
+                &trans  &trans      &trans      &trans      &trans      &trans                 &trans  AS(F7)  AS(F8)  AS(F9)  AS(F12)  &trans
+                &trans  SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)   &trans                 &trans  AS(F4)  AS(F5)  AS(F6)  AS(F11)  &trans
+                &trans  &trans      &trans      &trans      &trans      &trans                 &trans  AS(F1)  AS(F2)  AS(F3)  AS(F10)  &trans
+                                                        &trans  &trans  &trans                 &trans  &trans  &trans
             >;
         };
 
