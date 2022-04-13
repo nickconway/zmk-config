@@ -3,8 +3,8 @@ bht: balanced_hold_tap {
     label = "BALANCED_HOLD_TAP";
     #binding-cells = <2>;
     flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <200>;
+    tapping-term-ms = <TAPPING_TERM>;
+    quick-tap-ms = <QUICK_TAP_TERM>;
     bindings = <&kp>, <&kp>;
 };
 
@@ -13,7 +13,7 @@ altq: altq {
     compatible = "zmk,behavior-mod-morph";
     label = "ALT_Q";
     #binding-cells = <0>;
-    bindings = <&ASMQ>, <&kp F4>;
+    bindings = <&asmmQ>, <&kp F4>;
     mods = <(MOD_LALT)>;
 
 };
@@ -33,17 +33,7 @@ atn: atn {
     compatible = "zmk,behavior-mod-morph";
     label = "ALT_TAB_N";
     #binding-cells = <0>;
-    bindings = <&ASMN>, <&kp TAB>;
-    mods = <(MOD_LALT)>;
-
-};
-
-ati: ati {
-
-    compatible = "zmk,behavior-mod-morph";
-    label = "ALT_I";
-    #binding-cells = <0>;
-    bindings = <&ASMI>, <&kp LSHIFT>;
+    bindings = <&asmmN>, <&as LS(TAB) TAB>;
     mods = <(MOD_LALT)>;
 
 };
@@ -53,7 +43,7 @@ dcv: dcv {
     compatible = "zmk,behavior-mod-morph";
     label = "D_C_V";
     #binding-cells = <0>;
-    bindings = <&ASMD>, <&kp V>;
+    bindings = <&asmmD>, <&asmmV>;
     mods = <(MOD_LCTL)>;
 
 };
@@ -63,7 +53,7 @@ vcd: vcd {
     compatible = "zmk,behavior-mod-morph";
     label = "V_C_D";
     #binding-cells = <0>;
-    bindings = <&ASMV>, <&kp D>;
+    bindings = <&asmmV>, <&asmmD>;
     mods = <(MOD_LCTL)>;
 
 };
@@ -72,7 +62,7 @@ nk: not_so_sticky_key {
     compatible = "zmk,behavior-hold-tap";
     label = "not so sticky key";
     #binding-cells = <2>;
-    tapping-term-ms = <200>;
+    tapping-term-ms = <TAPPING_TERM>;
     flavor = "tap-preferred";
     bindings = <&kp>, <&sk>;
 };
@@ -81,7 +71,7 @@ ptd: ptd {
     compatible = "zmk,behavior-tap-dance";
     label = "ptd";
     #binding-cells = <0>;
-    tapping-term-ms = <250>;
+    tapping-term-ms = <TAPPING_TERM>;
     bindings = <&kp LPAR>, <&kp LBKT>, <&kp LBRC>;
 };
 
@@ -89,7 +79,7 @@ rptd: rptd {
     compatible = "zmk,behavior-tap-dance";
     label = "rptd";
     #binding-cells = <0>;
-    tapping-term-ms = <250>;
+    tapping-term-ms = <TAPPING_TERM>;
     bindings = <&kp RPAR>, <&kp RBKT>, <&kp RBRC>;
 };
 
@@ -97,7 +87,7 @@ sltd: sltd {
     compatible = "zmk,behavior-tap-dance";
     label = "sltd";
     #binding-cells = <0>;
-    tapping-term-ms = <250>;
+    tapping-term-ms = <TAPPING_TERM>;
     bindings = <&kp FSLH>, <&kp BSLH>;
 };
 
@@ -106,8 +96,8 @@ as: auto_shift {
     compatible = "zmk,behavior-hold-tap";
     label = "AUTO_SHIFT";
     #binding-cells = <2>;
-    tapping-term-ms = <175>;
-    quick-tap-ms = <300>;
+    tapping-term-ms = <TAPPING_TERM>;
+    quick-tap-ms = <QUICK_TAP_TERM>;
     flavor = "tap-preferred";
     bindings = <&kp>, <&kp>;
 
@@ -118,8 +108,8 @@ asr: auto_shift_ring {
     compatible = "zmk,behavior-hold-tap";
     label = "AUTO_SHIFT_RING";
     #binding-cells = <2>;
-    tapping-term-ms = <200>;
-    quick-tap-ms = <300>;
+    tapping-term-ms = <TAPPING_TERM_RING>;
+    quick-tap-ms = <QUICK_TAP_TERM>;
     flavor = "tap-preferred";
     bindings = <&kp>, <&kp>;
 
@@ -130,9 +120,11 @@ asp: auto_shift_pinky {
     compatible = "zmk,behavior-hold-tap";
     label = "AUTO_SHIFT_PINKY";
     #binding-cells = <2>;
-    tapping-term-ms = <225>;
-    quick-tap-ms = <300>;
+    tapping-term-ms = <TAPPING_TERM_PINKY>;
+    quick-tap-ms = <QUICK_TAP_TERM>;
     flavor = "tap-preferred";
     bindings = <&kp>, <&kp>;
 
 };
+
+#define SK(KEY) &nk KEY KEY

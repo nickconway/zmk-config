@@ -4,8 +4,8 @@
         label = ZMK_MACRO_STRINGIFY(hu##letter); \
         #binding-cells = <2>; \
         flavor = "tap-preferred"; \
-        tapping-term-ms = <175>; \
-        quick-tap-ms = <200>; \
+        tapping-term-ms = <TAPPING_TERM>; \
+        quick-tap-ms = <QUICK_TAP_TERM>; \
         bindings = <&ASB##letter>, <&none>; \
     }; \
  \
@@ -51,8 +51,8 @@
         label = ZMK_MACRO_STRINGIFY(hu##letter); \
         #binding-cells = <2>; \
         flavor = "tap-preferred"; \
-        tapping-term-ms = <200>; \
-        quick-tap-ms = <200>; \
+        tapping-term-ms = <TAPPING_TERM_RING>; \
+        quick-tap-ms = <QUICK_TAP_TERM>; \
         bindings = <&ASB##letter>, <&none>; \
     }; \
  \
@@ -98,8 +98,8 @@
         label = ZMK_MACRO_STRINGIFY(hu##letter); \
         #binding-cells = <2>; \
         flavor = "tap-preferred"; \
-        tapping-term-ms = <225>; \
-        quick-tap-ms = <200>; \
+        tapping-term-ms = <TAPPING_TERM_PINKY>; \
+        quick-tap-ms = <QUICK_TAP_TERM>; \
         bindings = <&ASB##letter>, <&none>; \
     }; \
  \
@@ -139,6 +139,14 @@
         ; \
     };
 
+#define AS(keycode) &asmm##keycode
+#define ASR(keycode) &ASMR##keycode
+#define ASP(keycode) &ASMP##keycode
+
+#define ASB(keycode) &as LS(keycode) keycode
+#define ASBR(keycode) &asr LS(keycode) keycode
+#define ASBP(keycode) &asp LS(keycode) keycode
+
 ASMP(A)
 ASM(B)
 ASM(C)
@@ -176,6 +184,7 @@ ASM(GRAVE)
 ASM(LBKT)
 ASM(RBKT)
 ASM(EQUAL)
+ASM(TAB)
 ASM(UP)
 ASM(LEFT)
 ASM(DOWN)

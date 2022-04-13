@@ -1,51 +1,4 @@
-#include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/mouse.h>
-
-#define COLE    0
-#define QWERTY  1
-#define GAME    2
-#define GAMET   3
-#define STENO   4
-#define NAVL    5
-#define MOUSEL  6
-#define MEDIAL  7
-#define NUMR    8
-#define SYMR    9
-#define FUNCR   10
-#define EM      11
-#define NOTHING 12
-
-&lt {
-    quick-tap-ms = <300>;
-    retro-tap;
-};
-
-&mmv {
-    delay-ms = <0>;
-    acceleration-exponent=<1>;
-    time-to-max-speed-ms = <2000>;
-};
-
-&mwh {
-    delay-ms = <0>;
-    acceleration-exponent=<1>;
-    time-to-max-speed-ms = <100>;
-};
-
-&caps_word {
-  continue-list = <UNDERSCORE MINUS BACKSPACE>;
-};
-
-#define AS(keycode) &asmm##keycode
-
-#define ASB(keycode) &as LS(keycode) keycode
-#define ASBR(keycode) &asr LS(keycode) keycode
-#define ASBP(keycode) &asp LS(keycode) keycode
-
-#define SK(KEY) &nk KEY KEY
+#include "general.dtsi"
 
 / {
 
@@ -61,32 +14,32 @@
         default_layer {
             label = "  COLE  ";
             bindings = <
-                &m1         &wing   AS(W)  AS(F)   AS(P)   AS(B)           AS(J) AS(L)     AS(U)       AS(Y)      AS(QUOT)   AS(MINUS)
-                &ptd        AS(A)   AS(R)  AS(S)   AS(T)   AS(G)           AS(M) &atn      AS(E)       AS(I)       AS(O)       &rptd
-                AS(GRAVE)   AS(Z)   AS(X)  AS(C)   &dcv    &vcd            AS(K) AS(H)     AS(CMMA)    AS(DOT)    AS(SLASH)  AS(SEMI)
-                        &lt FUNCR ESC &lt NUMR BKSP &lt SYMR DEL           &lt MEDIAL ENTER &lt NAVL SPC &lt MOUSEL TAB
+                &m1         &wing   AS(W)  AS(F)   AS(P)   AS(B)           AS(J) AS(L)     AS(U)       AS(Y)    AS(QUOT)   AS(MINUS)
+                &ptd        AS(A)   AS(R)  AS(S)   AS(T)   AS(G)           AS(M) &atn      AS(E)       AS(I)    AS(O)       &rptd
+                AS(GRAVE)   AS(Z)   AS(X)  AS(C)   &dcv    &vcd            AS(K) AS(H)     AS(CMMA)    AS(DOT)  AS(SLASH)  AS(SEMI)
+                            &lt FUN ESC &lt NUM BKSP &lt SYM DEL           &lt MEDIA RET &lt NAV SPC AS(TAB)
             >;
         };
 
         nav {
             label = "  NAVI  ";
             bindings = <
-                &m3     ASB(PG_UP)   ASB(HOME)    ASB(UP)           ASB(END)     ASB(INSERT)           &reset  &trans            &trans   &trans      &trans      &bootloader
-                &trans  ASB(PG_DN)   ASB(LEFT)    ASB(DOWN)         ASB(RIGHT)   &caps_word           &sleep  SK(LCTL)          SK(LALT) SK(LGUI)    SK(LSHIFT)  &trans
-                &trans  &kp LC(Z)   &kp LC(X)   &kp LC(LS(TAB))  &kp LC(TAB) &kp INSERT           &trans  &kp LG(LC(RIGHT)) &trans   &trans      &trans      &trans
-                                                                        &trans &trans &trans           &trans &trans  &trans
+                &trans  ASB(PG_UP)   ASB(HOME)  ASB(UP)         ASB(END)     ASB(INSERT)            &reset  &trans            &trans   &trans      &trans      &bootloader
+                &trans  ASB(PG_DN)   ASB(LEFT)  ASB(DOWN)       ASB(RIGHT)   &caps_word             &trans  SK(LCTL)          SK(LALT) SK(LGUI)    SK(LSHIFT)  &trans
+                &trans  &kp LC(Z)    &kp LC(X)  &kp LC(LS(TAB)) &kp LC(TAB)  &kp INSERT             &trans  &kp LG(LC(RIGHT)) &trans   &trans      &trans      &trans
+                                                                    &trans &trans &trans            &trans &trans &trans
             >;
         };
 
-        mouse {
-            label = "  MOUS  ";
-            bindings = <
-                &trans  &trans  &trans                  &mmv MOVE_VERT(-3000)   &trans                  &trans                 &trans  &trans           &mwh SCROLL_UP      &trans              &trans  &trans
-                &trans  &trans  &mmv MOVE_HOR(-3000)    &mmv MOVE_VERT(3000)    &mmv MOVE_HOR(3000)     &trans                 &trans  &mwh SCROLL_LEFT &mwh SCROLL_DOWN    &mwh SCROLL_RIGHT   &trans  &trans
-                &trans  &trans  &trans                  &trans                  &trans                  &trans                 &trans  &trans           &trans              &trans              &trans  &trans
-                                                                               &mkp RCLK  &mkp LCLK  &mkp RCLK                 &trans  &trans  &trans
-            >;
-        };
+        /* mouse { */
+        /*     label = "  MOUS  "; */
+        /*     bindings = < */
+        /*         &trans  &trans  &trans                  &mmv MOVE_VERT(-3000)   &trans                  &trans                 &trans  &trans           &mwh SCROLL_UP      &trans              &trans  &trans */
+        /*         &trans  &trans  &mmv MOVE_HOR(-3000)    &mmv MOVE_VERT(3000)    &mmv MOVE_HOR(3000)     &trans                 &trans  &mwh SCROLL_LEFT &mwh SCROLL_DOWN    &mwh SCROLL_RIGHT   &trans  &trans */
+        /*         &trans  &trans  &trans                  &trans                  &trans                  &trans                 &trans  &trans           &trans              &trans              &trans  &trans */
+        /*                                                                        &mkp RCLK  &mkp LCLK  &mkp RCLK                 &trans  &trans  &trans */
+        /*     >; */
+        /* }; */
 
         media {
             label = "  MDIA  ";
@@ -102,29 +55,29 @@
             label = "  NUM   ";
             bindings = <
                 &bootloader &trans      &trans      &trans      &trans              &reset                 AS(LBKT)     AS(N7)  AS(N8)  AS(N9)  AS(RBKT)    &trans
-                &trans      SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)           &trans                 AS(EQUAL)    AS(N4)  AS(N5)  AS(N6)   AS(SEMI)     &trans
+                &trans      SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)           &trans                 AS(EQUAL)    AS(N4)  AS(N5)  AS(N6)  AS(SEMI)    &trans
                 &trans      &trans      &trans      &trans      &kp LG(LC(LEFT))    &trans                 AS(GRAVE)    AS(N1)  AS(N2)  AS(N3)  AS(BSLH)    &trans
-                                                                    &trans  &trans  &trans                 AS(MINUS) AS(N0)  AS(MINUS)
+                                                                    &trans  &trans  &trans                 AS(MINUS) AS(N0)  AS(DOT)
             >;
         };
 
         symbol {
             label = "  SYMB  ";
             bindings = <
-                &trans  &trans  &trans  &trans  &trans  &trans                 &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans                 &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans                 &trans  &trans  &trans  &trans  &trans  &trans
-                                        &trans  &trans  &trans                 &trans  &trans  &trans
+                &trans  &trans      &trans      &trans      &trans      &trans                 &trans  &trans       &trans      &trans      &trans  &trans
+                &trans  SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)   &trans                 &trans  &kp LS(N9)   AS(LBKT)    AS(MINUS)   &trans  &trans
+                &trans  &trans      &trans      &trans      &trans      &trans                 &trans  &kp LS(N0)   AS(RBKT)    AS(MINUS)   &trans  &trans
+                                                        &trans  &trans  &trans                 &trans  AS(MINUS)  &trans
             >;
         };
 
         function {
             label = "  FUNC  ";
             bindings = <
-                &trans  &trans  &trans  &trans  &trans  &trans                 &trans  AS(F7)  AS(F8)  AS(F9)  AS(F12)  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans                 &trans  AS(F4)  AS(F5)  AS(F6)  AS(F11)  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans                 &trans  AS(F1)  AS(F2)  AS(F3)  AS(F10)  &trans
-                                        &trans  &trans  &trans                 &trans  &trans  &trans
+                &trans  &trans      &trans      &trans      &trans      &trans                 &trans  AS(F7)  AS(F8)  AS(F9)  AS(F12)  &trans
+                &trans  SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)   &trans                 &trans  AS(F4)  AS(F5)  AS(F6)  AS(F11)  &trans
+                &trans  &trans      &trans      &trans      &trans      &trans                 &trans  AS(F1)  AS(F2)  AS(F3)  AS(F10)  &trans
+                                                        &trans  &trans  &trans                 &trans  &trans  &trans
             >;
         };
 
