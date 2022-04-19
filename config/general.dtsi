@@ -19,12 +19,14 @@
 #define QUICK_TAP_TERM 300
 
 &lt {
+    tapping-term-ms = <TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_TERM>;
     retro-tap;
 };
 
 &sk {
     ignore-modifiers;
+    release-after-ms = <5000>;
 };
 
 /* &mmv { */

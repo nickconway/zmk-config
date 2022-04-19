@@ -1,9 +1,8 @@
 #define SC(letter, position) \
     sc##letter: sc##letter { \
-        timeout-ms = <50>; \
+        timeout-ms = <20>; \
         key-positions = <##position 40>; \
         bindings = <&kp LS(##letter)>; \
-        layers = <COLE>; \
     }; \
  \
 
@@ -36,6 +35,6 @@
  SC(V, 29)
  SC(K, 30)
  SC(H, 31)
- SC(CMMA 32)
+ SC(CMMA, 32)
  SC(DOT, 33)
  SC(SLASH, 34)
