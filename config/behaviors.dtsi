@@ -63,7 +63,7 @@ nk: not_so_sticky_key {
     label = "not so sticky key";
     #binding-cells = <2>;
     tapping-term-ms = <TAPPING_TERM>;
-    flavor = "tap-preferred";
+    flavor = "tap-unless-interrupted";
     bindings = <&kp>, <&sk>;
 };
 
@@ -124,6 +124,34 @@ asp: auto_shift_pinky {
     quick-tap-ms = <QUICK_TAP_TERM>;
     flavor = "tap-preferred";
     bindings = <&kp>, <&kp>;
+
+};
+
+lhm: lhm {
+
+    compatible = "zmk,behavior-hold-tap";
+    label = "HOMEROW_MODS_LEFT";
+    #binding-cells = <2>;
+    tapping-term-ms = <180>;
+    quick-tap-ms = <300>;
+    flavor = "tap-unless-interrupted";
+    bindings = <&nk>, <&kp>;
+    //hold-trigger-key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 39 40 41>;
+    retro-tap;
+
+};
+
+rhm: rhm {
+
+    compatible = "zmk,behavior-hold-tap";
+    label = "HOMEROW_MODS_RIGHT";
+    #binding-cells = <2>;
+    tapping-term-ms = <180>;
+    quick-tap-ms = <300>;
+    flavor = "tap-unless-interrupted";
+    bindings = <&nk>, <&kp>;
+    //hold-trigger-key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38>;
+    retro-tap;
 
 };
 
