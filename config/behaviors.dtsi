@@ -1,11 +1,3 @@
-stest: stest {
-    compatible = "zmk,behavior-sensor-rotate";
-    label = "sensor test";
-    #binding-cells = <0>;
-    #sensor-binding-cells = <0>;
-    bindings = <&kp A>, <&kp B>;
-};
-
 bht: balanced_hold_tap {
     compatible = "zmk,behavior-hold-tap";
     label = "BALANCED_HOLD_TAP";
