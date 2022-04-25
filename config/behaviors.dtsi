@@ -3,7 +3,7 @@ stest: stest {
     label = "sensor test";
     #binding-cells = <0>;
     #sensor-binding-cells = <0>;
-    bindings = <&kp A>, <&kp B>;
+    bindings = <&kp A>, <&lt 2>;
 };
 
 bht: balanced_hold_tap {
