@@ -1,9 +1,8 @@
 stest: stest {
     compatible = "zmk,behavior-sensor-rotate";
     label = "sensor test";
-    #binding-cells = <0>;
     #sensor-binding-cells = <0>;
-    bindings = <&kp A>, <&lt 2>;
+    bindings = <&m1>, <&to 2>;
 };
 
 bht: balanced_hold_tap {
