@@ -4,6 +4,48 @@ combos {
 
     /* #include "combo_shift.dtsi" */
 
+    combo_hmrl_par {
+        timeout-ms = <50>;
+        key-positions = <2 14>;
+        bindings = <&kp LPAR>;
+        layers = <COLE>;
+    };
+
+    combo_hmrl_bkt {
+        timeout-ms = <50>;
+        key-positions = <3 15>;
+        bindings = <&kp LBKT>;
+        layers = <COLE>;
+    };
+
+    combo_hmrl_brc {
+        timeout-ms = <50>;
+        key-positions = <4 16>;
+        bindings = <&kp LBRC>;
+        layers = <COLE>;
+    };
+
+    combo_hmrr_par {
+        timeout-ms = <50>;
+        key-positions = <9 21>;
+        bindings = <&kp RPAR>;
+        layers = <COLE>;
+    };
+
+    combo_hmrr_bkt {
+        timeout-ms = <50>;
+        key-positions = <8 20>;
+        bindings = <&kp RBKT>;
+        layers = <COLE>;
+    };
+
+    combo_hmrr_brc {
+        timeout-ms = <50>;
+        key-positions = <7 19>;
+        bindings = <&kp RBRC>;
+        layers = <COLE>;
+    };
+
     combo_hmrl_shift {
         timeout-ms = <50>;
         key-positions = <13 25>;
