@@ -20,7 +20,7 @@
                             &lt FUN ESC &lt NUM BKSP &lt SYM DEL           &lt MEDIA RET &lt NAV SPC AS(TAB)
             >;
             /* sensor-bindings = <&inc_dec_kp RIGHT LEFT &inc_dec_kp UP DOWN>; */
-            sensor-bindings = <&stest>;
+            sensor-bindings = <&rgb_encoder &arrow_encoder>;
         };
 
         nav {

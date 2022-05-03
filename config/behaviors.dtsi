@@ -5,6 +5,20 @@ stest: stest {
     bindings = <&m1>, <&to 2>;
 };
 
+rgb_encoder: rgb_encoder {
+    compatible = "zmk,behavior-sensor-rotate";
+    label = "RGB_ENCODER";
+    #sensor-binding-cells = <0>;
+    bindings = <&rgb_ug RGB_BRD>, <&rgb_ug RGB_BRI>;
+};
+
+arrow_encoder: arrow_encoder {
+    compatible = "zmk,behavior-sensor-rotate";
+    label = "ARROW_ENCODER";
+    #sensor-binding-cells = <0>;
+    bindings = <&kp LEFT>, <&kp RIGHT>;
+};
+
 bht: balanced_hold_tap {
     compatible = "zmk,behavior-hold-tap";
     label = "BALANCED_HOLD_TAP";
