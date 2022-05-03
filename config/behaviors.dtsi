@@ -1,22 +1,11 @@
-stest: stest {
-    compatible = "zmk,behavior-sensor-rotate";
-    label = "sensor test";
-    #sensor-binding-cells = <0>;
-    bindings = <&m1>, <&to 2>;
-};
-
-rgb_encoder: rgb_encoder {
-    compatible = "zmk,behavior-sensor-rotate";
-    label = "RGB_ENCODER";
-    #sensor-binding-cells = <0>;
-    bindings = <&rgb_ug RGB_BRD>, <&rgb_ug RGB_BRI>;
-};
-
-arrow_encoder: arrow_encoder {
-    compatible = "zmk,behavior-sensor-rotate";
-    label = "ARROW_ENCODER";
-    #sensor-binding-cells = <0>;
-    bindings = <&kp LEFT>, <&kp RIGHT>;
+rht: retro_hold_tap {
+    compatible = "zmk,behavior-retro-hold-tap";
+    label = "RETRO_HOLD_TAP";
+    #binding-cells = <2>;
+    flavor = "balanced";
+    tapping-term-ms = <TAPPING_TERM>;
+    quick-tap-ms = <QUICK_TAP_TERM>;
+    bindings = <&kp>, <&kp>, <&kp>;
 };
 
 bht: balanced_hold_tap {
