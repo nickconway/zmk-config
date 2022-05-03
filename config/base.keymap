@@ -19,7 +19,6 @@
                 AS(GRAVE)   AS(Z)   AS(X)  AS(C)   &dcv    &vcd            AS(K) AS(H)     AS(CMMA)    AS(DOT)  AS(SLASH)  AS(SEMI)
                             &lt FUN ESC &lt NUM BKSP &lt SYM DEL           &lt MEDIA RET &lt NAV SPC AS(TAB)
             >;
-            sensor-bindings = <&rgb_encoder &arrow_encoder>;
         };
 
         nav {
