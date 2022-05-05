@@ -32,62 +32,43 @@ tht: tap_hold_tap {
 };
 
 altq: altq {
-
     compatible = "zmk,behavior-mod-morph";
     label = "ALT_Q";
     #binding-cells = <0>;
     bindings = <&asmmQ>, <&kp F4>;
     mods = <(MOD_LALT)>;
-
 };
 
 wing: wing {
-
     compatible = "zmk,behavior-mod-morph";
     label = "WIN_GRAVE";
     #binding-cells = <0>;
     bindings = <&altq>, <&kp GRAVE>;
     mods = <(MOD_LGUI)>;
-
 };
 
 atn: atn {
-
     compatible = "zmk,behavior-mod-morph";
     label = "ALT_TAB_N";
     #binding-cells = <0>;
-    bindings = <&asmmN>, <&as LS(TAB) TAB>;
+    bindings = <AS(N)>, <&as LS(TAB) TAB>;
     mods = <(MOD_LALT)>;
-
 };
 
 dcv: dcv {
-
     compatible = "zmk,behavior-mod-morph";
     label = "D_C_V";
     #binding-cells = <0>;
     bindings = <&asmmD>, <&asmmV>;
     mods = <(MOD_LCTL)>;
-
 };
 
 vcd: vcd {
-
     compatible = "zmk,behavior-mod-morph";
     label = "V_C_D";
     #binding-cells = <0>;
     bindings = <&asmmV>, <&asmmD>;
     mods = <(MOD_LCTL)>;
-
-};
-
-nk: not_so_sticky_key {
-    compatible = "zmk,behavior-hold-tap";
-    label = "not so sticky key";
-    #binding-cells = <2>;
-    tapping-term-ms = <TAPPING_TERM>;
-    flavor = "tap-unless-interrupted";
-    bindings = <&kp>, <&sk>;
 };
 
 ptd: ptd {
@@ -143,5 +124,3 @@ asp: auto_shift_pinky {
     flavor = "tap-preferred";
     bindings = <&kp>, <&kp>;
 };
-
-#define SK(KEY) &nk KEY KEY

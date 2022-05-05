@@ -4,29 +4,3 @@ m1: m1 {
     #binding-cells = <0>;
     bindings = <&macro_tap &kp LA(SPC)>;
 };
-
-hrma: hrma {
-    compatible = "zmk,behavior-macro";
-    label = "HOME_ROW_A";
-    #binding-cells = <0>;
-    wait-ms = <0>;
-    bindings =
-            <&macro_press &hrht1 0 A>,
-            <&macro_press &hrht2 LSHFT A>,
-            /* <&macro_press &hrht3 LS(A) 0>, */
-            <&macro_pause_for_release>,
-            <&macro_release &hrht2 LSHFT A>,
-            <&macro_release &hrht1 0 A>;
-            /* <&macro_release &hrht3 LS(A) 0>; */
-};
-
-hrmr: hrmr {
-    compatible = "zmk,behavior-macro";
-    label = "HOME_ROW_R";
-    #binding-cells = <0>;
-    wait-ms = <0>;
-    bindings =
-            <&macro_press &hrht1 0 R &hrht2 LGUI 0 &hrht3 LS(R) 0>,
-            <&macro_pause_for_release>,
-            <&macro_release &hrht3 LS(R) 0 &hrht1 0 R &hrht2 LGUI 0>;
-};

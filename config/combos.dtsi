@@ -49,56 +49,56 @@ combos {
     combo_hmrl_shift {
         timeout-ms = <50>;
         key-positions = <13 25>;
-        bindings = <SK(LSHFT)>;
+        bindings = <&sk LSHFT>;
         layers = <COLE>;
     };
 
     combo_hmrl_gui {
         timeout-ms = <50>;
         key-positions = <14 26>;
-        bindings = <SK(LGUI)>;
+        bindings = <&sk LGUI>;
         layers = <COLE>;
     };
 
     combo_hmrl_alt {
         timeout-ms = <50>;
         key-positions = <15 27>;
-        bindings = <SK(LALT)>;
+        bindings = <&sk LALT>;
         layers = <COLE>;
     };
 
     combo_hmrl_ctrl {
         timeout-ms = <50>;
         key-positions = <16 28>;
-        bindings = <SK(LCTL)>;
+        bindings = <&sk LCTL>;
         layers = <COLE>;
     };
 
     combo_hmrr_ctrl {
         timeout-ms = <50>;
         key-positions = <19 31>;
-        bindings = <SK(LCTL)>;
+        bindings = <&sk LCTL>;
         layers = <COLE>;
     };
 
     combo_hmrr_alt {
         timeout-ms = <50>;
         key-positions = <20 32>;
-        bindings = <SK(LALT)>;
+        bindings = <&sk LALT>;
         layers = <COLE>;
     };
 
     combo_hmrr_gui {
         timeout-ms = <50>;
         key-positions = <21 33>;
-        bindings = <SK(LGUI)>;
+        bindings = <&sk LGUI>;
         layers = <COLE>;
     };
 
     combo_hmrr_shift {
         timeout-ms = <50>;
         key-positions = <22 34>;
-        bindings = <SK(LSHFT)>;
+        bindings = <&sk LSHFT>;
         layers = <COLE>;
     };
 
