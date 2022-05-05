@@ -1,11 +1,12 @@
 rht: retro_hold_tap {
     compatible = "zmk,behavior-retro-hold-tap";
     label = "RETRO_HOLD_TAP";
-    #binding-cells = <2>;
+    #binding-cells = <0>;
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_TERM>;
-    bindings = <&kp>, <&kp>, <&kp>;
+    global-quick-tap;
+    bindings = <&kp A>, <&kp B>, <&kp C>;
 };
 
 bht: balanced_hold_tap {
