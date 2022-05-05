@@ -1,12 +1,16 @@
 hra: hra {
-    compatible = "zmk,behavior-retro-hold-tap";
+    compatible = "zmk,behavior-hold-tap";
     label = "HOME_ROW_A";
-    #binding-cells = <0>;
+    #binding-cells = <2>;
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_TERM>;
     global-quick-tap;
-    bindings = <&kp LSHFT>, <&kp A>, <&kp LS(A)>;
+    bindings = <&kp>, <&kp>;
+    retro-tap;
+    retro-tap-behavior = "KEY_PRESS";
+    retro-tap-param1 = <LS(A)>;
+    retro-tap-param2 = <0>;
 };
 
 hrr: hrr {
