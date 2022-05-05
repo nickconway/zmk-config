@@ -15,7 +15,7 @@
             label = "  COLE  ";
             bindings = <
                 &m1         &wing   AS(W)  AS(F)   AS(P)   AS(B)           AS(J) AS(L)     AS(U)       AS(Y)    AS(QUOT)   AS(MINUS)
-                &ptd        &rht    AS(R)  AS(S)   AS(T)   AS(G)           AS(M) &atn      AS(E)       AS(I)    AS(O)       &rptd
+                &ptd        &hra    &hrr   &hrs    &hrt    AS(G)           AS(M) &atn      &hre        &hri     &hro       &rptd
                 AS(GRAVE)   AS(Z)   AS(X)  AS(C)   &dcv    &vcd            AS(K) AS(H)     AS(CMMA)    AS(DOT)  AS(SLASH)  AS(SEMI)
                             &lt FUN ESC &lt NUM BKSP &lt SYM DEL           &lt MEDIA RET &lt NAV SPC AS(TAB)
             >;
