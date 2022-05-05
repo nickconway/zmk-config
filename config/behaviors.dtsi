@@ -71,30 +71,6 @@ vcd: vcd {
     mods = <(MOD_LCTL)>;
 };
 
-ptd: ptd {
-    compatible = "zmk,behavior-tap-dance";
-    label = "ptd";
-    #binding-cells = <0>;
-    tapping-term-ms = <TAPPING_TERM>;
-    bindings = <&kp LPAR>, <&kp LBKT>, <&kp LBRC>;
-};
-
-rptd: rptd {
-    compatible = "zmk,behavior-tap-dance";
-    label = "rptd";
-    #binding-cells = <0>;
-    tapping-term-ms = <TAPPING_TERM>;
-    bindings = <&kp RPAR>, <&kp RBKT>, <&kp RBRC>;
-};
-
-sltd: sltd {
-    compatible = "zmk,behavior-tap-dance";
-    label = "sltd";
-    #binding-cells = <0>;
-    tapping-term-ms = <TAPPING_TERM>;
-    bindings = <&kp FSLH>, <&kp BSLH>;
-};
-
 as: auto_shift {
     compatible = "zmk,behavior-hold-tap";
     label = "AUTO_SHIFT";
