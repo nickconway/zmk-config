@@ -6,7 +6,7 @@ rht: retro_hold_tap {
     tapping-term-ms = <TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_TERM>;
     global-quick-tap;
-    bindings = <&kp A>, <&kp B>, <&kp C>;
+    bindings = <&kp LSHFT>, <&kp A>, <&kp LS(A)>;
 };
 
 bht: balanced_hold_tap {
