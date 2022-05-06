@@ -45,63 +45,7 @@ combos {
         bindings = <&kp RBRC>;
         layers = <COLE>;
     };
-
-    combo_hmrl_shift {
-        timeout-ms = <50>;
-        key-positions = <13 25>;
-        bindings = <&sk LSHFT>;
-        layers = <COLE>;
-    };
-
-    combo_hmrl_gui {
-        timeout-ms = <50>;
-        key-positions = <14 26>;
-        bindings = <&sk LGUI>;
-        layers = <COLE>;
-    };
-
-    combo_hmrl_alt {
-        timeout-ms = <50>;
-        key-positions = <15 27>;
-        bindings = <&sk LALT>;
-        layers = <COLE>;
-    };
-
-    combo_hmrl_ctrl {
-        timeout-ms = <50>;
-        key-positions = <16 28>;
-        bindings = <&sk LCTL>;
-        layers = <COLE>;
-    };
-
-    combo_hmrr_ctrl {
-        timeout-ms = <50>;
-        key-positions = <19 31>;
-        bindings = <&sk LCTL>;
-        layers = <COLE>;
-    };
-
-    combo_hmrr_alt {
-        timeout-ms = <50>;
-        key-positions = <20 32>;
-        bindings = <&sk LALT>;
-        layers = <COLE>;
-    };
-
-    combo_hmrr_gui {
-        timeout-ms = <50>;
-        key-positions = <21 33>;
-        bindings = <&sk LGUI>;
-        layers = <COLE>;
-    };
-
-    combo_hmrr_shift {
-        timeout-ms = <50>;
-        key-positions = <22 34>;
-        bindings = <&sk LSHFT>;
-        layers = <COLE>;
-    };
-
+    
     combo_none {
         timeout-ms = <50>;
         key-positions = <13 14 15 16 19 20 21 22>;
