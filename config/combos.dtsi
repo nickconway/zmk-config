@@ -6,46 +6,46 @@ combos {
 
     combo_hmrl_par {
         timeout-ms = <50>;
-        key-positions = <2 14>;
+        key-positions = <14 26>;
         bindings = <&kp LPAR>;
         layers = <COLE>;
     };
 
     combo_hmrl_bkt {
         timeout-ms = <50>;
-        key-positions = <3 15>;
+        key-positions = <15 27>;
         bindings = <&kp LBKT>;
         layers = <COLE>;
     };
 
     combo_hmrl_brc {
         timeout-ms = <50>;
-        key-positions = <4 16>;
+        key-positions = <16 28>;
         bindings = <&kp LBRC>;
         layers = <COLE>;
     };
 
     combo_hmrr_par {
         timeout-ms = <50>;
-        key-positions = <9 21>;
+        key-positions = <21 33>;
         bindings = <&kp RPAR>;
         layers = <COLE>;
     };
 
     combo_hmrr_bkt {
         timeout-ms = <50>;
-        key-positions = <8 20>;
+        key-positions = <20 32>;
         bindings = <&kp RBKT>;
         layers = <COLE>;
     };
 
     combo_hmrr_brc {
         timeout-ms = <50>;
-        key-positions = <7 19>;
+        key-positions = <19 31>;
         bindings = <&kp RBRC>;
         layers = <COLE>;
     };
-    
+
     combo_none {
         timeout-ms = <50>;
         key-positions = <13 14 15 16 19 20 21 22>;
