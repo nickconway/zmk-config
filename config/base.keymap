@@ -14,17 +14,17 @@
         default_layer {
             label = "  COLE  ";
             bindings = <
-                &m1         &wing   AS(W)  AS(F)   AS(P)   AS(B)           AS(J) AS(L)     AS(U)       AS(Y)    AS(QUOT)   AS(MINUS)
-                &ptd        &hra    &hrr   &hrs    &hrt    AS(G)           AS(M) &atn      &hre        &hri     &hro       &rptd
-                AS(GRAVE)   AS(Z)   AS(X)  AS(C)   &dcv    &vcd            AS(K) AS(H)     AS(CMMA)    AS(DOT)  AS(SLASH)  AS(SEMI)
-                            &lt FUN ESC &lt NUM BKSP &lt SYM DEL           &lt MEDIA RET &lt NAV SPC AS(TAB)
+                &m1         &wing           AS(W)       AS(F)       AS(P)           AS(B)               AS(J)   AS(L)   AS(U)       AS(Y)       AS(QUOT)        AS(MINUS)
+                &ptd        &hra LSHIFT A   &hrr LGUI R &hrs LALT S &hrt LCTL T     AS(G)               AS(M)   &atn    &hre LALT E &hri LGUI I &hro LSHFT O    &rptd
+                AS(GRAVE)   AS(Z)           AS(X)       AS(C)       &dcv            &vcd                AS(K)   AS(H)   AS(CMMA)    AS(DOT)     AS(SLASH)       AS(SEMI)
+                                                    &lt FUN ESC &lt NUM BKSP &lt SYM DEL                &lt MEDIA RET &lt NAV SPC AS(TAB)
             >;
         };
 
         nav {
             label = "  NAVI  ";
             bindings = <
-                &trans  ASB(PG_UP)   ASB(HOME)  ASB(UP)         ASB(END)     ASB(INSERT)            &reset  &trans            &trans   &trans      &trans      &bootloader
+                &trans  ASB(PG_UP)   ASB(HOME)  ASB(UP)         ASB(END)     ASB(INSERT)            &reset  &trans            &trans   &trans      &bootloader &bootloader
                 &trans  ASB(PG_DN)   ASB(LEFT)  ASB(DOWN)       ASB(RIGHT)   &caps_word             &trans  &sk LCTL          &sk LALT &sk LGUI    &sk LSHIFT  &trans
                 &trans  &kp LC(Z)    &kp LC(X)  &kp LC(LS(TAB)) &kp LC(TAB)  &kp INSERT             &trans  &kp LG(LC(RIGHT)) &trans   &trans      &trans      &trans
                                                                     &trans &trans &trans            &trans &trans &trans
@@ -54,7 +54,7 @@
         number {
             label = "  NUM   ";
             bindings = <
-                &bootloader &trans      &trans      &trans      &trans              &reset                 AS(LBKT)     AS(N7)  AS(N8)  AS(N9)  AS(RBKT)    &trans
+                &bootloader &bootloader &trans      &trans      &trans              &reset                 AS(LBKT)     AS(N7)  AS(N8)  AS(N9)  AS(RBKT)    &trans
                 &trans      &sk LSHIFT  &sk LGUI    &sk LALT    &sk LCTRL           &trans                 AS(EQUAL)    AS(N4)  AS(N5)  AS(N6)  AS(SEMI)    &trans
                 &trans      &trans      &trans      &trans      &kp LG(LC(LEFT))    &trans                 AS(GRAVE)    AS(N1)  AS(N2)  AS(N3)  AS(BSLH)    &trans
                                                                     &trans  &trans  &trans                 AS(MINUS) AS(N0)  AS(DOT)

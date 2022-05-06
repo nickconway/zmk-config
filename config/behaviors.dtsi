@@ -1,3 +1,123 @@
+hra: hra {
+    compatible = "zmk,behavior-hold-tap";
+    label = "HOME_ROW_A";
+    #binding-cells = <2>;
+    flavor = "balanced";
+    tapping-term-ms = <TAPPING_TERM>;
+    quick-tap-ms = <QUICK_TAP_TERM>;
+    global-quick-tap;
+    bindings = <&kp>, <&kp>;
+    retro-tap;
+    retro-tap-behavior = "KEY_PRESS";
+    retro-tap-param1 = <LS(A)>;
+    retro-tap-param2 = <0>;
+};
+
+hrr: hrr {
+    compatible = "zmk,behavior-hold-tap";
+    label = "HOME_ROW_R";
+    #binding-cells = <2>;
+    flavor = "balanced";
+    tapping-term-ms = <TAPPING_TERM>;
+    quick-tap-ms = <QUICK_TAP_TERM>;
+    global-quick-tap;
+    bindings = <&kp>, <&kp>;
+    retro-tap;
+    retro-tap-behavior = "KEY_PRESS";
+    retro-tap-param1 = <LS(R)>;
+    retro-tap-param2 = <0>;
+};
+
+hrs: hrs {
+    compatible = "zmk,behavior-hold-tap";
+    label = "HOME_ROW_S";
+    #binding-cells = <2>;
+    flavor = "balanced";
+    tapping-term-ms = <TAPPING_TERM>;
+    quick-tap-ms = <QUICK_TAP_TERM>;
+    global-quick-tap;
+    bindings = <&kp>, <&kp>;
+    retro-tap;
+    retro-tap-behavior = "KEY_PRESS";
+    retro-tap-param1 = <LS(S)>;
+    retro-tap-param2 = <0>;
+};
+
+hrt: hrt {
+    compatible = "zmk,behavior-hold-tap";
+    label = "HOME_ROW_T";
+    #binding-cells = <2>;
+    flavor = "balanced";
+    tapping-term-ms = <TAPPING_TERM>;
+    quick-tap-ms = <QUICK_TAP_TERM>;
+    global-quick-tap;
+    bindings = <&kp>, <&kp>;
+    retro-tap;
+    retro-tap-behavior = "KEY_PRESS";
+    retro-tap-param1 = <LS(T)>;
+    retro-tap-param2 = <0>;
+};
+
+hrn: hrn {
+    compatible = "zmk,behavior-hold-tap";
+    label = "HOME_ROW_N";
+    #binding-cells = <2>;
+    flavor = "balanced";
+    tapping-term-ms = <TAPPING_TERM>;
+    quick-tap-ms = <QUICK_TAP_TERM>;
+    global-quick-tap;
+    bindings = <&kp>, <&kp>;
+    retro-tap;
+    retro-tap-behavior = "KEY_PRESS";
+    retro-tap-param1 = <LS(N)>;
+    retro-tap-param2 = <0>;
+};
+
+hre: hre {
+    compatible = "zmk,behavior-hold-tap";
+    label = "HOME_ROW_E";
+    #binding-cells = <2>;
+    flavor = "balanced";
+    tapping-term-ms = <TAPPING_TERM>;
+    quick-tap-ms = <QUICK_TAP_TERM>;
+    global-quick-tap;
+    bindings = <&kp>, <&kp>;
+    retro-tap;
+    retro-tap-behavior = "KEY_PRESS";
+    retro-tap-param1 = <LS(E)>;
+    retro-tap-param2 = <0>;
+};
+
+hri: hri {
+    compatible = "zmk,behavior-hold-tap";
+    label = "HOME_ROW_I";
+    #binding-cells = <2>;
+    flavor = "balanced";
+    tapping-term-ms = <TAPPING_TERM>;
+    quick-tap-ms = <QUICK_TAP_TERM>;
+    global-quick-tap;
+    bindings = <&kp>, <&kp>;
+    retro-tap;
+    retro-tap-behavior = "KEY_PRESS";
+    retro-tap-param1 = <LS(I)>;
+    retro-tap-param2 = <0>;
+};
+
+hro: hro {
+    compatible = "zmk,behavior-hold-tap";
+    label = "HOME_ROW_O";
+    #binding-cells = <2>;
+    flavor = "balanced";
+    tapping-term-ms = <TAPPING_TERM>;
+    quick-tap-ms = <QUICK_TAP_TERM>;
+    global-quick-tap;
+    bindings = <&kp>, <&kp>;
+    retro-tap;
+    retro-tap-behavior = "KEY_PRESS";
+    retro-tap-param1 = <LS(O)>;
+    retro-tap-param2 = <0>;
+};
+
 bht: balanced_hold_tap {
     compatible = "zmk,behavior-hold-tap";
     label = "BALANCED_HOLD_TAP";
@@ -51,7 +171,7 @@ atn: atn {
     compatible = "zmk,behavior-mod-morph";
     label = "ALT_TAB_N";
     #binding-cells = <0>;
-    bindings = <AS(N)>, <&as LS(TAB) TAB>;
+    bindings = <&hrn LCTL N>, <&as LS(TAB) TAB>;
     mods = <(MOD_LALT)>;
 };
 
