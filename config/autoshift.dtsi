@@ -60,7 +60,7 @@
         compatible = "zmk,behavior-mod-morph"; \
         label = ZMK_MACRO_STRINGIFY(asmm##letter); \
         #binding-cells = <0>; \
-        bindings = <&ASM##letter>, <&as LS(##letter) ##letter>; \
+        bindings = <&ASM##letter>, <&asr LS(##letter) ##letter>; \
         mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>; \
     }; \
  \
@@ -107,7 +107,7 @@
         compatible = "zmk,behavior-mod-morph"; \
         label = ZMK_MACRO_STRINGIFY(asmm##letter); \
         #binding-cells = <0>; \
-        bindings = <&ASM##letter>, <&as LS(##letter) ##letter>; \
+        bindings = <&ASM##letter>, <&asp LS(##letter) ##letter>; \
         mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>; \
     }; \
  \
@@ -139,9 +139,7 @@
         ; \
     };
 
-#define AS(keycode) &ASM##keycode
-#define ASR(keycode) &ASMR##keycode
-#define ASP(keycode) &ASMP##keycode
+#define AS(keycode) &asmm##keycode
 
 #define ASB(keycode) &as LS(keycode) keycode
 #define ASBR(keycode) &asr LS(keycode) keycode
