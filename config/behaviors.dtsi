@@ -5,7 +5,7 @@ hra: hra {
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_TERM>;
-    global-quick-tap;
+    /* global-quick-tap; */
     bindings = <&kp>, <&kp>;
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
@@ -110,7 +110,7 @@ hro: hro {
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_TERM>;
-    global-quick-tap;
+    /* global-quick-tap; */
     bindings = <&kp>, <&kp>;
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
