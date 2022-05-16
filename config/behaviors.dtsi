@@ -220,3 +220,13 @@ asp: auto_shift_pinky {
     flavor = "tap-preferred";
     bindings = <&kp>, <&kp>;
 };
+
+nk: not_so_sticky_key {
+    compatible = "zmk,behavior-hold-tap";
+    label = "not so sticky key";
+    #binding-cells = <2>;
+    tapping-term-ms = <200>;
+    flavor = "tap-preferred";
+    bindings = <&kp>, <&sk>;
+};
+#define SK(KEY) &nk KEY KEY

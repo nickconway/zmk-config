@@ -25,7 +25,7 @@
             label = "  NAVI  ";
             bindings = <
                 &trans  ASB(PG_UP)   ASB(HOME)  ASB(UP)         ASB(END)     ASB(INSERT)            &reset  &trans            &trans   &trans      &bootloader &bootloader
-                &trans  ASB(PG_DN)   ASB(LEFT)  ASB(DOWN)       ASB(RIGHT)   &caps_word             &trans  &sk LCTL          &sk LALT &sk LGUI    &sk LSHIFT  &trans
+                &trans  ASB(PG_DN)   ASB(LEFT)  ASB(DOWN)       ASB(RIGHT)   &caps_word             &trans  SK(LCTL)          SK(LALT) SK(LGUI)    SK(LSHIFT)  &trans
                 &trans  &kp LC(Z)    &kp LC(X)  &kp LC(C)       &kp LC(V)    &kp INSERT             &trans  &kp LG(LC(RIGHT)) &trans   &trans      &trans      &trans
                                                                     &trans &trans &trans            &trans &trans &trans
             >;
@@ -55,7 +55,7 @@
             label = "  NUM   ";
             bindings = <
                 &bootloader &bootloader &trans      &trans      &trans              &reset                 AS(LBKT)     AS(N7)  AS(N8)  AS(N9)  AS(RBKT)    &trans
-                &trans      &sk LSHIFT  &sk LGUI    &sk LALT    &sk LCTRL           &trans                 AS(EQUAL)    AS(N4)  AS(N5)  AS(N6)  AS(SEMI)    &trans
+                &trans      SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)           &trans                 AS(EQUAL)    AS(N4)  AS(N5)  AS(N6)  AS(SEMI)    &trans
                 &trans      &trans      &trans      &trans      &kp LG(LC(LEFT))    &trans                 AS(GRAVE)    AS(N1)  AS(N2)  AS(N3)  AS(BSLH)    &trans
                                                                    &trans  &trans  &trans                 AS(MINUS) AS(N0)  AS(DOT)
             >;
@@ -65,7 +65,7 @@
             label = "  SYMB  ";
             bindings = <
                 &trans  &trans      &trans      &trans      &trans      &trans                 &trans  &trans       &trans      &trans      &trans  &trans
-                &trans  &sk LSHIFT  &sk LGUI    &sk LALT    &sk LCTRL   &trans                 &trans  &kp LS(N9)   AS(LBKT)    AS(MINUS)   &trans  &trans
+                &trans  SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)   &trans                 &trans  &kp LS(N9)   AS(LBKT)    AS(MINUS)   &trans  &trans
                 &trans  &trans      &trans      &trans      &trans      &trans                 &trans  &kp LS(N0)   AS(RBKT)    AS(MINUS)   &trans  &trans
                                                        &trans  &trans  &trans                &trans  AS(MINUS)  &trans
             >;
@@ -75,7 +75,7 @@
             label = "  FUNC  ";
             bindings = <
                 &trans  &trans      &trans      &trans      &trans      &trans                 &trans  AS(F7)  AS(F8)  AS(F9)  AS(F12)  &trans
-                &trans  &sk LSHIFT  &sk LGUI    &sk LALT    &sk LCTRL   &trans                 &trans  AS(F4)  AS(F5)  AS(F6)  AS(F11)  &trans
+                &trans  SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)   &trans                 &trans  AS(F4)  AS(F5)  AS(F6)  AS(F11)  &trans
                 &trans  &trans      &trans      &trans      &trans      &trans                 &trans  AS(F1)  AS(F2)  AS(F3)  AS(F10)  &trans
                                                        &trans  &trans  &trans                 &trans  &trans  &trans
             >;
