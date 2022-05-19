@@ -51,15 +51,15 @@
             >;
         };
 
-        /* mouse { */
-        /*     label = "  MOUS  "; */
-        /*     bindings = < */
-        /*         &trans  &trans  &trans                  &mmv MOVE_VERT(-3000)   &trans                  &trans                 &trans  &trans           &mwh SCROLL_UP      &trans              &trans  &trans */
-        /*         &trans  &trans  &mmv MOVE_HOR(-3000)    &mmv MOVE_VERT(3000)    &mmv MOVE_HOR(3000)     &trans                 &trans  &mwh SCROLL_LEFT &mwh SCROLL_DOWN    &mwh SCROLL_RIGHT   &trans  &trans */
-        /*         &trans  &trans  &trans                  &trans                  &trans                  &trans                 &trans  &trans           &trans              &trans              &trans  &trans */
-        /*                                                                        &mkp RCLK  &mkp LCLK  &mkp RCLK                 &trans  &trans  &trans */
-        /*     >; */
-        /* }; */
+        mouse {
+            label = "  MOUS  ";
+            bindings = <
+                &trans  &trans  &trans                  &mmv MOVE_VERT(-3000)   &trans                  &trans                 &trans  &trans           &mwh SCROLL_UP      &trans              &trans  &trans
+                &trans  &trans  &mmv MOVE_HOR(-3000)    &mmv MOVE_VERT(3000)    &mmv MOVE_HOR(3000)     &trans                 &trans  &mwh SCROLL_LEFT &mwh SCROLL_DOWN    &mwh SCROLL_RIGHT   &trans  &trans
+                &trans  &trans  &trans                  &trans                  &trans                  &trans                 &trans  &trans           &trans              &trans              &trans  &trans
+                                                                               &mkp RCLK  &mkp LCLK  &mkp RCLK                 &trans  &trans  &trans
+            >;
+        };
 
         media {
             label = "  MDIA  ";

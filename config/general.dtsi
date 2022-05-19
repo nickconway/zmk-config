@@ -8,12 +8,12 @@
 #define GAME    1
 #define GAMET   2
 #define NAV     3
-/* #define MOUSE   2 */
-#define MEDIA   4
-#define NUM     5
-#define SYM     6
-#define FUN     7
-#define NOTHING 8
+#define MOUSE   4
+#define MEDIA   5
+#define NUM     6
+#define SYM     7
+#define FUN     8
+#define NOTHING 9
 
 #define TAPPING_TERM 175
 #define TAPPING_TERM_RING 225
@@ -31,17 +31,17 @@
     release-after-ms = <1000>;
 };
 
-/* &mmv { */
-/*     delay-ms = <0>; */
-/*     acceleration-exponent=<1>; */
-/*     time-to-max-speed-ms = <2000>; */
-/* }; */
-/**/
-/* &mwh { */
-/*     delay-ms = <0>; */
-/*     acceleration-exponent=<1>; */
-/*     time-to-max-speed-ms = <100>; */
-/* }; */
+&mmv {
+    delay-ms = <0>;
+    acceleration-exponent=<1>;
+    time-to-max-speed-ms = <2000>;
+};
+
+&mwh {
+    delay-ms = <0>;
+    acceleration-exponent=<1>;
+    time-to-max-speed-ms = <100>;
+};
 
 &caps_word {
   continue-list = <UNDERSCORE MINUS BACKSPACE>;
