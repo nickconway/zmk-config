@@ -5,13 +5,15 @@
 /* #include <dt-bindings/zmk/mouse.h> */
 
 #define COLE    0
-#define NAV     1
+#define GAME    1
+#define GAMET   2
+#define NAV     3
 /* #define MOUSE   2 */
-#define MEDIA   2
-#define NUM     3
-#define SYM     4
-#define FUN     5
-#define NOTHING 6
+#define MEDIA   4
+#define NUM     5
+#define SYM     6
+#define FUN     7
+#define NOTHING 8
 
 #define TAPPING_TERM 175
 #define TAPPING_TERM_RING 225

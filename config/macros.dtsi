@@ -4,3 +4,10 @@ m1: m1 {
     #binding-cells = <0>;
     bindings = <&macro_tap &kp LA(SPC)>;
 };
+
+m2: m2 {
+    compatible = "zmk,behavior-macro";
+    label = "MACRO_2";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp RET &tog GAMET>;
+};

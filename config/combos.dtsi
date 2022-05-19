@@ -53,4 +53,11 @@ combos {
         layers = <COLE NOTHING>;
     };
 
+    combo_game {
+        timeout-ms = <50>;
+        key-positions = <36 41>;
+        bindings = <&tog GAME>;
+        layers = <COLE GAME>;
+    };
+
 };

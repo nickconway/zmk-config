@@ -21,6 +21,26 @@
             >;
         };
 
+        game {
+            label = " GAME  ";
+            bindings = <
+                &bht TAB ESC    &kp Q  &kp W  &kp F  &kp P  &kp B          &trans  &trans  &trans  &trans  &trans  &trans
+                &kp MINUS       &kp A  &kp R  &kp S  &kp T  &kp G          &trans  &trans  &trans  &trans  &trans  &trans
+                &kp GRAVE       &kp Z  &kp X  &kp C  &kp D  &kp V          &trans  &trans  &trans  &trans  &trans  &trans
+                                       &kp LCTRL &kp SPC &kp LALT          &m2  &trans  &trans
+            >;
+        };
+
+        gametype {
+            label = " GAMET ";
+            bindings = <
+                &m1         &wing           AS(W)       AS(F)       AS(P)           AS(B)               &trans  &trans  &trans  &trans  &trans  &trans
+                &trans      &hra LSHIFT A   &hrr LGUI R &hrs LALT S &hrt LCTL T     AS(G)               &trans  &trans  &trans  &trans  &trans  &trans
+                AS(GRAVE)   AS(Z)           AS(X)       AS(C)       AS(D)           AS(V)               &trans  &trans  &trans  &trans  &trans  &trans
+                                                    &lt FUN ESC &lt NUM BKSP &lt SYM DEL                &trans &trans &trans
+            >;
+        };
+
         nav {
             label = "  NAVI  ";
             bindings = <
