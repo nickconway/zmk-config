@@ -5,7 +5,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: retro-tap-binding
+      revision: mouse-ftc
       import: app/west.yml
   self:
     path: config
