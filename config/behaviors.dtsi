@@ -3,7 +3,7 @@ hra: hra {
     label = "HOME_ROW_A";
     #binding-cells = <2>;
     flavor = "balanced";
-    tapping-term-ms = <TAPPING_TERM>;
+    tapping-term-ms = <TAPPING_TERM_PINKY>;
     quick-tap-ms = <QUICK_TAP_TERM>;
     /* global-quick-tap; */
     bindings = <&kp>, <&kp>;
@@ -18,7 +18,7 @@ hrr: hrr {
     label = "HOME_ROW_R";
     #binding-cells = <2>;
     flavor = "balanced";
-    tapping-term-ms = <TAPPING_TERM>;
+    tapping-term-ms = <TAPPING_TERM_RING>;
     quick-tap-ms = <QUICK_TAP_TERM>;
     global-quick-tap;
     bindings = <&kp>, <&kp>;
@@ -93,7 +93,7 @@ hri: hri {
     label = "HOME_ROW_I";
     #binding-cells = <2>;
     flavor = "balanced";
-    tapping-term-ms = <TAPPING_TERM>;
+    tapping-term-ms = <TAPPING_TERM_RING>;
     quick-tap-ms = <QUICK_TAP_TERM>;
     global-quick-tap;
     bindings = <&kp>, <&kp>;
@@ -108,7 +108,7 @@ hro: hro {
     label = "HOME_ROW_O";
     #binding-cells = <2>;
     flavor = "balanced";
-    tapping-term-ms = <TAPPING_TERM>;
+    tapping-term-ms = <TAPPING_TERM_PINKY>;
     quick-tap-ms = <QUICK_TAP_TERM>;
     /* global-quick-tap; */
     bindings = <&kp>, <&kp>;
