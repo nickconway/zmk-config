@@ -43,6 +43,14 @@
             <&macro_pause_for_release>, \
             <&macro_release &kp LS(letter)> \
         ; \
+    }; \
+ \
+    astd##letter: astd##letter { \
+        compatible = "zmk,behavior-tap-dance"; \
+        label = ZMK_MACRO_STRINGIFY(astd##letter); \
+        #binding-cells = <0>; \
+        tapping-term-ms = <TAPPING_TERM>; \
+        bindings = <&asmm##letter>, <&kp letter>; \
     };
 
 #define ASMR(letter) \
@@ -90,6 +98,14 @@
             <&macro_pause_for_release>, \
             <&macro_release &kp LS(letter)> \
         ; \
+    }; \
+ \
+    astd##letter: astd##letter { \
+        compatible = "zmk,behavior-tap-dance"; \
+        label = ZMK_MACRO_STRINGIFY(astd##letter); \
+        #binding-cells = <0>; \
+        tapping-term-ms = <TAPPING_TERM>; \
+        bindings = <&asmm##letter>, <&kp letter>; \
     };
 
 #define ASMP(letter) \
@@ -137,6 +153,14 @@
             <&macro_pause_for_release>, \
             <&macro_release &kp LS(letter)> \
         ; \
+    }; \
+ \
+    astd##letter: astd##letter { \
+        compatible = "zmk,behavior-tap-dance"; \
+        label = ZMK_MACRO_STRINGIFY(astd##letter); \
+        #binding-cells = <0>; \
+        tapping-term-ms = <TAPPING_TERM>; \
+        bindings = <&asmm##letter>, <&kp letter>; \
     };
 
 #define AS(keycode) &asmm##keycode
