@@ -16,7 +16,7 @@ mparen: mparen {
     compatible = "zmk,behavior-macro";
     label = "MACRO_PARENTHESIS";
     #binding-cells = <0>;
-    wait-time-ms = <10>;
+    wait-ms = <10>;
     bindings = <&macro_tap &kp LPAR &kp RPAR &kp LEFT>;
 };
 
@@ -24,7 +24,7 @@ mbracket: mbracket {
     compatible = "zmk,behavior-macro";
     label = "MACRO_BRACKET";
     #binding-cells = <0>;
-    wait-time-ms = <10>;
+    wait-ms = <10>;
     bindings = <&macro_tap &kp LBKT &kp RBKT &kp LEFT>;
 };
 
@@ -32,6 +32,6 @@ mbrace: mbrace {
     compatible = "zmk,behavior-macro";
     label = "MACRO_BRACE";
     #binding-cells = <0>;
-    wait-time-ms = <10>;
+    wait-ms = <10>;
     bindings = <&macro_tap &kp LBRC &kp RBRC &kp LEFT>;
 };
