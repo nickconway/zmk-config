@@ -44,7 +44,7 @@
         nav {
             label = "  NAVI  ";
             bindings = <
-                &trans  ASB(PG_UP)   ASB(HOME)  ASB(UP)         ASB(END)     ASB(INSERT)            &reset  &trans            &trans   &trans      &bootloader &bootloader
+                &trans  ASB(PG_UP)   ASB(HOME)  ASB(UP)         ASB(END)     ASB(INSERT)            &reset  &td0              &td1     &trans      &bootloader &bootloader
                 &trans  ASB(PG_DN)   ASB(LEFT)  ASB(DOWN)       ASB(RIGHT)   &caps_word             &trans  SK(LCTL)          SK(LALT) SK(LGUI)    SK(LSHIFT)  &trans
                 &trans  &kp LC(Z)    &kp LC(X)  &kp LC(C)       &kp LC(V)    &kp INSERT             &trans  &kp LG(LC(RIGHT)) &trans   &trans      &trans      &trans
                                                                     &trans &trans &trans            &trans &trans &trans
@@ -74,7 +74,7 @@
         number {
             label = "  NUM   ";
             bindings = <
-                &trans  &bootloader &trans      &trans      &trans              &reset                 AS(LBKT)     AS(N7)  AS(N8)  AS(N9)  AS(RBKT)    &trans
+                &trans  &bootloader &trans      &td2        &td3                &reset                 AS(LBKT)     AS(N7)  AS(N8)  AS(N9)  AS(RBKT)    &trans
                 &trans  SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)           &trans                 AS(EQUAL)    AS(N4)  AS(N5)  AS(N6)  AS(SEMI)    &trans
                 &trans  &trans      &trans      &trans      &kp LG(LC(LEFT))    &trans                 AS(GRAVE)    AS(N1)  AS(N2)  AS(N3)  AS(BSLH)    &trans
                                                                &trans  &trans  &trans                 AS(MINUS) AS(N0)  AS(DOT)
