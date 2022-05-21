@@ -65,6 +65,7 @@
         #binding-cells = <0>; \
         tapping-term-ms = <tapping_time>; \
         bindings = <&asmm##letter>, <&asdt##letter>; \
+        on-each-press; \
     };
 
 #define AS(keycode) &astd##keycode
