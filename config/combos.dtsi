@@ -49,7 +49,7 @@ combos {
     combo_dash {
         timeout-ms = <50>;
         key-positions = <7 19>;
-        bindings = <&mbrace>;
+        bindings = <&as LS(MINUS) MINUS>;
         layers = <COLE>;
     };
 
