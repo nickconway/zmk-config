@@ -7,42 +7,42 @@ combos {
     combo_hmrl_par {
         timeout-ms = <50>;
         key-positions = <14 26>;
-        bindings = <&kp LPAR>;
+        bindings = <&mparen>;
         layers = <COLE>;
     };
 
     combo_hmrl_bkt {
         timeout-ms = <50>;
         key-positions = <15 27>;
-        bindings = <&kp LBKT>;
+        bindings = <&mbracket>;
         layers = <COLE>;
     };
 
     combo_hmrl_brc {
         timeout-ms = <50>;
         key-positions = <16 28>;
-        bindings = <&kp LBRC>;
+        bindings = <&mbrace>;
         layers = <COLE>;
     };
 
     combo_hmrr_par {
         timeout-ms = <50>;
         key-positions = <21 33>;
-        bindings = <&kp RPAR>;
+        bindings = <&mparen>;
         layers = <COLE>;
     };
 
     combo_hmrr_bkt {
         timeout-ms = <50>;
         key-positions = <20 32>;
-        bindings = <&kp RBKT>;
+        bindings = <&mbracket>;
         layers = <COLE>;
     };
 
     combo_hmrr_brc {
         timeout-ms = <50>;
         key-positions = <19 31>;
-        bindings = <&kp RBRC>;
+        bindings = <&mbrace>;
         layers = <COLE>;
     };
 
