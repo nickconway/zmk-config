@@ -5,7 +5,6 @@ hra: hra {
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM_PINKY>;
     quick-tap-ms = <QUICK_TAP_TERM>;
-    /* global-quick-tap; */
     bindings = <&kp>, <&kp>;
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
@@ -20,7 +19,6 @@ hrr: hrr {
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM_RING>;
     quick-tap-ms = <QUICK_TAP_TERM>;
-    global-quick-tap;
     bindings = <&kp>, <&kp>;
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
@@ -35,7 +33,6 @@ hrs: hrs {
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_TERM>;
-    global-quick-tap;
     bindings = <&kp>, <&kp>;
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
@@ -50,7 +47,6 @@ hrt: hrt {
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_TERM>;
-    global-quick-tap;
     bindings = <&kp>, <&kp>;
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
@@ -65,7 +61,6 @@ hrn: hrn {
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_TERM>;
-    global-quick-tap;
     bindings = <&kp>, <&kp>;
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
@@ -80,7 +75,6 @@ hre: hre {
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_TERM>;
-    global-quick-tap;
     bindings = <&kp>, <&kp>;
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
@@ -95,7 +89,6 @@ hri: hri {
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM_RING>;
     quick-tap-ms = <QUICK_TAP_TERM>;
-    global-quick-tap;
     bindings = <&kp>, <&kp>;
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
@@ -110,7 +103,6 @@ hro: hro {
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM_PINKY>;
     quick-tap-ms = <QUICK_TAP_TERM>;
-    /* global-quick-tap; */
     bindings = <&kp>, <&kp>;
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
@@ -231,36 +223,3 @@ nk: not_so_sticky_key {
 };
 
 #define SK(KEY) &nk KEY KEY
-
-td0: tap_dance_0 {
-    compatible = "zmk,behavior-tap-dance";
-    label = "TAP_DANCE_0";
-    #binding-cells = <0>;
-    tapping-term-ms = <TAPPING_TERM>;
-    bindings = <&hht A B>, <&kp N2>, <&kp N3>;
-};
-
-td1: tap_dance_1 {
-    compatible = "zmk,behavior-tap-dance";
-    label = "TAP_DANCE_1";
-    #binding-cells = <0>;
-    tapping-term-ms = <TAPPING_TERM>;
-    bindings = <&kp N1>, <&kp N2>, <&kp N3>;
-};
-
-td2: tap_dance_2 {
-    compatible = "zmk,behavior-tap-dance";
-    label = "TAP_DANCE_2";
-    #binding-cells = <0>;
-    tapping-term-ms = <TAPPING_TERM>;
-    bindings = <&kp A>, <&kp B>, <&kp C>;
-    on-each-press;
-};
-
-td3: tap_dance_3 {
-    compatible = "zmk,behavior-tap-dance";
-    label = "TAP_DANCE_3";
-    #binding-cells = <0>;
-    tapping-term-ms = <TAPPING_TERM>;
-    bindings = <&kp N1>, <&kp N2>, <&kp N3>;
-};
