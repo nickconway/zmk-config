@@ -229,6 +229,7 @@ nk: not_so_sticky_key {
     flavor = "tap-preferred";
     bindings = <&kp>, <&sk>;
 };
+
 #define SK(KEY) &nk KEY KEY
 
 td0: tap_dance_0 {
