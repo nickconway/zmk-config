@@ -235,6 +235,15 @@ td0: tap_dance_0 {
     compatible = "zmk,behavior-tap-dance";
     label = "TAP_DANCE_0";
     #binding-cells = <0>;
-    tapping-term-ms = <200>;
+    tapping-term-ms = <TAPPING_TERM>;
+    bindings = <&hht A B>, <&kp N2>, <&kp N3>;
+    on-each-press;
+};
+
+td1: tap_dance_1 {
+    compatible = "zmk,behavior-tap-dance";
+    label = "TAP_DANCE_1";
+    #binding-cells = <0>;
+    tapping-term-ms = <TAPPING_TERM>;
     bindings = <&kp N1>, <&kp N2>, <&kp N3>;
 };

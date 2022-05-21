@@ -44,7 +44,7 @@
         nav {
             label = "  NAVI  ";
             bindings = <
-                &trans  ASB(PG_UP)   ASB(HOME)  ASB(UP)         ASB(END)     ASB(INSERT)            &reset  &td0              &trans   &trans      &bootloader &bootloader
+                &trans  ASB(PG_UP)   ASB(HOME)  ASB(UP)         ASB(END)     ASB(INSERT)            &reset  &td0              &td1     &trans      &bootloader &bootloader
                 &trans  ASB(PG_DN)   ASB(LEFT)  ASB(DOWN)       ASB(RIGHT)   &caps_word             &trans  SK(LCTL)          SK(LALT) SK(LGUI)    SK(LSHIFT)  &trans
                 &trans  &kp LC(Z)    &kp LC(X)  &kp LC(C)       &kp LC(V)    &kp INSERT             &trans  &kp LG(LC(RIGHT)) &trans   &trans      &trans      &trans
                                                                     &trans &trans &trans            &trans &trans &trans
