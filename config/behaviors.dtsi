@@ -9,7 +9,6 @@ hra: hra {
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
     retro-tap-param1 = <LS(A)>;
-    retro-tap-param2 = <0>;
 };
 
 hrr: hrr {
@@ -23,7 +22,6 @@ hrr: hrr {
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
     retro-tap-param1 = <LS(R)>;
-    retro-tap-param2 = <0>;
 };
 
 hrs: hrs {
@@ -37,7 +35,6 @@ hrs: hrs {
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
     retro-tap-param1 = <LS(S)>;
-    retro-tap-param2 = <0>;
 };
 
 hrt: hrt {
@@ -51,7 +48,6 @@ hrt: hrt {
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
     retro-tap-param1 = <LS(T)>;
-    retro-tap-param2 = <0>;
 };
 
 hrn: hrn {
@@ -65,7 +61,6 @@ hrn: hrn {
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
     retro-tap-param1 = <LS(N)>;
-    retro-tap-param2 = <0>;
 };
 
 hre: hre {
@@ -79,7 +74,6 @@ hre: hre {
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
     retro-tap-param1 = <LS(E)>;
-    retro-tap-param2 = <0>;
 };
 
 hri: hri {
@@ -93,7 +87,6 @@ hri: hri {
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
     retro-tap-param1 = <LS(I)>;
-    retro-tap-param2 = <0>;
 };
 
 hro: hro {
@@ -107,7 +100,6 @@ hro: hro {
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
     retro-tap-param1 = <LS(O)>;
-    retro-tap-param2 = <0>;
 };
 
 bht: balanced_hold_tap {
