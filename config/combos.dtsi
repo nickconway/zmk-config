@@ -53,6 +53,13 @@ combos {
         layers = <COLE>;
     };
 
+    combo_semi {
+        timeout-ms = <50>;
+        key-positions = <22 34>;
+        bindings = <&as LS(MINUS) MINUS>;
+        layers = <COLE>;
+    };
+
     combo_none {
         timeout-ms = <50>;
         key-positions = <13 14 15 16 19 20 21 22>;
