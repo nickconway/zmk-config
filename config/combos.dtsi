@@ -56,7 +56,7 @@ combos {
     combo_semi {
         timeout-ms = <50>;
         key-positions = <22 34>;
-        bindings = <&as LS(MINUS) MINUS>;
+        bindings = <&as LS(SEMI) SEMI>;
         layers = <COLE>;
     };
 
