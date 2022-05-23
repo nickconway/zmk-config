@@ -289,7 +289,7 @@ atn: atn {
     compatible = "zmk,behavior-mod-morph";
     label = "ALT_TAB_N";
     #binding-cells = <0>;
-    bindings = <AS(A)>, <&as LS(TAB) TAB>;
+    bindings = <AS(N)>, <&as LS(TAB) TAB>;
     mods = <(MOD_LALT)>;
 };
 
