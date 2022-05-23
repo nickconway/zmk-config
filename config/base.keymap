@@ -17,7 +17,7 @@
                 &trans   &wing  AS(W)   AS(F)   AS(P)   AS(B)               AS(J)   AS(L)   AS(U)       AS(Y)   AS(QUOT)    &trans
                 &trans   &hrtdA &hrtdR  &hrtdS  &hrtdT  AS(G)               AS(M)   &atn    &hrtdE      &hrtdI  &hrtdO      &trans
                 &trans   AS(Z)  AS(X)   AS(C)   AS(D)   AS(V)               AS(K)   AS(H)   AS(CMMA)    AS(DOT) AS(SLASH)   &trans
-                         &lt FUN ESC &lt NUM BKSP &lt SYM DEL               &lt MEDIA RET &lt NAV SPC &lt MOUSE TAB
+                                     &ltdESC &ltdBKSP &ltdDEL               &ltdRET &ltdSPC &ltdTAB
             >;
         };
 
@@ -27,7 +27,7 @@
                 &trans  &kp Q  &kp W  &kp F  &kp P  &kp B          &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &kp A  &kp R  &kp S  &kp T  &kp G          &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &kp Z  &kp X  &kp C  &kp D  &kp V          &trans  &trans  &trans  &trans  &trans  &trans
-                              &kp LCTRL &kp SPC &kp LALT          &m2  &trans  &trans
+                               &kp LCTRL &kp SPC &kp LALT          &m2  &trans  &trans
             >;
         };
 
