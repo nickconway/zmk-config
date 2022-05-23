@@ -102,6 +102,78 @@ hro: hro {
     retro-tap-param1 = <LS(O)>;
 };
 
+hrtdA: hrtdA {
+    compatible = "zmk,behavior-tap-dance";
+    label = "hrtdA";
+    #binding-cells = <0>;
+    tapping-term-ms = <TAPPING_TERM_PINKY>;
+    bindings = <&hra LSHIFT A>, <&kp A>;
+    on-each-press;
+};
+
+hrtdR: hrtdR {
+    compatible = "zmk,behavior-tap-dance";
+    label = "hrtdR";
+    #binding-cells = <0>;
+    tapping-term-ms = <TAPPING_TERM_RING>;
+    bindings = <&hrr LGUI R>, <&kp R>;
+    on-each-press;
+};
+
+hrtdS: hrtdS {
+    compatible = "zmk,behavior-tap-dance";
+    label = "hrtdS";
+    #binding-cells = <0>;
+    tapping-term-ms = <TAPPING_TERM>;
+    bindings = <&hrs LALT S>, <&kp S>;
+    on-each-press;
+};
+
+hrtdT: hrtdT {
+    compatible = "zmk,behavior-tap-dance";
+    label = "hrtdT";
+    #binding-cells = <0>;
+    tapping-term-ms = <TAPPING_TERM>;
+    bindings = <&hrt LCTL T>, <&kp T>;
+    on-each-press;
+};
+
+hrtdO: hrtdO {
+    compatible = "zmk,behavior-tap-dance";
+    label = "hrtdO";
+    #binding-cells = <0>;
+    tapping-term-ms = <TAPPING_TERM_PINKY>;
+    bindings = <&hra LSHIFT O>, <&kp O>;
+    on-each-press;
+};
+
+hrtdI: hrtdI {
+    compatible = "zmk,behavior-tap-dance";
+    label = "hrtdI";
+    #binding-cells = <0>;
+    tapping-term-ms = <TAPPING_TERM_RING>;
+    bindings = <&hrr LGUI I>, <&kp I>;
+    on-each-press;
+};
+
+hrtdE: hrtdE {
+    compatible = "zmk,behavior-tap-dance";
+    label = "hrtdE";
+    #binding-cells = <0>;
+    tapping-term-ms = <TAPPING_TERM>;
+    bindings = <&hrs LALT E>, <&kp E>;
+    on-each-press;
+};
+
+hrtdN: hrtdN {
+    compatible = "zmk,behavior-tap-dance";
+    label = "hrtdN";
+    #binding-cells = <0>;
+    tapping-term-ms = <TAPPING_TERM>;
+    bindings = <&hrt LCTL N>, <&kp N>;
+    on-each-press;
+};
+
 bht: balanced_hold_tap {
     compatible = "zmk,behavior-hold-tap";
     label = "BALANCED_HOLD_TAP";
@@ -155,7 +227,7 @@ atn: atn {
     compatible = "zmk,behavior-mod-morph";
     label = "ALT_TAB_N";
     #binding-cells = <0>;
-    bindings = <&hrn LCTL N>, <&as LS(TAB) TAB>;
+    bindings = <&hrtdT>, <&as LS(TAB) TAB>;
     mods = <(MOD_LALT)>;
 };
 
