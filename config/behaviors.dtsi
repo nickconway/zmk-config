@@ -174,60 +174,6 @@ hrtdN: hrtdN {
     on-each-press;
 };
 
-ltdSPC: ltdSPC {
-    compatible = "zmk,behavior-tap-dance";
-    label = "ltdSPC";
-    #binding-cells = <0>;
-    tapping-term-ms = <TAPPING_TERM>;
-    bindings = <&lt NAV SPC>, <&kp SPC>;
-    on-each-press;
-};
-
-ltdRET: ltdRET {
-    compatible = "zmk,behavior-tap-dance";
-    label = "ltdRET";
-    #binding-cells = <0>;
-    tapping-term-ms = <TAPPING_TERM>;
-    bindings = <&lt MEDIA RET>, <&kp RET>;
-    on-each-press;
-};
-
-ltdTAB: ltdTAB {
-    compatible = "zmk,behavior-tap-dance";
-    label = "ltdTAB";
-    #binding-cells = <0>;
-    tapping-term-ms = <TAPPING_TERM>;
-    bindings = <&lt MOUSE TAB>, <&kp TAB>;
-    on-each-press;
-};
-
-ltdDEL: ltdDEL {
-    compatible = "zmk,behavior-tap-dance";
-    label = "ltdDEL";
-    #binding-cells = <0>;
-    tapping-term-ms = <TAPPING_TERM>;
-    bindings = <&lt SYM DEL>, <&kp DEL>;
-    on-each-press;
-};
-
-ltdBKSP: ltdBKSP {
-    compatible = "zmk,behavior-tap-dance";
-    label = "ltdBKSP";
-    #binding-cells = <0>;
-    tapping-term-ms = <TAPPING_TERM>;
-    bindings = <&lt NUM BKSP>, <&kp BKSP>;
-    on-each-press;
-};
-
-ltdESC: ltdESC {
-    compatible = "zmk,behavior-tap-dance";
-    label = "ltdESC";
-    #binding-cells = <0>;
-    tapping-term-ms = <TAPPING_TERM>;
-    bindings = <&lt FUN ESC>, <&kp ESC>;
-    on-each-press;
-};
-
 bht: balanced_hold_tap {
     compatible = "zmk,behavior-hold-tap";
     label = "BALANCED_HOLD_TAP";
@@ -281,7 +227,7 @@ atn: atn {
     compatible = "zmk,behavior-mod-morph";
     label = "ALT_TAB_N";
     #binding-cells = <0>;
-    bindings = <AS(N)>, <&as LS(TAB) TAB>;
+    bindings = <&hrtdN>, <&as LS(TAB) TAB>;
     mods = <(MOD_LALT)>;
 };
 
