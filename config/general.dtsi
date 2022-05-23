@@ -28,7 +28,7 @@
 
 &sk {
     ignore-modifiers;
-    release-after-ms = <3000>;
+    release-after-ms = <5000>;
 };
 
 &mmv {
