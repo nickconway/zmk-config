@@ -2,10 +2,10 @@
 
 / {
 
+    #include "autoshift.dtsi"
     #include "behaviors.dtsi"
     #include "macros.dtsi"
     #include "combos.dtsi"
-    #include "autoshift.dtsi"
 
     keymap {
 
@@ -15,9 +15,9 @@
             label = "  COLE  ";
             bindings = <
                 &trans   &wing  AS(W)   AS(F)   AS(P)   AS(B)               AS(J)   AS(L)   AS(U)       AS(Y)   AS(QUOT)    &trans
-                &trans   &hrtdA &hrtdR  &hrtdS  &hrtdT  AS(G)               AS(M)   &atn    &hrtdE      &hrtdI  &hrtdO      &trans
+                &trans   AS(A)  AS(R)   AS(S)   AS(T)   AS(G)               AS(M)   &atn    AS(E)       AS(I)   AS(O)       &trans
                 &trans   AS(Z)  AS(X)   AS(C)   AS(D)   AS(V)               AS(K)   AS(H)   AS(CMMA)    AS(DOT) AS(SLASH)   &trans
-                                     &ltdESC &ltdBKSP &ltdDEL               &ltdRET &ltdSPC &ltdTAB
+                         &lt FUN ESC &lt NUM BKSP &lt SYM DEL               &lt MEDIA RET &lt NAV SPC &lt MOUSE TAB
             >;
         };
 
