@@ -108,6 +108,7 @@ hrtdA: hrtdA {
     #binding-cells = <0>;
     tapping-term-ms = <TAPPING_TERM_PINKY>;
     bindings = <&hra LSHIFT A>, <&kp A>;
+    on-each-press;
 };
 
 hrtdR: hrtdR {
@@ -116,6 +117,7 @@ hrtdR: hrtdR {
     #binding-cells = <0>;
     tapping-term-ms = <TAPPING_TERM_RING>;
     bindings = <&hrr LGUI R>, <&kp R>;
+    on-each-press;
 };
 
 hrtdS: hrtdS {
@@ -124,6 +126,7 @@ hrtdS: hrtdS {
     #binding-cells = <0>;
     tapping-term-ms = <TAPPING_TERM>;
     bindings = <&hrs LALT S>, <&kp S>;
+    on-each-press;
 };
 
 hrtdT: hrtdT {
@@ -132,6 +135,7 @@ hrtdT: hrtdT {
     #binding-cells = <0>;
     tapping-term-ms = <TAPPING_TERM>;
     bindings = <&hrt LCTL T>, <&kp T>;
+    on-each-press;
 };
 
 hrtdO: hrtdO {
@@ -140,6 +144,7 @@ hrtdO: hrtdO {
     #binding-cells = <0>;
     tapping-term-ms = <TAPPING_TERM_PINKY>;
     bindings = <&hro LSHIFT O>, <&kp O>;
+    on-each-press;
 };
 
 hrtdI: hrtdI {
@@ -147,7 +152,8 @@ hrtdI: hrtdI {
     label = "hrtdI";
     #binding-cells = <0>;
     tapping-term-ms = <TAPPING_TERM_RING>;
-    bindings = <&hri LGUI I>, <&kp I>;
+    bindings = <&hrr LGUI I>, <&kp I>;
+    on-each-press;
 };
 
 hrtdE: hrtdE {
@@ -155,7 +161,8 @@ hrtdE: hrtdE {
     label = "hrtdE";
     #binding-cells = <0>;
     tapping-term-ms = <TAPPING_TERM>;
-    bindings = <&hre LALT E>, <&kp E>;
+    bindings = <&hrs LALT E>, <&kp E>;
+    on-each-press;
 };
 
 hrtdN: hrtdN {
@@ -164,6 +171,7 @@ hrtdN: hrtdN {
     #binding-cells = <0>;
     tapping-term-ms = <TAPPING_TERM>;
     bindings = <&hrn LCTL N>, <&kp N>;
+    on-each-press;
 };
 
 ltdSPC: ltdSPC {
