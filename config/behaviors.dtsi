@@ -170,7 +170,7 @@ hrtdN: hrtdN {
     label = "hrtdN";
     #binding-cells = <0>;
     tapping-term-ms = <TAPPING_TERM>;
-    bindings = <&hrt LCTL N>, <&kp N>;
+    bindings = <&hrn LCTL N>, <&kp N>;
     on-each-press;
 };
 
@@ -227,7 +227,7 @@ atn: atn {
     compatible = "zmk,behavior-mod-morph";
     label = "ALT_TAB_N";
     #binding-cells = <0>;
-    bindings = <&hrtdT>, <&as LS(TAB) TAB>;
+    bindings = <&hrtdN>, <&as LS(TAB) TAB>;
     mods = <(MOD_LALT)>;
 };
 
