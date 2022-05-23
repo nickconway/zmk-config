@@ -5,7 +5,6 @@ hra: hra {
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM_PINKY>;
     quick-tap-ms = <QUICK_TAP_TERM>;
-    global-quick-tap;
     bindings = <&kp>, <&kp>;
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
@@ -19,7 +18,6 @@ hrr: hrr {
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM_RING>;
     quick-tap-ms = <QUICK_TAP_TERM>;
-    global-quick-tap;
     bindings = <&kp>, <&kp>;
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
@@ -33,7 +31,6 @@ hrs: hrs {
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_TERM>;
-    global-quick-tap;
     bindings = <&kp>, <&kp>;
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
@@ -47,7 +44,6 @@ hrt: hrt {
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_TERM>;
-    global-quick-tap;
     bindings = <&kp>, <&kp>;
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
@@ -61,7 +57,6 @@ hrn: hrn {
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_TERM>;
-    global-quick-tap;
     bindings = <&kp>, <&kp>;
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
@@ -75,7 +70,6 @@ hre: hre {
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_TERM>;
-    global-quick-tap;
     bindings = <&kp>, <&kp>;
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
@@ -89,7 +83,6 @@ hri: hri {
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM_RING>;
     quick-tap-ms = <QUICK_TAP_TERM>;
-    global-quick-tap;
     bindings = <&kp>, <&kp>;
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
@@ -103,7 +96,6 @@ hro: hro {
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM_PINKY>;
     quick-tap-ms = <QUICK_TAP_TERM>;
-    global-quick-tap;
     bindings = <&kp>, <&kp>;
     retro-tap;
     retro-tap-behavior = "KEY_PRESS";
