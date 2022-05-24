@@ -17,7 +17,7 @@
                 &trans   &wing  AS(W)   AS(F)   AS(P)   AS(B)               AS(J)   AS(L)   AS(U)       AS(Y)   AS(QUOT)    &trans
                 &trans   &hrtdA &hrtdR  &hrtdS  &hrtdT  AS(G)               AS(M)   &atn    &hrtdE      &hrtdI  &hrtdO      &trans
                 &trans   AS(Z)  AS(X)   AS(C)   AS(D)   AS(V)               AS(K)   AS(H)   AS(CMMA)    AS(DOT) AS(SLASH)   &trans
-                                     &ltdESC &ltdBKSP &ltdDEL               &ltdRET &ltdSPC &ltdTAB
+                         &lt FUN ESC &lt NUM BKSP &lt SYM DEL               &lt MEDIA RET &lt NAV SPC &lt MOUSE TAB
             >;
         };
 
@@ -34,10 +34,10 @@
         gametype {
             label = " GAMET ";
             bindings = <
-                &trans  &wing           AS(W)       AS(F)       AS(P)           AS(B)               &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &hra LSHIFT A   &hrr LGUI R &hrs LALT S &hrt LCTL T     AS(G)               &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  AS(Z)           AS(X)       AS(C)       AS(D)           AS(V)               &trans  &trans  &trans  &trans  &trans  &trans
-                                                &lt FUN ESC &lt NUM BKSP &lt SYM DEL               &trans &trans &trans
+                &trans   &wing  AS(W)   AS(F)   AS(P)   AS(B)               &trans &trans &trans &trans &trans &trans
+                &trans   &hrtdA &hrtdR  &hrtdS  &hrtdT  AS(G)               &trans &trans &trans &trans &trans &trans
+                &trans   AS(Z)  AS(X)   AS(C)   AS(D)   AS(V)               &trans &trans &trans &trans &trans &trans
+                         &lt FUN ESC &lt NUM BKSP &lt SYM DEL               &trans &trans &trans
             >;
         };
 
@@ -47,7 +47,7 @@
                 &trans  ASB(PG_UP)   ASB(HOME)  ASB(UP)         ASB(END)     ASB(INSERT)            &reset  &trans            &trans   &trans      &bootloader &trans
                 &trans  ASB(PG_DN)   ASB(LEFT)  ASB(DOWN)       ASB(RIGHT)   &caps_word             &trans  SK(LCTL)          SK(LALT) SK(LGUI)    SK(LSHIFT)  &trans
                 &trans  &kp LC(Z)    &kp LC(X)  &kp LC(C)       &kp LC(V)    &kp INSERT             &trans  &kp LG(LC(RIGHT)) &trans   &trans      &trans      &trans
-                                                                    &trans &trans &trans            &trans &trans &trans
+                                                                   &trans &trans &trans             &trans &trans &trans
             >;
         };
 
