@@ -14,9 +14,9 @@
         default_layer {
             label = "  COLE  ";
             bindings = <
-                &trans   &wing  AS(W)   AS(F)   AS(P)   AS(B)               AS(J)   AS(L)   AS(U)       AS(Y)   AS(QUOT)    &trans
-                &trans   &hrtdA &hrtdR  &hrtdS  &hrtdT  AS(G)               AS(M)   &atn    &hrtdE      &hrtdI  &hrtdO      &trans
-                &trans   AS(Z)  AS(X)   AS(C)   AS(D)   AS(V)               AS(K)   AS(H)   AS(CMMA)    AS(DOT) AS(SLASH)   &trans
+                &trans   &wing          AS(W)       AS(F)       AS(P)       AS(B)               AS(J)   AS(L)   AS(U)       AS(Y)       AS(QUOT)        &trans
+                &trans   &hrA LSHIFT A  &hrR LGUI R &hrS LALT S &hrT LCTL T AS(G)               AS(M)   &atn    &hrE LALT E &hrI LGUI I &hrO LSHIFT O   &trans
+                &trans   AS(Z)          AS(X)       AS(C)       AS(D)       AS(V)               AS(K)   AS(H)   AS(CMMA)    AS(DOT)     AS(SLASH)       &trans
                          &lt FUN ESC &lt NUM BKSP &lt SYM DEL               &lt MEDIA RET &lt NAV SPC &lt MOUSE TAB
             >;
         };
