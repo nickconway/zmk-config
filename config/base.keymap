@@ -14,10 +14,10 @@
         default_layer {
             label = "  COLE  ";
             bindings = <
-                &trans   &wing          AS(W)       AS(F)       AS(P)       AS(B)               AS(J)   AS(L)   AS(U)       AS(Y)       AS(QUOT)        &trans
-                &trans   &hrA LSHIFT A  &hrR LGUI R &hrS LALT S &hrT LCTL T AS(G)               AS(M)   &atn    &hrE LALT E &hrI LGUI I &hrO LSHIFT O   &trans
-                &trans   AS(Z)          AS(X)       AS(C)       AS(D)       AS(V)               AS(K)   AS(H)   AS(CMMA)    AS(DOT)     AS(SLASH)       &trans
-                         &lt FUN ESC &lt NUM BKSP &lt SYM DEL               &lt MEDIA RET &lt NAV SPC &lt MOUSE TAB
+                &trans   &wing  AS(W) AS(F) AS(P)   AS(B)               AS(J)   AS(L)   AS(U)       AS(Y)   AS(QUOT)    &trans
+                &trans   AS(A)  AS(R) AS(S) AS(T)   AS(G)               AS(M)   &atn    AS(E)       AS(I)   AS(O)       &trans
+                &trans   AS(Z)  AS(X) AS(C) AS(D)   AS(V)               AS(K)   AS(H)   AS(CMMA)    AS(DOT) AS(SLASH)   &trans
+                     &lt FUN ESC &lt NUM BKSP &lt SYM DEL               &lt MEDIA RET &lt NAV SPC &lt MOUSE TAB
             >;
         };
 
@@ -35,7 +35,7 @@
             label = " GAMET ";
             bindings = <
                 &trans   &wing  AS(W)   AS(F)   AS(P)   AS(B)               &trans &trans &trans &trans &trans &trans
-                &trans   &hrtdA &hrtdR  &hrtdS  &hrtdT  AS(G)               &trans &trans &trans &trans &trans &trans
+                &trans   AS(A)  AS(R)   AS(S)   AS(T)   AS(G)               &trans &trans &trans &trans &trans &trans
                 &trans   AS(Z)  AS(X)   AS(C)   AS(D)   AS(V)               &trans &trans &trans &trans &trans &trans
                          &lt FUN ESC &lt NUM BKSP &lt SYM DEL               &trans &trans &trans
             >;
