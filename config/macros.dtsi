@@ -9,7 +9,7 @@ m2: m2 {
     compatible = "zmk,behavior-macro";
     label = "MACRO_2";
     #binding-cells = <0>;
-    bindings = <&macro_tap &kp RET &tog GAMET>;
+    bindings = <&macro_tap &kp RET &tog GAME &tog GAMET>;
 };
 
 mparen: mparen {
