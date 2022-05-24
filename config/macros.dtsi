@@ -45,7 +45,7 @@ mpa: mparrow {
     #binding-cells = <0>;
     wait-ms = <0>;
     tap-ms = <20>;
-    bindings = <&macro_press &kp LEFT>;
+    bindings = <&macro_press &mmv MOVE_HOR(-1)>;
 };
 
 mra: mrarrow {
@@ -54,5 +54,5 @@ mra: mrarrow {
     #binding-cells = <0>;
     wait-ms = <0>;
     tap-ms = <20>;
-    bindings = <&macro_release &kp LEFT>;
+    bindings = <&macro_release &mmv MOVE_HOR(-1)>;
 };
