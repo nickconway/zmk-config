@@ -54,7 +54,7 @@
         on-each-press; \
     };
 
-#define AS(keycode) &astd##keycode
+#define AS(keycode) &asmm##keycode
 
 #define ASB(keycode) &as LS(keycode) keycode
 #define ASBR(keycode) &asr LS(keycode) keycode
