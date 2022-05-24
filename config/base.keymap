@@ -7,6 +7,24 @@
     #include "macros.dtsi"
     #include "combos.dtsi"
 
+    tdtest: tdtest {
+        compatible = "zmk,behavior-tap-dance";
+        label = "tdtest";
+        #binding-cells = <0>;
+        tapping-term-ms = <TAPPING_TERM>;
+        bindings = <&kp A>, <&kp C>;
+        on-each-press;
+    };
+
+    tdtest2: tdtest2 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "tdtest2";
+        #binding-cells = <0>;
+        tapping-term-ms = <TAPPING_TERM>;
+        bindings = <&kp B>, <&kp D>;
+        on-each-press;
+    };
+
     keymap {
 
         compatible = "zmk,keymap";
