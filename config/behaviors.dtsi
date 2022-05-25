@@ -1,178 +1,34 @@
-hrA: hrA {
-    compatible = "zmk,behavior-hold-tap";
-    label = "HOME_ROW_A";
-    #binding-cells = <2>;
-    flavor = "balanced";
-    tapping-term-ms = <TAPPING_TERM_PINKY>;
-    quick-tap-ms = <QUICK_TAP_TERM>;
-    bindings = <&kp>, <&kp>;
-    retro-tap;
-    retro-tap-behavior = "KEY_PRESS";
-    retro-tap-param1 = <LS(A)>;
-};
+#define HRM(letter, mod, tapping_time) \
+    hr##letter: hr##letter { \
+        compatible = "zmk,behavior-hold-tap"; \
+        label = ZMK_MACRO_STRINGIFY(HOME_ROW_##letter); \
+        #binding-cells = <2>; \
+        flavor = "balanced"; \
+        tapping-term-ms = <tapping_time>; \
+        quick-tap-ms = <QUICK_TAP_TERM>; \
+        bindings = <&kp>, <&kp>; \
+        retro-tap; \
+        retro-tap-behavior = "KEY_PRESS"; \
+        retro-tap-param1 = <LS(letter)>; \
+    }; \
+ \
+    hrt##letter: hrt##letter { \
+        compatible = "zmk,behavior-tap-dance"; \
+        label = ZMK_MACRO_STRINGIFY(hrt##letter); \
+        #binding-cells = <0>; \
+        tapping-term-ms = <tapping_time>; \
+        bindings = <&hr##letter mod letter>, <&kp letter>; \
+        on-each-press; \
+    };
 
-hrR: hrR {
-    compatible = "zmk,behavior-hold-tap";
-    label = "HOME_ROW_R";
-    #binding-cells = <2>;
-    flavor = "balanced";
-    tapping-term-ms = <TAPPING_TERM_RING>;
-    quick-tap-ms = <QUICK_TAP_TERM>;
-    bindings = <&kp>, <&kp>;
-    retro-tap;
-    retro-tap-behavior = "KEY_PRESS";
-    retro-tap-param1 = <LS(R)>;
-};
-
-hrS: hrS {
-    compatible = "zmk,behavior-hold-tap";
-    label = "HOME_ROW_S";
-    #binding-cells = <2>;
-    flavor = "balanced";
-    tapping-term-ms = <TAPPING_TERM>;
-    quick-tap-ms = <QUICK_TAP_TERM>;
-    bindings = <&kp>, <&kp>;
-    retro-tap;
-    retro-tap-behavior = "KEY_PRESS";
-    retro-tap-param1 = <LS(S)>;
-};
-
-hrT: hrT {
-    compatible = "zmk,behavior-hold-tap";
-    label = "HOME_ROW_T";
-    #binding-cells = <2>;
-    flavor = "balanced";
-    tapping-term-ms = <TAPPING_TERM>;
-    quick-tap-ms = <QUICK_TAP_TERM>;
-    bindings = <&kp>, <&kp>;
-    retro-tap;
-    retro-tap-behavior = "KEY_PRESS";
-    retro-tap-param1 = <LS(T)>;
-};
-
-hrN: hrN {
-    compatible = "zmk,behavior-hold-tap";
-    label = "HOME_ROW_N";
-    #binding-cells = <2>;
-    flavor = "balanced";
-    tapping-term-ms = <TAPPING_TERM>;
-    quick-tap-ms = <QUICK_TAP_TERM>;
-    bindings = <&kp>, <&kp>;
-    retro-tap;
-    retro-tap-behavior = "KEY_PRESS";
-    retro-tap-param1 = <LS(N)>;
-};
-
-hrE: hrE {
-    compatible = "zmk,behavior-hold-tap";
-    label = "HOME_ROW_E";
-    #binding-cells = <2>;
-    flavor = "balanced";
-    tapping-term-ms = <TAPPING_TERM>;
-    quick-tap-ms = <QUICK_TAP_TERM>;
-    bindings = <&kp>, <&kp>;
-    retro-tap;
-    retro-tap-behavior = "KEY_PRESS";
-    retro-tap-param1 = <LS(E)>;
-};
-
-hrI: hrI {
-    compatible = "zmk,behavior-hold-tap";
-    label = "HOME_ROW_I";
-    #binding-cells = <2>;
-    flavor = "balanced";
-    tapping-term-ms = <TAPPING_TERM_RING>;
-    quick-tap-ms = <QUICK_TAP_TERM>;
-    bindings = <&kp>, <&kp>;
-    retro-tap;
-    retro-tap-behavior = "KEY_PRESS";
-    retro-tap-param1 = <LS(I)>;
-};
-
-hrO: hrO {
-    compatible = "zmk,behavior-hold-tap";
-    label = "HOME_ROW_O";
-    #binding-cells = <2>;
-    flavor = "balanced";
-    tapping-term-ms = <TAPPING_TERM_PINKY>;
-    quick-tap-ms = <QUICK_TAP_TERM>;
-    bindings = <&kp>, <&kp>;
-    retro-tap;
-    retro-tap-behavior = "KEY_PRESS";
-    retro-tap-param1 = <LS(O)>;
-};
-
-hrtA: hrtA {
-    compatible = "zmk,behavior-tap-dance";
-    label = "hrtA";
-    #binding-cells = <0>;
-    tapping-term-ms = <TAPPING_TERM_PINKY>;
-    bindings = <&hrA LSHIFT A>, <&kp A>;
-    on-each-press;
-};
-
-hrtR: hrtR {
-    compatible = "zmk,behavior-tap-dance";
-    label = "hrtR";
-    #binding-cells = <0>;
-    tapping-term-ms = <TAPPING_TERM_RING>;
-    bindings = <&hrR LGUI R>, <&kp R>;
-    on-each-press;
-};
-
-hrtS: hrtS {
-    compatible = "zmk,behavior-tap-dance";
-    label = "hrtS";
-    #binding-cells = <0>;
-    tapping-term-ms = <TAPPING_TERM>;
-    bindings = <&hrS LALT S>, <&kp S>;
-    on-each-press;
-};
-
-hrtT: hrtT {
-    compatible = "zmk,behavior-tap-dance";
-    label = "hrtT";
-    #binding-cells = <0>;
-    tapping-term-ms = <TAPPING_TERM>;
-    bindings = <&hrT LCTL T>, <&kp T>;
-    on-each-press;
-};
-
-hrtO: hrtO {
-    compatible = "zmk,behavior-tap-dance";
-    label = "hrtO";
-    #binding-cells = <0>;
-    tapping-term-ms = <TAPPING_TERM_PINKY>;
-    bindings = <&hrO LSHIFT O>, <&kp O>;
-    on-each-press;
-};
-
-hrtI: hrtI {
-    compatible = "zmk,behavior-tap-dance";
-    label = "hrtI";
-    #binding-cells = <0>;
-    tapping-term-ms = <TAPPING_TERM_RING>;
-    bindings = <&hrI LGUI I>, <&kp I>;
-    on-each-press;
-};
-
-hrtE: hrtE {
-    compatible = "zmk,behavior-tap-dance";
-    label = "hrtE";
-    #binding-cells = <0>;
-    tapping-term-ms = <TAPPING_TERM>;
-    bindings = <&hrE LALT E>, <&kp E>;
-    on-each-press;
-};
-
-hrtN: hrtN {
-    compatible = "zmk,behavior-tap-dance";
-    label = "hrtN";
-    #binding-cells = <0>;
-    tapping-term-ms = <TAPPING_TERM>;
-    bindings = <&hrN LCTL N>, <&kp N>;
-    on-each-press;
-};
+HRM(A, LSHIFT, TAPPING_TERM_PINKY)
+HRM(R, LGUI, TAPPING_TERM_RING)
+HRM(S, LALT, TAPPING_TERM)
+HRM(T, LCTL, TAPPING_TERM)
+HRM(N, LCTL, TAPPING_TERM)
+HRM(E, LALT, TAPPING_TERM)
+HRM(I, LGUI, TAPPING_TERM_RING)
+HRM(O, LSHIFT, TAPPING_TERM_PINKY)
 
 bht: balanced_hold_tap {
     compatible = "zmk,behavior-hold-tap";
@@ -207,19 +63,12 @@ tht: tap_hold_tap {
     bindings = <&kp>, <&kp>;
 };
 
-altq: altq {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ALT_Q";
-    #binding-cells = <0>;
-    bindings = <&asmmQ>, <&kp F4>;
-    mods = <(MOD_LALT)>;
-};
-
 wing: wing {
     compatible = "zmk,behavior-mod-morph";
     label = "WIN_GRAVE";
     #binding-cells = <0>;
-    bindings = <&altq>, <&kp GRAVE>;
+    /* bindings = <AS(Q)>, <&kp GRAVE>; */
+    bindings = <ASBP(Q)>, <&kp GRAVE>;
     mods = <(MOD_LGUI)>;
 };
 
