@@ -102,72 +102,72 @@ hrO: hrO {
     retro-tap-param1 = <LS(O)>;
 };
 
-hrtdA: hrtdA {
+hrtA: hrtA {
     compatible = "zmk,behavior-tap-dance";
-    label = "hrtdA";
+    label = "hrtA";
     #binding-cells = <0>;
     tapping-term-ms = <TAPPING_TERM_PINKY>;
     bindings = <&hrA LSHIFT A>, <&kp A>;
     on-each-press;
 };
 
-hrtdR: hrtdR {
+hrtR: hrtR {
     compatible = "zmk,behavior-tap-dance";
-    label = "hrtdR";
+    label = "hrtR";
     #binding-cells = <0>;
     tapping-term-ms = <TAPPING_TERM_RING>;
     bindings = <&hrR LGUI R>, <&kp R>;
     on-each-press;
 };
 
-hrtdS: hrtdS {
+hrtS: hrtS {
     compatible = "zmk,behavior-tap-dance";
-    label = "hrtdS";
+    label = "hrtS";
     #binding-cells = <0>;
     tapping-term-ms = <TAPPING_TERM>;
     bindings = <&hrS LALT S>, <&kp S>;
     on-each-press;
 };
 
-hrtdT: hrtdT {
+hrtT: hrtT {
     compatible = "zmk,behavior-tap-dance";
-    label = "hrtdT";
+    label = "hrtT";
     #binding-cells = <0>;
     tapping-term-ms = <TAPPING_TERM>;
     bindings = <&hrT LCTL T>, <&kp T>;
     on-each-press;
 };
 
-hrtdO: hrtdO {
+hrtO: hrtO {
     compatible = "zmk,behavior-tap-dance";
-    label = "hrtdO";
+    label = "hrtO";
     #binding-cells = <0>;
     tapping-term-ms = <TAPPING_TERM_PINKY>;
     bindings = <&hrO LSHIFT O>, <&kp O>;
     on-each-press;
 };
 
-hrtdI: hrtdI {
+hrtI: hrtI {
     compatible = "zmk,behavior-tap-dance";
-    label = "hrtdI";
+    label = "hrtI";
     #binding-cells = <0>;
     tapping-term-ms = <TAPPING_TERM_RING>;
     bindings = <&hrI LGUI I>, <&kp I>;
     on-each-press;
 };
 
-hrtdE: hrtdE {
+hrtE: hrtE {
     compatible = "zmk,behavior-tap-dance";
-    label = "hrtdE";
+    label = "hrtE";
     #binding-cells = <0>;
     tapping-term-ms = <TAPPING_TERM>;
     bindings = <&hrE LALT E>, <&kp E>;
     on-each-press;
 };
 
-hrtdN: hrtdN {
+hrtN: hrtN {
     compatible = "zmk,behavior-tap-dance";
-    label = "hrtdN";
+    label = "hrtN";
     #binding-cells = <0>;
     tapping-term-ms = <TAPPING_TERM>;
     bindings = <&hrN LCTL N>, <&kp N>;

@@ -15,7 +15,7 @@
             label = "  COLE  ";
             bindings = <
                 &trans   &wing  AS(W) AS(F) AS(P)   AS(B)               AS(J)   AS(L)   AS(U)       AS(Y)   AS(QUOT)    &trans
-                &trans   AS(A)  AS(R) AS(S) AS(T)   AS(G)               AS(M)   &atn    AS(E)       AS(I)   AS(O)       &trans
+                &trans   &hrtA  &hrtR &hrtS &hrtT   AS(G)               AS(M)   &atn    &hrtE       &hrtI   &hrtO       &trans
                 &trans   AS(Z)  AS(X) AS(C) AS(D)   AS(V)               AS(K)   AS(H)   AS(CMMA)    AS(DOT) AS(SLASH)   &trans
                      &lt FUN ESC &lt NUM BKSP &lt SYM DEL               &lt MEDIA RET &lt NAV SPC &lt MOUSE TAB
             >;
@@ -44,9 +44,9 @@
         nav {
             label = "  NAVI  ";
             bindings = <
-                &trans  ASB(PG_UP)   ASB(HOME)  ASB(UP)         ASB(END)     ASB(INSERT)            &reset  &trans            &trans   &trans      &bootloader &trans
-                &trans  ASB(PG_DN)   ASB(LEFT)  ASB(DOWN)       ASB(RIGHT)   &caps_word             &trans  SK(LCTL)          SK(LALT) SK(LGUI)    SK(LSHIFT)  &trans
-                &trans  &kp LC(Z)    &kp LC(X)  &kp LC(C)       &kp LC(V)    &kp INSERT             &trans  &kp LG(LC(RIGHT)) &trans   &trans      &trans      &trans
+                &trans  ASB(PG_UP)   ASB(HOME)  ASB(UP)         ASB(END)     ASB(INSERT)            &reset      &trans            &trans   &trans      &bootloader &trans
+                &trans  ASB(PG_DN)   ASB(LEFT)  ASB(DOWN)       ASB(RIGHT)   &caps_word             &kp CAPS    SK(LCTL)          SK(LALT) SK(LGUI)    SK(LSHIFT)  &trans
+                &trans  &kp LC(Z)    &kp LC(X)  &kp LC(C)       &kp LC(V)    &kp INSERT             &trans      &kp LG(LC(RIGHT)) &trans   &trans      &trans      &trans
                                                                    &trans &trans &trans             &trans &trans &trans
             >;
         };
