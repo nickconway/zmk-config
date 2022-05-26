@@ -56,3 +56,9 @@ mra: mrarrow {
     tap-ms = <20>;
     bindings = <&macro_release &mmv MOVE_HOR(-1)>;
 };
+
+dm1: dm1 {
+    compatible = "zmk,behavior-dynamic-macro";
+    label = "DYNAMIC MACRO 1";
+    #binding-cells = <1>;
+};
