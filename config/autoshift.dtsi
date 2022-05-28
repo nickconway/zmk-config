@@ -13,7 +13,7 @@
         compatible = "zmk,behavior-mod-morph"; \
         label = ZMK_MACRO_STRINGIFY(asmm##letter); \
         #binding-cells = <0>; \
-        bindings = <&ASM##letter>, <&as LS(##letter) ##letter>; \
+        bindings = <&kp letter>, <&as LS(##letter) ##letter>; \
         mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL|MOD_LALT|MOD_RALT|MOD_LGUI|MOD_RGUI)>; \
     }; \
  \
@@ -54,11 +54,13 @@
         on-each-press; \
     };
 
-#define AS(keycode) &astd##keycode
+        /* bindings = <&ASM##letter>, <&as LS(##letter) ##letter>; \ */
 
 #define ASB(keycode) &as LS(keycode) keycode
 #define ASBR(keycode) &asr LS(keycode) keycode
 #define ASBP(keycode) &asp LS(keycode) keycode
+
+#define AS(keycode) &asmm##keycode
 
 ASM(Q, TAPPING_TERM_PINKY)
 ASM(W, TAPPING_TERM_RING)

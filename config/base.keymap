@@ -14,14 +14,10 @@
         default_layer {
             label = "  COLE  ";
             bindings = <
-                /* &trans   &wing  AS(W) AS(F) AS(P)   AS(B)               AS(J)   AS(L)   AS(U)       AS(Y)   AS(QUOT)    &trans */
-                /* &trans   &hrtA  &hrtR &hrtS &hrtT   AS(G)               AS(M)   &atn    &hrtE       &hrtI   &hrtO       &trans */
-                /* &trans   AS(Z)  AS(X) AS(C) AS(D)   AS(V)               AS(K)   AS(H)   AS(CMMA)    AS(DOT) AS(SLASH)   &trans */
-                     /* &lt FUN ESC &lt NUM BKSP &lt SYM DEL               &lt MEDIA RET &lt NAV SPC &lt MOUSE TAB */
-                &trans   &wing          ASBR(W)     ASB(F)      ASB(P)      ASB(B)               ASB(J)   ASB(L)    ASB(U)      ASBR(Y)     ASBP(QUOT)      &trans
-                &trans   &hrA LSHIFT A  &hrR LGUI R &hrS LALT S &hrT LCTL T ASB(G)               ASB(M)   &atn      &hrE LALT E &hrI LGUI I &hrO LSHIFT O   &trans
-                &trans   ASBP(Z)        ASBR(X)     ASB(C)      ASB(D)      ASB(V)               ASB(K)   ASB(H)    ASB(CMMA)   ASBR(DOT)   ASBP(SLASH)      &trans
-                                             &lt FUN ESC &lt NUM BKSP &lt SYM DEL               &lt MEDIA RET &lt NAV SPC &lt MOUSE TAB
+                &trans   &wing  AS(W) AS(F) AS(P)   AS(B)               AS(J)   AS(L)   AS(U)       AS(Y)   AS(QUOT)    &trans
+                &trans   &hrtA  &hrtR &hrtS &hrtT   AS(G)               AS(M)   &atn    &hrtE       &hrtI   &hrtO       &trans
+                &trans   AS(Z)  AS(X) AS(C) AS(D)   AS(V)               AS(K)   AS(H)   AS(CMMA)    AS(DOT) AS(SLASH)   &trans
+                     &lt FUN ESC &lt NUM BKSP &lt SYM DEL               &lt MEDIA RET &lt NAV SPC &lt MOUSE TAB
             >;
         };
 
