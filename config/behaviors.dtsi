@@ -136,3 +136,15 @@ nk: not_so_sticky_key {
 };
 
 #define SK(KEY) &nk KEY KEY
+
+hrm: hrm {
+    compatible = "zmk,behavior-hold-tap";
+    label = "HOME_ROW_MOD";
+    #binding-cells = <2>;
+    flavor = "balanced";
+    tapping-term-ms = <TAPPING_TERM>;
+    quick-tap-ms = <QUICK_TAP_TERM>;
+    bindings = <&kp>, <&kp>;
+};
+
+#define HRA &hrm LSHIFT A
