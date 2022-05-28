@@ -54,8 +54,6 @@
         on-each-press; \
     };
 
-        /* bindings = <&ASM##letter>, <&as LS(##letter) ##letter>; \ */
-
 #define ASB(keycode) &as LS(keycode) keycode
 #define ASBR(keycode) &asr LS(keycode) keycode
 #define ASBP(keycode) &asp LS(keycode) keycode
@@ -131,3 +129,37 @@ ASM(F9, TAPPING_TERM)
 ASM(F10, TAPPING_TERM)
 ASM(F11, TAPPING_TERM)
 ASM(F12, TAPPING_TERM)
+
+#define HRM(letter, mod, tapping_time) \
+    hr##letter: hr##letter { \
+        compatible = "zmk,behavior-hold-tap"; \
+        label = ZMK_MACRO_STRINGIFY(HOME_ROW_##letter); \
+        #binding-cells = <2>; \
+        flavor = "balanced"; \
+        tapping-term-ms = <tapping_time>; \
+        quick-tap-ms = <QUICK_TAP_TERM>; \
+        bindings = <&kp>, <&kp>; \
+        retro-tap; \
+        retro-tap-behavior = "KEY_PRESS"; \
+        retro-tap-param1 = <LS(letter)>; \
+    }; \
+ \
+    hrt##letter: hrt##letter { \
+        compatible = "zmk,behavior-tap-dance"; \
+        label = ZMK_MACRO_STRINGIFY(hrt##letter); \
+        #binding-cells = <0>; \
+        tapping-term-ms = <tapping_time>; \
+        bindings = <&hr##letter mod letter>, <&kp letter>; \
+        on-each-press; \
+    };
+
+/* bindings = <&ASM##letter>, <&as LS(##letter) ##letter>; \ */
+
+HRM(A, LSHIFT, TAPPING_TERM_PINKY)
+HRM(R, LGUI, TAPPING_TERM_RING)
+HRM(S, LALT, TAPPING_TERM)
+HRM(T, LCTL, TAPPING_TERM)
+HRM(N, LCTL, TAPPING_TERM)
+HRM(E, LALT, TAPPING_TERM)
+HRM(I, LGUI, TAPPING_TERM_RING)
+HRM(O, LSHIFT, TAPPING_TERM_PINKY)

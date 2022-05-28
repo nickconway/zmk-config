@@ -1,35 +1,3 @@
-#define HRM(letter, mod, tapping_time) \
-    hr##letter: hr##letter { \
-        compatible = "zmk,behavior-hold-tap"; \
-        label = ZMK_MACRO_STRINGIFY(HOME_ROW_##letter); \
-        #binding-cells = <2>; \
-        flavor = "balanced"; \
-        tapping-term-ms = <tapping_time>; \
-        quick-tap-ms = <QUICK_TAP_TERM>; \
-        bindings = <&kp>, <&kp>; \
-        retro-tap; \
-        retro-tap-behavior = "KEY_PRESS"; \
-        retro-tap-param1 = <LS(letter)>; \
-    }; \
- \
-    hrt##letter: hrt##letter { \
-        compatible = "zmk,behavior-tap-dance"; \
-        label = ZMK_MACRO_STRINGIFY(hrt##letter); \
-        #binding-cells = <0>; \
-        tapping-term-ms = <tapping_time>; \
-        bindings = <&hr##letter mod letter>, <&kp letter>; \
-        on-each-press; \
-    };
-
-HRM(A, LSHIFT, TAPPING_TERM_PINKY)
-HRM(R, LGUI, TAPPING_TERM_RING)
-HRM(S, LALT, TAPPING_TERM)
-HRM(T, LCTL, TAPPING_TERM)
-HRM(N, LCTL, TAPPING_TERM)
-HRM(E, LALT, TAPPING_TERM)
-HRM(I, LGUI, TAPPING_TERM_RING)
-HRM(O, LSHIFT, TAPPING_TERM_PINKY)
-
 bht: balanced_hold_tap {
     compatible = "zmk,behavior-hold-tap";
     label = "BALANCED_HOLD_TAP";
