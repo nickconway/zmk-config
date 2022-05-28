@@ -148,3 +148,10 @@ hrm: hrm {
 };
 
 #define HRA &hrm LSHIFT A
+#define HRR &hrm LGUI R
+#define HRS &hrm LALT S
+#define HRT &hrm LCTL T
+#define HRN &hrm LCTL N
+#define HRE &hrm LALT E
+#define HRI &hrm LGUI I
+#define HRO &hrm LSHIFT O
