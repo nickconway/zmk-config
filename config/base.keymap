@@ -17,7 +17,7 @@
                 &trans   &wing  AS(W) AS(F) AS(P)   AS(B)               AS(J)   AS(L)   AS(U)       AS(Y)   AS(QUOT)    &trans
                 &trans   HRA    HRR   HRS   HRT     AS(G)               AS(M)   &atn    HRE         HRI     HRO         &trans
                 &trans   AS(Z)  AS(X) AS(C) AS(D)   AS(V)               AS(K)   AS(H)   AS(CMMA)    AS(DOT) AS(SLASH)   &trans
-                     &lt FUN ESC &lt NUM BKSP &lt SYM DEL               &lt MEDIA RET &lt NAV SPC &lt MOUSE TAB
+                    &lt FUN ESC &lt NUM BKSP &lt SYM DEL               &lt MEDIA RET &lt NAV SPC &lt MOUSE TAB
             >;
         };
 
@@ -27,7 +27,7 @@
                 &trans  &kp Q  &kp W  &kp F  &kp P  &kp B          &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &kp A  &kp R  &kp S  &kp T  &kp G          &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &kp Z  &kp X  &kp C  &kp D  &kp V          &trans  &trans  &trans  &trans  &trans  &trans
-                               &kp LCTRL &kp SPC &kp LALT          &m2  &trans  &trans
+                              &kp LCTRL &kp SPC &kp LALT          &m2  &trans  &trans
             >;
         };
 
@@ -37,7 +37,7 @@
                 &trans   &trans  &trans   &trans   &trans   &trans               &trans &trans &trans &trans &trans &trans
                 &trans   &trans  &trans   &trans   &trans   &trans               &trans &trans &trans &trans &trans &trans
                 &trans   &trans  &trans   &trans   &trans   &trans               &trans &trans &trans &trans &trans &trans
-                                          &trans   &trans   &trans               &m2 &trans &trans
+                                         &trans   &trans   &trans               &m2 &trans &trans
             >;
         };
 
@@ -47,7 +47,7 @@
                 &trans  ASB(PG_UP)   ASB(HOME)  ASB(UP)         ASB(END)     ASB(INSERT)            &reset      &trans            &trans   &trans      &bootloader &trans
                 &trans  ASB(PG_DN)   ASB(LEFT)  ASB(DOWN)       ASB(RIGHT)   &caps_word             &kp CAPS    SK(LCTL)          SK(LALT) SK(LGUI)    SK(LSHIFT)  &trans
                 &trans  &kp LC(Z)    &kp LC(X)  &kp LC(C)       &kp LC(V)    &kp INSERT             &trans      &kp LG(LC(RIGHT)) &trans   &trans      &trans      &trans
-                                                                   &trans &trans &trans             &trans &trans &trans
+                                                                  &trans &trans &trans             &trans &trans &trans
             >;
         };
 
@@ -57,7 +57,7 @@
                 &trans  &trans  &trans                  &mmv MOVE_VERT(-3000)   &trans                  &trans                 &trans  &trans           &mwh SCROLL_UP      &trans              &trans  &trans
                 &trans  &trans  &mmv MOVE_HOR(-3000)    &mmv MOVE_VERT(3000)    &mmv MOVE_HOR(3000)     &trans                 &trans  &mwh SCROLL_LEFT &mwh SCROLL_DOWN    &mwh SCROLL_RIGHT   &trans  &trans
                 &trans  &trans  &trans                  &trans                  &trans                  &trans                 &trans  &trans           &trans              &trans              &trans  &trans
-                                                                               &mkp RCLK  &mkp LCLK  &mkp RCLK                 &trans  &trans  &trans
+                                                                              &mkp RCLK  &mkp LCLK  &mkp RCLK                 &trans  &trans  &trans
             >;
         };
 
@@ -77,7 +77,7 @@
                 &trans  &bootloader &trans      &trans      &trans              &reset                 AS(LBKT)     AS(N7)  AS(N8)  AS(N9)  AS(RBKT)    &trans
                 &trans  SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)           &trans                 AS(EQUAL)    AS(N4)  AS(N5)  AS(N6)  AS(SEMI)    &trans
                 &trans  &trans      &mra        &mpa        &kp LG(LC(LEFT))    &trans                 AS(GRAVE)    AS(N1)  AS(N2)  AS(N3)  AS(BSLH)    &trans
-                                                                &trans  &trans  &trans                 AS(MINUS) AS(N0)  AS(DOT)
+                                                               &trans  &trans  &trans                 AS(MINUS) AS(N0)  AS(DOT)
             >;
         };
 

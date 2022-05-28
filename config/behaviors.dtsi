@@ -103,8 +103,6 @@ nk: not_so_sticky_key {
     bindings = <&kp>, <&sk>;
 };
 
-#define SK(KEY) &nk KEY KEY
-
 hrm: hrm {
     compatible = "zmk,behavior-hold-tap";
     label = "HOME_ROW_MOD";
@@ -114,6 +112,8 @@ hrm: hrm {
     quick-tap-ms = <QUICK_TAP_TERM>;
     bindings = <&kp>, <&kp>;
 };
+
+#define SK(KEY) &nk KEY KEY
 
 #define HRA &hrm LSHIFT A
 #define HRR &hrm LGUI R
