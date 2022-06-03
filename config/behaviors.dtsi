@@ -99,7 +99,7 @@ nk: not_so_sticky_key {
     label = "not so sticky key";
     #binding-cells = <2>;
     tapping-term-ms = <TAPPING_TERM>;
-    flavor = "hold-preferred";
+    flavor = "tap-preferred";
     bindings = <&kp>, <&sk>;
 };
 
