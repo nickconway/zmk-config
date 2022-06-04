@@ -1,3 +1,14 @@
+#define SK(KEY) &nk KEY KEY
+
+#define HRA &hrm LSHIFT A
+#define HRR &hrm LGUI R
+#define HRS &hrm LALT S
+#define HRT &hrm LCTL T
+#define HRN &hrm LCTL N
+#define HRE &hrm LALT E
+#define HRI &hrm LGUI I
+#define HRO &hrm LSHIFT O
+
 bht: balanced_hold_tap {
     compatible = "zmk,behavior-hold-tap";
     label = "BALANCED_HOLD_TAP";
@@ -44,7 +55,7 @@ atn: atn {
     compatible = "zmk,behavior-mod-morph";
     label = "ALT_TAB_N";
     #binding-cells = <0>;
-    bindings = <&hrN LCTL N>, <&as LS(TAB) TAB>;
+    bindings = <HRN>, <&as LS(TAB) TAB>;
     mods = <(MOD_LALT)>;
 };
 
@@ -111,16 +122,4 @@ hrm: hrm {
     tapping-term-ms = <TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_TERM>;
     bindings = <&kp>, <&kp>;
-    global-quick-tap;
 };
-
-#define SK(KEY) &nk KEY KEY
-
-#define HRA &hrm LSHIFT A
-#define HRR &hrm LGUI R
-#define HRS &hrm LALT S
-#define HRT &hrm LCTL T
-#define HRN &hrm LCTL N
-#define HRE &hrm LALT E
-#define HRI &hrm LGUI I
-#define HRO &hrm LSHIFT O
