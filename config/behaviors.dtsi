@@ -111,6 +111,7 @@ hrm: hrm {
     tapping-term-ms = <TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_TERM>;
     bindings = <&kp>, <&kp>;
+    global-quick-tap;
 };
 
 #define SK(KEY) &nk KEY KEY
