@@ -1,0 +1,15 @@
+
+#include "general.dtsi"
+
+/ {
+
+    #include "autoshift.dtsi"
+    #include "behaviors.dtsi"
+    #include "macros.dtsi"
+    #include "combos.dtsi"
+
+#ifdef THREEXFIVE
+    #include "3x5.keymap"
+#endif
+
+};

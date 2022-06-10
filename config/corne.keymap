@@ -1,9 +1,10 @@
 #define THREE_THUMBS
-
-#include "3x5.keymap"
+#define THREEXFIVE
 
 / {
     chosen {
         zmk,matrix_transform = &five_column_transform;
     };
 };
+
+#include "base.keymap"
