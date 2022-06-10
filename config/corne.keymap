@@ -1,4 +1,4 @@
-#include "base.keymap"
+#include "3x5.keymap"
 
 / {
     chosen {
