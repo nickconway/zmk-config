@@ -1,0 +1,116 @@
+#include "general.dtsi"
+
+/ {
+
+    #include "autoshift.dtsi"
+    #include "behaviors.dtsi"
+    #include "macros.dtsi"
+    #include "combos.dtsi"
+
+    keymap {
+
+        compatible = "zmk,keymap";
+
+        default_layer {
+            label = "  COLE  ";
+            bindings = <
+                &wing  AS(W) AS(F) AS(P)   AS(B)               AS(J)   AS(L)   AS(U)       AS(Y)   AS(QUOT)
+                HRA    HRR   HRS   HRT     AS(G)               AS(M)   &atn    HRE         HRI     HRO
+                AS(Z)  AS(X) AS(C) AS(D)   AS(V)               AS(K)   AS(H)   AS(CMMA)    AS(DOT) AS(SLASH)
+            &lt FUN ESC &lt NUM BKSP &lt SYM DEL               &lt MEDIA RET &lt NAV SPC &lt MOUSE TAB
+            >;
+        };
+
+        game {
+            label = " GAME  ";
+            bindings = <
+                &kp Q  &kp W  &kp F  &kp P  &kp B          &trans  &trans  &trans  &trans  &trans
+                &kp A  &kp R  &kp S  &kp T  &kp G          &trans  &trans  &trans  &trans  &trans
+                &kp Z  &kp X  &kp C  &kp D  &kp V          &trans  &trans  &trans  &trans  &trans
+                      &kp LCTRL &kp SPC &kp LALT          &m2  &trans  &trans
+            >;
+        };
+
+        gametype {
+            label = " GAMET ";
+            bindings = <
+                &trans  &trans   &trans   &trans   &trans               &trans &trans &trans &trans &trans
+                &trans  &trans   &trans   &trans   &trans               &trans &trans &trans &trans &trans
+                &trans  &trans   &trans   &trans   &trans               &trans &trans &trans &trans &trans
+                                &trans   &trans   &trans               &m2 &trans &trans
+            >;
+        };
+
+        nav {
+            label = "  NAVI  ";
+            bindings = <
+                ASB(PG_UP)   ASB(HOME)  ASB(UP)         ASB(END)     ASB(INSERT)            &reset      &trans            &trans   &trans      &bootloader
+                ASB(PG_DN)   ASB(LEFT)  ASB(DOWN)       ASB(RIGHT)   &caps_word             &kp CAPS    SK(LCTL)          SK(LALT) SK(LGUI)    SK(LSHIFT)
+                &kp LC(Z)    &kp LC(X)  &kp LC(C)       &kp LC(V)    &kp INSERT             &trans      &kp LG(LC(RIGHT)) &trans   &trans      &trans
+                                                          &trans &trans &trans             &trans &trans &trans
+            >;
+        };
+
+        mouse {
+            label = "  MOUS  ";
+            bindings = <
+                &trans  &trans                  &mmv MOVE_VERT(-3000)   &trans                  &trans                 &trans  &trans           &mwh SCROLL_UP      &trans              &trans
+                &trans  &mmv MOVE_HOR(-3000)    &mmv MOVE_VERT(3000)    &mmv MOVE_HOR(3000)     &trans                 &trans  &mwh SCROLL_LEFT &mwh SCROLL_DOWN    &mwh SCROLL_RIGHT   &trans
+                &trans  &trans                  &trans                  &trans                  &trans                 &trans  &trans           &trans              &trans              &trans
+                                                                      &mkp RCLK  &mkp LCLK  &mkp RCLK                 &trans  &trans  &trans
+            >;
+        };
+
+        media {
+            label = "  MDIA  ";
+            bindings = <
+                &trans          &trans          &kp C_VOL_UP    &trans          &trans                       &trans  &trans  &kp C_BRI_UP   &trans  &bt BT_CLR
+                &out OUT_TOG    &kp C_PREV      &kp C_VOL_DN    &kp C_NEXT      &trans                       &trans  &trans  &kp C_BRI_DN   &trans  &trans
+                &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                 &trans  &trans  &trans         &trans  &trans
+                                                             &kp C_MUTE &kp C_PP &kp C_STOP                 &trans  &trans  &trans
+            >;
+        };
+
+        number {
+            label = "  NUM   ";
+            bindings = <
+                &bootloader &trans      &trans      &trans              &reset                 AS(LBKT)     AS(N7)  AS(N8)  AS(N9)  AS(RBKT)
+                SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)           &trans                 AS(EQUAL)    AS(N4)  AS(N5)  AS(N6)  AS(SEMI)
+                &trans      &trans      &kt RIGHT   &kp LG(LC(LEFT))    &trans                 AS(GRAVE)    AS(N1)  AS(N2)  AS(N3)  AS(BSLH)
+                                                       &trans  &trans  &trans                 AS(MINUS) AS(N0)  AS(DOT)
+            >;
+        };
+
+        symbol {
+            label = "  SYMB  ";
+            bindings = <
+                &trans      &trans      &trans      &trans      &trans                 &trans  &trans       &trans      &trans      &trans
+                SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)   &trans                 &trans  &kp LS(N9)   AS(LBKT)    AS(MINUS)   &trans
+                &trans      &trans      &trans      &trans      &trans                 &trans  &kp LS(N0)   AS(RBKT)    AS(MINUS)   &trans
+                                               &trans  &trans  &trans                 &trans  AS(MINUS)  &trans
+            >;
+        };
+
+        function {
+            label = "  FUNC  ";
+            bindings = <
+                &trans      &trans      &trans      &trans      &trans                 &trans  AS(F7)  AS(F8)  AS(F9)  AS(F12)
+                SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)   &trans                 &trans  AS(F4)  AS(F5)  AS(F6)  AS(F11)
+                &trans      &trans      &trans      &trans      &trans                 &trans  AS(F1)  AS(F2)  AS(F3)  AS(F10)
+                                               &trans  &trans  &trans                 &trans  &trans  &trans
+            >;
+        };
+
+        nothing {
+            label = "  NOTH  ";
+            bindings = <
+                &none   &none   &none   &none   &none                  &none   &none   &none   &none   &none
+                &none   &none   &none   &none   &none                  &none   &none   &none   &none   &none
+                &none   &none   &none   &none   &none                  &none   &none   &none   &none   &none
+                               &none   &none   &none                  &none   &none   &none
+            >;
+        };
+
+    };
+
+};
