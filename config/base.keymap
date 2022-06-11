@@ -5,7 +5,9 @@
 
     #include "autoshift.dtsi"
     #include "behaviors.dtsi"
+    #ifndef NO_COMBOS
     #include "combos.dtsi"
+    #endif
     #include "macros.dtsi"
 
     #ifdef THREEXFIVE

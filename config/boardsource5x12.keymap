@@ -1,3 +1,4 @@
 #define FOURXTWELVE
+#define NO_COMBOS
 
 #include "base.keymap"
