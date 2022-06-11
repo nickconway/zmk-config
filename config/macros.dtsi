@@ -1,40 +1,19 @@
-m1: m1 {
-    compatible = "zmk,behavior-macro";
-    label = "MACRO_1";
-    #binding-cells = <0>;
-    bindings = <&macro_tap &kp LA(SPC)>;
-};
+#define MACRO(NAME, WAIT, TAP, BINDINGS) \
+	NAME: NAME { \
+		compatible = "zmk,behavior-macro"; \
+		label = ZMK_MACRO_STRINGIFY(ZM_##NAME); \
+		#binding-cells = <0>; \
+        wait-ms = <WAIT>; \
+        tap-ms = <TAP>; \
+		bindings = <BINDINGS>; \
+    };
 
-m2: m2 {
-    compatible = "zmk,behavior-macro";
-    label = "MACRO_2";
-    #binding-cells = <0>;
-    bindings = <&macro_tap &kp RET &tog GAME &tog GAMET>;
-};
+MACRO(m1, 0, 20, &macro_tap &kp LA(SPC))
 
-mparen: mparen {
-    compatible = "zmk,behavior-macro";
-    label = "MACRO_PARENTHESIS";
-    #binding-cells = <0>;
-    wait-ms = <0>;
-    tap-ms = <20>;
-    bindings = <&macro_tap &kp LPAR &kp RPAR &kp LEFT>;
-};
+#ifdef GAME
+MACRO(m2, 0, 20, &macro_tap &kp RET &tog GAME &tog GAMET)
+#endif
 
-mbracket: mbracket {
-    compatible = "zmk,behavior-macro";
-    label = "MACRO_BRACKET";
-    #binding-cells = <0>;
-    wait-ms = <0>;
-    tap-ms = <20>;
-    bindings = <&macro_tap &kp LBKT &kp RBKT &kp LEFT>;
-};
-
-mbrace: mbrace {
-    compatible = "zmk,behavior-macro";
-    label = "MACRO_BRACE";
-    #binding-cells = <0>;
-    wait-ms = <0>;
-    tap-ms = <20>;
-    bindings = <&macro_tap &kp LBRC &kp RBRC &kp LEFT>;
-};
+MACRO(mparen, 0, 20, &macro_tap &kp LPAR &kp RPAR &kp LEFT)
+MACRO(mbracket, 0, 20, &macro_tap &kp LBKT &kp RBKT &kp LEFT)
+MACRO(mbrace, 0, 20, &macro_tap &kp LBRC &kp RBRC &kp LEFT)

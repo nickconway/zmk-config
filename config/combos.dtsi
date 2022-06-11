@@ -1,77 +1,30 @@
+#define COMBO(NAME, TIMEOUT, KEYS, BINDINGS, LAYERS) \
+	combo_##NAME { \
+        timeout-ms = <TIMEOUT>; \
+        key-positions = <KEYS>; \
+        bindings = <BINDINGS>; \
+        layers = <LAYERS>; \
+};
+
 combos {
 
     compatible = "zmk,combos";
 
-    /* #include "combo_shift.dtsi" */
+    #ifdef COMBO_SHIFT
+    #include "combo_shift.dtsi"
+    #endif
 
-    combo_hmrl_par {
-        timeout-ms = <50>;
-        key-positions = <14 26>;
-        bindings = <&mparen>;
-        layers = <COLE>;
-    };
-
-    combo_hmrl_bkt {
-        timeout-ms = <50>;
-        key-positions = <15 27>;
-        bindings = <&mbracket>;
-        layers = <COLE>;
-    };
-
-    combo_hmrl_brc {
-        timeout-ms = <50>;
-        key-positions = <16 28>;
-        bindings = <&mbrace>;
-        layers = <COLE>;
-    };
-
-    combo_hmrr_par {
-        timeout-ms = <50>;
-        key-positions = <21 33>;
-        bindings = <&mparen>;
-        layers = <COLE>;
-    };
-
-    combo_hmrr_bkt {
-        timeout-ms = <50>;
-        key-positions = <20 32>;
-        bindings = <&mbracket>;
-        layers = <COLE>;
-    };
-
-    combo_hmrr_brc {
-        timeout-ms = <50>;
-        key-positions = <19 31>;
-        bindings = <&mbrace>;
-        layers = <COLE>;
-    };
-
-    combo_dash {
-        timeout-ms = <50>;
-        key-positions = <7 19>;
-        bindings = <&as LS(MINUS) MINUS>;
-        layers = <COLE>;
-    };
-
-    combo_semi {
-        timeout-ms = <50>;
-        key-positions = <22 34>;
-        bindings = <&as LS(SEMI) SEMI>;
-        layers = <COLE>;
-    };
-
-    combo_none {
-        timeout-ms = <50>;
-        key-positions = <13 14 15 16 19 20 21 22>;
-        bindings = <&tog NOTHING>;
-        layers = <COLE NOTHING>;
-    };
-
-    combo_game {
-        timeout-ms = <50>;
-        key-positions = <36 41>;
-        bindings = <&tog GAME>;
-        layers = <COLE GAME>;
-    };
+    #ifdef THREEXFIVE
+    COMBO(hmrl_par, 50, 14 26, &mparen, BASE)
+    COMBO(hmrl_bkt, 50, 15 27, &mbracket, BASE)
+    COMBO(hmrl_brc, 50, 16 28, &mbrace, BASE)
+    COMBO(hmrr_par, 50, 21 33, &mparen, BASE)
+    COMBO(hmrr_bkt, 50, 20 32, &mbracket, BASE)
+    COMBO(hmrr_brc, 50, 19 31, &mbrace, BASE)
+    COMBO(dash, 50, 7 19, &as LS(MINUS) MINUS, BASE)
+    COMBO(semi, 50, 22 34, &as LS(SEMI) SEMI, BASE)
+    COMBO(none, 50, 13 14 15 16 19 20 21 22, &tog NOTHING, BASE NOTHING)
+    COMBO(game, 50, 36 41, &tog GAME, BASE GAME)
+    #endif
 
 };

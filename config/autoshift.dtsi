@@ -153,8 +153,6 @@ ASM(F12, TAPPING_TERM)
         on-each-press; \
     };
 
-/* bindings = <&ASM##letter>, <&as LS(##letter) ##letter>; \ */
-
 HRM(A, LSHIFT, TAPPING_TERM_PINKY)
 HRM(R, LGUI, TAPPING_TERM_RING)
 HRM(S, LALT, TAPPING_TERM)

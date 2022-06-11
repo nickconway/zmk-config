@@ -1,0 +1,18 @@
+#ifdef THREEXFIVE
+#define BASE    0
+#define GAME    1
+#define GAMET   2
+#define NAV     3
+#define MOUSE   4
+#define MEDIA   5
+#define NUM     6
+#define SYM     7
+#define FUN     8
+#define NOTHING 9
+#endif
+
+#ifdef FOURXTWELVE
+#define BASE    0
+#define NUM     1
+#define FUN     2
+#endif

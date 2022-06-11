@@ -1,5 +1,5 @@
-#define THREE_THUMBS
 #define THREEXFIVE
+#define THREE_THUMBS
 
 / {
     chosen {
