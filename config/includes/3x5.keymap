@@ -14,6 +14,7 @@ keymap {
                     &lt NUM BKSP &lt SYM DEL               &lt MEDIA RET &lt NAV SPC
 #endif
         >;
+        sensor-bindings = <&arrow_enc &arrow_enc2>;
     };
 
     game {
@@ -28,6 +29,7 @@ keymap {
                              &kp SPC &kp LALT          &m2  &trans
 #endif
         >;
+        sensor-bindings = <&arrow_enc &arrow_enc2>;
     };
 
     gametype {
@@ -42,6 +44,7 @@ keymap {
                                       &trans   &trans               &m2 &trans
 #endif
         >;
+        sensor-bindings = <&arrow_enc &arrow_enc2>;
     };
 
     nav {
@@ -56,6 +59,7 @@ keymap {
                                                                &trans &trans            &trans &trans
 #endif
         >;
+        sensor-bindings = <&inc_dec_kp LG(LC(LEFT)) LG(LC(RIGHT))>;
     };
 
     mouse {

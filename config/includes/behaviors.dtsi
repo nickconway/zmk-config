@@ -123,3 +123,17 @@ hrm: hrm {
     quick-tap-ms = <QUICK_TAP_TERM>;
     bindings = <&kp>, <&kp>;
 };
+
+arrow_enc: arrow_enc {
+    compatible = "zmk,behavior-sensor-rotate";
+    label = "ARROW_ENCODER";
+    #sensor-binding-cells = <0>;
+    bindings = <&kp LEFT>, <&kp RIGHT>;
+};
+
+arrow_enc2: arrow_enc2 {
+    compatible = "zmk,behavior-sensor-rotate";
+    label = "ARROW_ENCODER2";
+    #sensor-binding-cells = <0>;
+    bindings = <&kp UP>, <&kp DOWN>;
+};
