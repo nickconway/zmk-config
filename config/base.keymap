@@ -1,19 +1,19 @@
-#include "general.dtsi"
-#include "layers.dtsi"
+#include "includes/general.dtsi"
+#include "includes/layers.dtsi"
 
 / {
 
-    #include "autoshift.dtsi"
-    #include "behaviors.dtsi"
+    #include "includes/autoshift.dtsi"
+    #include "includes/behaviors.dtsi"
     #ifndef NO_COMBOS
-    #include "combos.dtsi"
+    #include "includes/combos.dtsi"
     #endif
-    #include "macros.dtsi"
+    #include "includes/macros.dtsi"
 
     #ifdef THREEXFIVE
-    #include "3x5.keymap"
+    #include "includes/3x5.keymap"
     #elif defined(FOURXTWELVE)
-    #include "4x12.keymap"
+    #include "includes/4x12.keymap"
     #endif
 
 };
