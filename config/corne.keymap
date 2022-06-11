@@ -1,5 +1,6 @@
 #define THREEXFIVE
 #define THREETHUMBS
+#define NOPOWERSWITCH
 
 / {
     chosen {

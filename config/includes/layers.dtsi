@@ -15,4 +15,5 @@
 #define BASE    0
 #define NUM     1
 #define FUN     2
+#define NOTHING 3
 #endif

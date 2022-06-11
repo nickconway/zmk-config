@@ -1,4 +1,4 @@
 #define FOURXTWELVE
-#define NO_COMBOS
+#define NOPOWERSWITCH
 
 #include "base.keymap"

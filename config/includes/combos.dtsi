@@ -14,7 +14,6 @@ combos {
     #include "combo_shift.dtsi"
     #endif
 
-    #ifdef THREEXFIVE
     COMBO(hmrl_par, 50, 14 26, &mparen, BASE)
     COMBO(hmrl_bkt, 50, 15 27, &mbracket, BASE)
     COMBO(hmrl_brc, 50, 16 28, &mbrace, BASE)
@@ -23,7 +22,12 @@ combos {
     COMBO(hmrr_brc, 50, 19 31, &mbrace, BASE)
     COMBO(dash, 50, 7 19, &as LS(MINUS) MINUS, BASE)
     COMBO(semi, 50, 22 34, &as LS(SEMI) SEMI, BASE)
+
+    #ifdef NOPOWERSWITCH
     COMBO(none, 50, 13 14 15 16 19 20 21 22, &tog NOTHING, BASE NOTHING)
+    #endif
+
+    #ifdef GAMING
     COMBO(game, 50, 36 41, &tog GAME, BASE GAME)
     #endif
 

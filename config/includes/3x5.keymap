@@ -59,7 +59,7 @@ keymap {
                                                                &trans &trans            &trans &trans
 #endif
         >;
-        sensor-bindings = <&inc_dec_kp LG(LC(LEFT)) LG(LC(RIGHT))>;
+        sensor-bindings = <&inc_dec_kp LG(LC(LEFT)) LG(LC(RIGHT)) &none_enc>;
     };
 
     mouse {
@@ -88,6 +88,7 @@ keymap {
                                                                      &kp C_MUTE &kp C_PP                 &trans  &trans
 #endif
         >;
+        sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &none_enc>;
     };
 
     number {

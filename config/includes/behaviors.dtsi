@@ -137,3 +137,10 @@ arrow_enc2: arrow_enc2 {
     #sensor-binding-cells = <0>;
     bindings = <&kp UP>, <&kp DOWN>;
 };
+
+none_enc: none_enc {
+    compatible = "zmk,behavior-sensor-rotate";
+    label = "NONE_ENCODER";
+    #sensor-binding-cells = <0>;
+    bindings = <&none>, <&none>;
+};
