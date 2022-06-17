@@ -51,7 +51,7 @@
         #binding-cells = <0>; \
         tapping-term-ms = <##tapping_time>; \
         bindings = <&asmm##letter>, <&kp letter>; \
-        on-each-press; \
+        trigger-each-binding; \
     };
 
 #define ASB(keycode) &as LS(keycode) keycode
@@ -150,7 +150,7 @@ ASM(F12, TAPPING_TERM)
         #binding-cells = <0>; \
         tapping-term-ms = <tapping_time>; \
         bindings = <&hr##letter mod letter>, <&kp letter>; \
-        on-each-press; \
+        trigger-each-binding; \
     };
 
 HRM(A, LSHIFT, TAPPING_TERM_PINKY)

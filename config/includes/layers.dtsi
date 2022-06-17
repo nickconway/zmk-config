@@ -9,6 +9,7 @@
 #define SYM     7
 #define FUN     8
 #define NOTHING 9
+#define DEV     10
 #endif
 
 #ifdef FOURXTWELVE

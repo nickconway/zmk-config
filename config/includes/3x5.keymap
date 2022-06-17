@@ -147,4 +147,14 @@ keymap {
         >;
     };
 
+    dev {
+        label = "  DEV  ";
+        bindings = <
+            &none   &none   &none   &none   &none                  &none   &none   &none   &none   &none
+            &none   &none   &dm1 0  &dm1 1  &none                  &none   &none   &none   &none   &none
+            &none   &none   &none   &none   &none                  &none   &none   &none   &none   &none
+                                &none &none &none                  &none &none &none
+        >;
+    };
+
 };
