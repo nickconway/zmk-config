@@ -21,7 +21,7 @@ MACRO(mbrace, 0, 20, &macro_tap &kp LBRC &kp RBRC &kp LEFT)
 dm1: dm1 {
     compatible = "zmk,behavior-dynamic-macro";
     label = "dynamic-macro-1";
-    wait-ms: <10>;
-    tap-ms: <10>;
+    wait-ms = <10>;
+    tap-ms = <10>;
     #binding-cells = <1>;
 };
