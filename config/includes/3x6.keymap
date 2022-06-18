@@ -94,7 +94,7 @@ keymap {
     number {
         label = "  NUM   ";
         bindings = <
-            &trans  &bootloader &trans      &trans      &trans              &reset                 AS(LBKT)     AS(N7)  AS(N8)  AS(N9)  AS(RBKT)    &trans
+            &trans  &bootloader &trans      &trans      &dm1 0              &reset                 AS(LBKT)     AS(N7)  AS(N8)  AS(N9)  AS(RBKT)    &trans
             &trans  SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)           &trans                 AS(EQUAL)    AS(N4)  AS(N5)  AS(N6)  AS(SEMI)    &trans
             &trans  &trans      &trans      &kt RIGHT   &kp LG(LC(LEFT))    &trans                 AS(GRAVE)    AS(N1)  AS(N2)  AS(N3)  AS(BSLH)    &trans
 #ifdef THREETHUMBS
