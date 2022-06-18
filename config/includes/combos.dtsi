@@ -23,7 +23,7 @@ combos {
     COMBO(dash, 50, 7 19, &as LS(MINUS) MINUS, BASE)
     COMBO(semi, 50, 22 34, &as LS(SEMI) SEMI, BASE)
 
-    COMBO(dev, 50, 4 5, &tog DEV, BASE DEV)
+    COMBO(dev, 50, 5 6, &tog DEV, BASE DEV)
 
     #ifdef NOPOWERSWITCH
     COMBO(none, 50, 13 14 15 16 19 20 21 22, &tog NOTHING, BASE NOTHING)

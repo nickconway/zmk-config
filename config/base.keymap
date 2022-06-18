@@ -12,6 +12,8 @@
 
     #ifdef THREEXFIVE
     #include "includes/3x5.keymap"
+    #elif defined(THREEXSIX)
+    #include "includes/3x6.keymap"
     #elif defined(FOURXTWELVE)
     #include "includes/4x12.keymap"
     #endif

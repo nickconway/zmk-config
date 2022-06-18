@@ -1,11 +1,5 @@
-#define THREEXFIVE
+#define THREEXSIX
 #define THREETHUMBS
 #define NOPOWERSWITCH
-
-/ {
-    chosen {
-        zmk,matrix_transform = &five_column_transform;
-    };
-};
 
 #include "base.keymap"
