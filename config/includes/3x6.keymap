@@ -94,7 +94,7 @@ keymap {
     number {
         label = "  NUM   ";
         bindings = <
-            &trans  &bootloader &trans      &trans      &dm1 0              &reset                 AS(LBKT)     AS(N7)  AS(N8)  AS(N9)  AS(RBKT)    &trans
+            &trans  &bootloader &dm1 1      &kp B       &dm1 0              &reset                 AS(LBKT)     AS(N7)  AS(N8)  AS(N9)  AS(RBKT)    &trans
             &trans  SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)           &trans                 AS(EQUAL)    AS(N4)  AS(N5)  AS(N6)  AS(SEMI)    &trans
             &trans  &trans      &trans      &kt RIGHT   &kp LG(LC(LEFT))    &trans                 AS(GRAVE)    AS(N1)  AS(N2)  AS(N3)  AS(BSLH)    &trans
 #ifdef THREETHUMBS
@@ -108,7 +108,7 @@ keymap {
     symbol {
         label = "  SYMB  ";
         bindings = <
-            &trans  &trans      &trans      &trans      &trans      &trans                 &trans  &trans       &trans      &trans      &trans  &trans
+            &trans  &trans      &trans      &kp C       &trans      &trans                 &trans  &trans       &trans      &trans      &trans  &trans
             &trans  SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)   &trans                 &trans  &kp LS(N9)   AS(LBKT)    AS(MINUS)   &trans  &trans
             &trans  &trans      &trans      &trans      &trans      &trans                 &trans  &kp LS(N0)   AS(RBKT)    AS(MINUS)   &trans  &trans
 #ifdef THREETHUMBS
@@ -150,10 +150,10 @@ keymap {
     dev {
         label = "  DEV  ";
         bindings = <
-            &trans  &none   &none   &none   &none   &none                  &none   &none   &none   &none   &none    &trans
-            &trans  &none   &none   &dm1 0  &dm1 1  &none                  &none   &none   &none   &none   &none    &trans
-            &trans  &none   &none   &none   &none   &none                  &none   &none   &none   &none   &none    &trans
-                                &none &none &none                  &none &none &none
+            &trans  &none   &none   &none       &none       &none                  &none   &none   &none   &none   &none    &trans
+            &trans  &none   &none   &dm1 PLAY   &dm1 RECORD &none                  &none   &none   &none   &none   &none    &trans
+            &trans  &none   &none   &none       &none       &none                  &none   &none   &none   &none   &none    &trans
+                                                &none &none &none                  &none &none &none
         >;
     };
 
