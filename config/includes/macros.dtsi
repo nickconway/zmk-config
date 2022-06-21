@@ -22,6 +22,5 @@ dm1: dm1 {
     compatible = "zmk,behavior-dynamic-macro";
     label = "dynamic-macro-1";
     wait-ms = <10>;
-    tap-ms = <10>;
     #binding-cells = <1>;
 };
