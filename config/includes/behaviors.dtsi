@@ -124,6 +124,16 @@ hrm: hrm {
     bindings = <&kp>, <&kp>;
 };
 
+swap: swap {
+    compatible = "zmk,behavior-tap-dance";
+    label = "SWAPPER";
+    #binding-cells = <0>;
+    tapping-term-ms = <1000>;
+    trigger-each-binding;
+    end-behavior;
+    bindings = <&kt LALT>, <&kp TAB>, <&kp TAB>, <&kt LALT>;
+};
+
 arrow_enc: arrow_enc {
     compatible = "zmk,behavior-sensor-rotate";
     label = "ARROW_ENCODER";
