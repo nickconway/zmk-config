@@ -23,6 +23,8 @@ combos {
 
     COMBO(lthumb, COMBO_TERM, LH1 LH2, &lt FUN ESC, BASE)
     COMBO(rthumb, COMBO_TERM, RH0 RH1, &lt MOUSE TAB, BASE)
+    COMBO(ltesc, COMBO_TERM, LT2 LT3, &kp ESC, BASE)
+    COMBO(rttab, COMBO_TERM, RT1 RT2, &kp TAB, BASE)
 
     COMBO(hmrl_par, COMBO_TERM, LM1 LB1, &mparen, BASE)
     COMBO(hmrl_bkt, COMBO_TERM, LM2 LB2, &mbracket, BASE)
@@ -34,7 +36,6 @@ combos {
     COMBO(semi, COMBO_TERM, RB2 RB3, &as LS(SEMI) SEMI, BASE)
 
     COMBO(none, COMBO_TERM, LM0 LM1 LM2 LM3 RM1 RM2 RM3 RM4, &tog NOTHING, BASE NOTHING)
-
     COMBO(game, COMBO_TERM, LH1 RH1, &tog GAME, BASE GAME)
 
 };
