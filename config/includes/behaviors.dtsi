@@ -148,6 +148,22 @@ arrow_enc2: arrow_enc2 {
     bindings = <&kp DOWN>, <&kp UP>;
 };
 
+mouse_enc: mouse_enc {
+    compatible = "zmk,behavior-sensor-rotate";
+    label = "MOUSE_ENCODER";
+    #sensor-binding-cells = <0>;
+    bindings = <&mmv MOVE_HOR(3000)>, <&mmv MOVE_HOR(-3000)>;
+    tap-ms = <100>;
+};
+
+mouse_enc2: mouse_enc2 {
+    compatible = "zmk,behavior-sensor-rotate";
+    label = "MOUSE_ENCODER2";
+    #sensor-binding-cells = <0>;
+    bindings = <&mmv MOVE_VERT(-3000)>, <&mmv MOVE_VERT(3000)>;
+    tap-ms = <100>;
+};
+
 none_enc: none_enc {
     compatible = "zmk,behavior-sensor-rotate";
     label = "NONE_ENCODER";
