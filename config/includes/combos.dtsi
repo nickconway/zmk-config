@@ -10,10 +10,6 @@ combos {
 
     compatible = "zmk,combos";
 
-    #ifdef COMBO_SHIFT
-    #include "combo_shift.dtsi"
-    #endif
-
     COMBO(hmrl_par, 50, 14 26, &mparen, BASE)
     COMBO(hmrl_bkt, 50, 15 27, &mbracket, BASE)
     COMBO(hmrl_brc, 50, 16 28, &mbrace, BASE)
