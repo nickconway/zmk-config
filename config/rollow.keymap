@@ -60,5 +60,9 @@
 #define ETR &none
 #define EMR &none
 #define EBR &none
+#define TTL &lt FUN ESC
+#define TTLG &kp LCTL
+#define TTR &lt MOUSE TAB
+#define TTRG &trans
 
 #include "base.keymap"
