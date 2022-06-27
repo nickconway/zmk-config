@@ -21,12 +21,8 @@ combos {
 
     compatible = "zmk,combos";
 
-    combo_hmrl_par {
-          timeout-ms = <50>;
-          key-positions = <4 5>;
-          bindings = <&mparen>;
-          layers = <BASE>;
-    };
+    COMBO(lthumb, COMBO_TERM, LH1 LH2, &lt FUN ESC, BASE)
+    COMBO(rthumb, COMBO_TERM, RH0 RH1, &lt MOUSE TAB, BASE)
 
     COMBO(hmrl_par, COMBO_TERM, LM1 LB1, &mparen, BASE)
     COMBO(hmrl_bkt, COMBO_TERM, LM2 LB2, &mbracket, BASE)
