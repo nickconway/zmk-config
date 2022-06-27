@@ -1,0 +1,4 @@
+#define THREEXSIX
+#define THREETHUMBS
+
+#include "base.keymap"
