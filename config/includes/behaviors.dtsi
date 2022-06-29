@@ -125,13 +125,10 @@ hrm: hrm {
 };
 
 swap: swap {
-    compatible = "zmk,behavior-tap-dance";
+    compatible = "zmk,behavior-smart-interrupt";
     label = "SWAPPER";
     #binding-cells = <0>;
-    tapping-term-ms = <1000>;
-    trigger-each-binding;
-    end-behavior;
-    bindings = <&kt LALT>, <&kp TAB>, <&kp TAB>, <&kt LALT>;
+    bindings = <&kt LALT>, <ASB(TAB)>, <&kt LALT>;
 };
 
 arrow_enc: arrow_enc {

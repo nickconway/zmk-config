@@ -78,9 +78,9 @@
         nav {
             label = "  NAVI  ";
             bindings = <
-                ETL ASB(PG_UP)   ASB(HOME)  ASB(UP)         ASB(END)     ASB(INSERT)            &reset      &swap             &trans   &trans      &bootloader  ETR
-                EML ASB(PG_DN)   ASB(LEFT)  ASB(DOWN)       ASB(RIGHT)   &caps_word             &kp CAPS    SK(LCTL)          SK(LALT) SK(LGUI)    SK(LSHIFT)   EMR
-                EBL &kp LC(Z)    &kp LC(X)  &kp LC(C)       &kp LC(V)    &kp INSERT             &trans      &kp LG(LC(RIGHT)) &trans   &trans      &trans       EBR
+                ETL ASB(PG_UP)   ASB(HOME)  ASB(UP)         ASB(END)     ASB(INSERT)            &reset      &swap             &trans            &trans      &bootloader  ETR
+                EML ASB(PG_DN)   ASB(LEFT)  ASB(DOWN)       ASB(RIGHT)   &caps_word             &kp CAPS    SK(LCTL)          SK(LALT)          SK(LGUI)    SK(LSHIFT)   EMR
+                EBL &kp LC(Z)    &kp LC(X)  &kp LC(C)       &kp LC(V)    &kp INSERT             &trans      &kp LG(LC(RIGHT)) &ext_power EP_TOG &trans      &trans       EBR
                                                                    TTL &trans &trans            &trans &trans TTR
             >;
             sensor-bindings = <&inc_dec_kp LG(LC(LEFT)) LG(LC(RIGHT)) &none_enc>;
