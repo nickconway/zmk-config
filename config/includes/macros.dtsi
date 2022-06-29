@@ -1,12 +1,12 @@
 #define MACRO(NAME, WAIT, TAP, BINDINGS) \
-	NAME: NAME { \
-		compatible = "zmk,behavior-macro"; \
-		label = ZMK_MACRO_STRINGIFY(ZM_##NAME); \
-		#binding-cells = <0>; \
+    NAME: NAME { \
+        compatible = "zmk,behavior-macro"; \
+        label = ZMK_MACRO_STRINGIFY(ZM_##NAME); \
+        #binding-cells = <0>; \
         wait-ms = <WAIT>; \
         tap-ms = <TAP>; \
-		bindings = <BINDINGS>; \
-    };
+        bindings = <BINDINGS>; \
+};
 
 MACRO(m1, 0, 20, &macro_tap &kp LA(SPC))
 

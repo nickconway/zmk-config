@@ -38,6 +38,10 @@
     #include "includes/combos.dtsi"
     #include "includes/macros.dtsi"
 
+    chosen {
+        zephyr,display = &oled;
+    };
+
     keymap {
 
         compatible = "zmk,keymap";
