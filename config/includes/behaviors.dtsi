@@ -51,14 +51,6 @@ wing: wing {
     mods = <(MOD_LGUI)>;
 };
 
-atn: atn {
-    compatible = "zmk,behavior-mod-morph";
-    label = "ALT_TAB_N";
-    #binding-cells = <0>;
-    bindings = <HRN>, <&as LS(TAB) TAB>;
-    mods = <(MOD_LALT)>;
-};
-
 dcv: dcv {
     compatible = "zmk,behavior-mod-morph";
     label = "D_C_V";
