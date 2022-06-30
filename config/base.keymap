@@ -47,7 +47,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            label = "  COLE  ";
+            label = "BASE";
             bindings = <
                 ETL &wing  AS(W) AS(F) AS(P)   AS(B)               AS(J)   AS(L)   AS(U)       AS(Y)   AS(QUOT)  ETR
                 EML HRA    HRR   HRS   HRT     AS(G)               AS(M)   HRN     HRE         HRI     HRO       EMR
@@ -58,7 +58,7 @@
         };
 
         game {
-            label = " GAME  ";
+            label = "GAME";
             bindings = <
                 ETL &kp Q  &kp W  &kp F  &kp P  &kp B          &trans  &trans  &trans  &trans  &trans ETR
                 EML &kp A  &kp R  &kp S  &kp T  &kp G          &trans  &trans  &trans  &trans  &trans EMR
@@ -69,7 +69,7 @@
         };
 
         gametype {
-            label = " GAMET ";
+            label = "GAMETYPE";
             bindings = <
                 ETL &trans  &trans   &trans   &trans   &trans               &trans &trans &trans &trans &trans ETR
                 EML &trans  &trans   &trans   &trans   &trans               &trans &trans &trans &trans &trans EMR
@@ -80,7 +80,7 @@
         };
 
         nav {
-            label = "  NAVI  ";
+            label = "NAV";
             bindings = <
                 ETL ASB(PG_UP)   ASB(HOME)  ASB(UP)         ASB(END)     ASB(INSERT)            &reset      &swap             &trans            &trans      &bootloader  ETR
                 EML ASB(PG_DN)   ASB(LEFT)  ASB(DOWN)       ASB(RIGHT)   &caps_word             &kp CAPS    SK(LCTL)          SK(LALT)          SK(LGUI)    SK(LSHIFT)   EMR
@@ -91,7 +91,7 @@
         };
 
         mouse {
-            label = "  MOUS  ";
+            label = "MOUSE";
             bindings = <
                 ETL &trans  &trans                  &mmv MOVE_VERT(-3000)   &trans                  &trans                 &trans  &trans           &mwh SCROLL_UP      &trans              &trans ETR
                 EML &trans  &mmv MOVE_HOR(-3000)    &mmv MOVE_VERT(3000)    &mmv MOVE_HOR(3000)     &trans                 &trans  &mwh SCROLL_LEFT &mwh SCROLL_DOWN    &mwh SCROLL_RIGHT   &trans EMR
@@ -101,7 +101,7 @@
         };
 
         media {
-            label = "  MDIA  ";
+            label = "MEDIA";
             bindings = <
                 ETL &trans          &trans          &kp C_VOL_UP    &trans          &trans                       &trans  &trans  &kp C_BRI_UP   &trans  &bt BT_CLR  ETR
                 EML &out OUT_TOG    &kp C_PREV      &kp C_VOL_DN    &kp C_NEXT      &trans                       &trans  &trans  &kp C_BRI_DN   &trans  &trans      EMR
@@ -112,7 +112,7 @@
         };
 
         number {
-            label = "  NUM   ";
+            label = "NUMBER";
             bindings = <
                 ETL &bootloader &trans      &dm1 RECORD &dm1 PLAY           &reset                 AS(LBKT)     AS(N7)  AS(N8)  AS(N9)  AS(RBKT)    ETR
                 EML SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)           &trans                 AS(EQUAL)    AS(N4)  AS(N5)  AS(N6)  AS(SEMI)    EMR
@@ -122,7 +122,7 @@
         };
 
         symbol {
-            label = "  SYMB  ";
+            label = "SYMBOL";
             bindings = <
                 ETL &trans      &trans      &kp C       &trans      &trans                 &trans  &trans       &trans      &trans      &trans  ETR
                 EML SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)   &trans                 &trans  &kp LS(N9)   AS(LBKT)    AS(MINUS)   &trans  EMR
@@ -132,7 +132,7 @@
         };
 
         function {
-            label = "  FUNC  ";
+            label = "FUNCTION";
             bindings = <
                 ETL &trans      &trans      &trans      &trans      &trans                 &trans  AS(F7)  AS(F8)  AS(F9)  AS(F12)  ETR
                 EML SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)   &trans                 &trans  AS(F4)  AS(F5)  AS(F6)  AS(F11)  EMR
@@ -142,7 +142,7 @@
         };
 
         nothing {
-            label = "  NOTH  ";
+            label = "NOTHING";
             bindings = <
                 ETL &none   &none   &none   &none   &none                  &none   &none   &none   &none   &none    ETR
                 EML &none   &none   &none   &none   &none                  &none   &none   &none   &none   &none    EMR
