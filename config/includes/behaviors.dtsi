@@ -46,8 +46,7 @@ wing: wing {
     compatible = "zmk,behavior-mod-morph";
     label = "WIN_GRAVE";
     #binding-cells = <0>;
-    /* bindings = <AS(Q)>, <&kp GRAVE>; */
-    bindings = <ASBP(Q)>, <&kp GRAVE>;
+    bindings = <&asmmQ>, <&kp GRAVE>;
     mods = <(MOD_LGUI)>;
 };
 
