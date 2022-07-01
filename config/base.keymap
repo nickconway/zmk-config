@@ -98,6 +98,7 @@
                 EBL &trans  &trans                  &trans                  &trans                  &trans                 &trans  &trans           &trans              &trans              &trans EBR
                                                                                  TTL  &mkp LCLK  &mkp RCLK                 &trans  &trans  TTR
             >;
+            sensor-bindings = <&mouse_enc &mouse_enc2>;
         };
 
         media {
@@ -108,7 +109,7 @@
                 EBL &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                 &trans  &trans  &trans         &trans  &trans      EBR
                                                                          TTL &kp C_PP &kp C_STOP                 &trans  &trans  TTR
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &none_enc>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &none_enc>;
         };
 
         number {
@@ -149,6 +150,7 @@
                 EBL &none   &none   &none   &none   &none                  &none   &none   &none   &none   &none    EBR
                                           TTL &none &none                  &none &none TTR
             >;
+            sensor-bindings = <&none_enc &none_enc>;
         };
 
     };
