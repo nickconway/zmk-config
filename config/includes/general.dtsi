@@ -16,7 +16,7 @@
 #define SYM     7
 #define FUN     8
 #define NOTHING 9
-#define DEV     10
+#define STENO   10
 
 #define TAPPING_TERM 175
 #define TAPPING_TERM_RING 225

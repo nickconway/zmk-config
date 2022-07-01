@@ -153,6 +153,17 @@
             sensor-bindings = <&none_enc &none_enc>;
         };
 
+        steno {
+            label = "STENO";
+            bindings = <
+                ETL &kp PLV_SL  &kp PLV_TL  &kp PLV_PL  &kp PLV_HL  &kp PLV_ST          &kp PLV_ST  &kp PLV_FR &kp PLV_PR &kp PLV_LR  &kp PLV_TR  &kp PLV_DR
+                EML &kp PLV_SL  &kp PLV_KL  &kp PLV_WL  &kp PLV_RL  &kp PLV_ST          &kp PLV_ST  &kp PLV_RR &kp PLV_BR &kp PLV_GR  &kp PLV_SR  &kp PLV_ZR
+                EBL &none   &none   &none   &none   &none                               &none   &none   &none   &none   &none    EBR
+                                                        TTL &kp PLV_A &kp PLV_O         &kp PLV_E &kp PLV_U TTR
+            >;
+            sensor-bindings = <&none_enc &none_enc>;
+        };
+
     };
 
 };
