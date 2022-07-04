@@ -98,7 +98,7 @@
                 EBL &trans  &trans                  &trans                  &trans                  &trans                 &trans  &trans           &trans              &trans              &trans EBR
                                                                                  TTL  &mkp LCLK  &mkp RCLK                 &trans  &trans  TTR
             >;
-            sensor-bindings = <&mouse_enc &mouse_enc2>;
+            sensor-bindings = <&mwh_enc &mwh_enc2>;
         };
 
         media {

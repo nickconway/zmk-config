@@ -136,20 +136,36 @@ arrow_enc2: arrow_enc2 {
     bindings = <&kp DOWN>, <&kp UP>;
 };
 
-mouse_enc: mouse_enc {
+mmv_enc: mmv_enc {
     compatible = "zmk,behavior-sensor-rotate";
-    label = "MOUSE_ENCODER";
+    label = "MMV_ENCODER";
     #sensor-binding-cells = <0>;
     bindings = <&mmv MOVE_HOR(3000)>, <&mmv MOVE_HOR(-3000)>;
-    tap-ms = <100>;
+    tap-ms = <20>;
 };
 
-mouse_enc2: mouse_enc2 {
+mmv_enc2: mmv_enc2 {
     compatible = "zmk,behavior-sensor-rotate";
-    label = "MOUSE_ENCODER2";
+    label = "MMV_ENCODER2";
     #sensor-binding-cells = <0>;
-    bindings = <&mmv MOVE_VERT(-3000)>, <&mmv MOVE_VERT(3000)>;
-    tap-ms = <100>;
+    bindings = <&mmv MOVE_VERT(3000)>, <&mmv MOVE_VERT(-3000)>;
+    tap-ms = <20>;
+};
+
+mwh_enc: mwh_enc {
+    compatible = "zmk,behavior-sensor-rotate";
+    label = "MMV_ENCODER";
+    #sensor-binding-cells = <0>;
+    bindings = <&mwh SCROLL_RIGHT>, <&mwh SCROLL_LEFT>;
+    tap-ms = <20>;
+};
+
+mwh_enc2: mwh_enc2 {
+    compatible = "zmk,behavior-sensor-rotate";
+    label = "MMV_ENCODER2";
+    #sensor-binding-cells = <0>;
+    bindings = <&mwh SCROLL_DOWN>, <&mwh SCROLL_UP>;
+    tap-ms = <20>;
 };
 
 none_enc: none_enc {
