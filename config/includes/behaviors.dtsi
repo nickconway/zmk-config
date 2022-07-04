@@ -141,7 +141,7 @@ mmv_enc: mmv_enc {
     label = "MMV_ENCODER";
     #sensor-binding-cells = <0>;
     bindings = <&mmv MOVE_HOR(3000)>, <&mmv MOVE_HOR(-3000)>;
-    tap-ms = <20>;
+    tap-ms = <100>;
 };
 
 mmv_enc2: mmv_enc2 {
@@ -149,7 +149,7 @@ mmv_enc2: mmv_enc2 {
     label = "MMV_ENCODER2";
     #sensor-binding-cells = <0>;
     bindings = <&mmv MOVE_VERT(3000)>, <&mmv MOVE_VERT(-3000)>;
-    tap-ms = <20>;
+    tap-ms = <100>;
 };
 
 mwh_enc: mwh_enc {
@@ -157,7 +157,7 @@ mwh_enc: mwh_enc {
     label = "MMV_ENCODER";
     #sensor-binding-cells = <0>;
     bindings = <&mwh SCROLL_RIGHT>, <&mwh SCROLL_LEFT>;
-    tap-ms = <20>;
+    tap-ms = <100>;
 };
 
 mwh_enc2: mwh_enc2 {
@@ -165,7 +165,7 @@ mwh_enc2: mwh_enc2 {
     label = "MMV_ENCODER2";
     #sensor-binding-cells = <0>;
     bindings = <&mwh SCROLL_DOWN>, <&mwh SCROLL_UP>;
-    tap-ms = <20>;
+    tap-ms = <100>;
 };
 
 none_enc: none_enc {
