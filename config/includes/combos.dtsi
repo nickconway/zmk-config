@@ -31,8 +31,8 @@ combos {
     COMBO(hmrr_bkt, COMBO_TERM, RM2 RB2, &mbracket, BASE)
     COMBO(hmrr_brc, COMBO_TERM, RM1 RB1, &mbrace, BASE)
 
-    COMBO(ltesc, COMBO_TERM, LB2 LB3, &kp ESC, BASE)
-    COMBO(rttab, COMBO_TERM, RB1 RB2, &kp TAB, BASE)
+    COMBO(ltesc, COMBO_TERM, LB2 LB3, &lt FUN ESC, BASE)
+    COMBO(rttab, COMBO_TERM, RB1 RB2, &lt MOUSE TAB, BASE)
     COMBO(dash, COMBO_TERM, RT1 RT2, &as LS(MINUS) MINUS, BASE NUM)
     COMBO(semi, COMBO_TERM, RT2 RT3, &as LS(SEMI) SEMI, BASE NUM)
 
