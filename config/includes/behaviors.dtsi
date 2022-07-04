@@ -164,7 +164,7 @@ mwh_enc2: mwh_enc2 {
     compatible = "zmk,behavior-sensor-rotate";
     label = "MMV_ENCODER2";
     #sensor-binding-cells = <0>;
-    bindings = <&mwh SCROLL_DOWN>, <&mwh SCROLL_UP>;
+    bindings = <&mwh SCROLL_VERT(-20)>, <&mwh SCROLL_VERT(20)>;
     tap-ms = <100>;
 };
 
