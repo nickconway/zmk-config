@@ -68,5 +68,5 @@
 #ifndef EMMY
 #include "includes/base.keymap"
 #else
-#include "includes/em/base.keymap"
+#include "em/base.keymap"
 #endif
