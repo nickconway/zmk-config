@@ -66,7 +66,7 @@
 #define TTRG &trans
 
 #ifndef EMMY
-#include "includes/base.keymap"
+#include "nick/base.keymap"
 #else
 #include "em/base.keymap"
 #endif
