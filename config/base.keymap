@@ -30,6 +30,9 @@
 #ifndef TTRG
 #define TTRG
 #endif
+#ifndef CHOSEN
+#define CHOSEN
+#endif
 
 / {
 
@@ -38,9 +41,7 @@
     #include "includes/combos.dtsi"
     #include "includes/macros.dtsi"
 
-    chosen {
-        zephyr,display = &oled;
-    };
+    CHOSEN
 
     keymap {
 

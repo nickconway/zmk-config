@@ -7,7 +7,7 @@
   ╰───────────╮ 36  37  38 │ │ 39  40  41 ╭───────────╯
               ╰────────────╯ ╰────────────╯ */
 
-#define THREETHUMBS
+#define EMMY
 
 /* key positions */
 #define LT0  1  // left-top row
@@ -60,5 +60,13 @@
 #define ETR &none
 #define EMR &none
 #define EBR &none
+#define TTL &lt FUN ESC
+#define TTLG &kp LCTL
+#define TTR &lt MOUSE TAB
+#define TTRG &trans
 
-#include "base.keymap"
+#ifndef EMMY
+#include "includes/base.keymap"
+#else
+#include "includes/em/base.keymap"
+#endif

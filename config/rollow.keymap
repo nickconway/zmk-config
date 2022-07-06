@@ -7,8 +7,6 @@
   ╰───────────╮ 36  37  38 │ │ 39  40  41 ╭───────────╯
               ╰────────────╯ ╰────────────╯ */
 
-#define THREETHUMBS
-
 /* key positions */
 #define LT0  1  // left-top row
 #define LT1  2
@@ -64,5 +62,10 @@
 #define TTLG &kp LCTL
 #define TTR &lt MOUSE TAB
 #define TTRG &trans
+
+#define CHOSEN \
+    chosen { \
+        zephyr,display = &oled; \
+    };
 
 #include "base.keymap"
