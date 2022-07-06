@@ -7,8 +7,6 @@
   ╰───────────╮ 36  37  38 │ │ 39  40  41 ╭───────────╯
               ╰────────────╯ ╰────────────╯ */
 
-#define EMMY
-
 /* key positions */
 #define LT0  1  // left-top row
 #define LT1  2
@@ -65,8 +63,4 @@
 #define TTR &lt MOUSE TAB
 #define TTRG &trans
 
-#ifndef EMMY
-#include "nick/base.keymap"
-#else
 #include "em/base.keymap"
-#endif
