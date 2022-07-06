@@ -49,9 +49,9 @@
         default_layer {
             label = "BASE";
             bindings = <
-                ETL &kp Q  &kp W  &kp F  &kp P  &kp B              &kp J   &kp L   &kp U       &kp Y   &kp QUOT  ETR
-                EML &kp A  &kp R  &kp S  &kp T  &kp G              &kp M   &kp N   &kp E       &kp I   &kp O     EMR
-                EBL &kp Z  &kp X  &kp C  &kp D  &kp V              &kp K   &kp H   &kp CMMA    &kp DOT &kp SLASH EBR
+                ETL &kp Q  &kp W  &kp E  &kp R  &kp T              &kp Y   &kp U   &kp I       &kp O   &kp P     ETR
+                EML &kp A  &kp S  &kp D  &kp F  &kp G              &kp H   &kp J   &kp K       &kp L   &kp SEMI  EMR
+                EBL &kp Z  &kp X  &kp C  &kp V  &kp B              &kp M   &kp N   &kp CMMA    &kp DOT &kp SLASH EBR
                         TTL &lt NUM BKSP &lt SYM DEL               &lt MEDIA RET &lt NAV SPC TTR
             >;
             sensor-bindings = <&arrow_enc &arrow_enc2>;
