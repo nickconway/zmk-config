@@ -1,4 +1,1 @@
-#define FOURXTWELVE
-#define NOPOWERSWITCH
-
-#include "base.keymap"
+#include "includes/base.keymap"
