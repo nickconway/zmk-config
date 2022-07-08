@@ -7,17 +7,19 @@
   ╰───────╮ LH0 LH1 LH2 │ │ RH0 RH1 RH2 ╭───────╯
           ╰─────────────╯ ╰─────────────╯ */
 
-#define LEADER(NAME, KEYS, BINDINGS, LAYERS) \
+#define LEADER(NAME, TIMEOUT, KEYS, BINDINGS, LAYERS) \
     leader_##NAME { \
-          key-positions = <KEYS>; \
-          bindings = <BINDINGS>; \
-          layers = <LAYERS>; \
+        key-positions = <KEYS>; \
+        bindings = <BINDINGS>; \
+        timeout-ms = <TIMEOUT>; \
+        layers = <LAYERS>; \
     };
 
-l {
+leader_sequences {
 
     compatible = "zmk,leader-sequences";
 
     LEADER(terminal, LM3, &kp LG(GRAVE), BASE)
+    LEADER(files, RM2, &kp LG(E), BASE)
 
 };
