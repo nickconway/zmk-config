@@ -38,8 +38,9 @@
 
     #include "autoshift.dtsi"
     #include "behaviors.dtsi"
-    #include "combos.dtsi"
     #include "macros.dtsi"
+    #include "combos.dtsi"
+    #include "leader.dtsi"
 
     CHOSEN
 
