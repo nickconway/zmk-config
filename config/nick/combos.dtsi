@@ -40,4 +40,5 @@ combos {
     COMBO(game, COMBO_TERM, LH1 RH1, &tog GAME, BASE GAME)
     COMBO(steno, COMBO_TERM, LH2 RH0, &tog STENO, BASE STENO)
 
+    COMBO(leader, COMBO_TERM, RM1 RM2, &leader, BASE)
 };
