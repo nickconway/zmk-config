@@ -19,7 +19,7 @@ leader_sequences {
     compatible = "zmk,leader-sequences";
 
     LEADER(terminal, LM3, &kp LG(GRAVE), BASE)
-    LEADER(brpwser, LT4, &kp LG(N1), BASE)
+    LEADER(browser, LT4, &kp LG(N1), BASE)
     LEADER(files, RM2, &kp LG(E), BASE)
 
 };
