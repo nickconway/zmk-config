@@ -7,11 +7,10 @@
   ╰───────╮ LH0 LH1 LH2 │ │ RH0 RH1 RH2 ╭───────╯
           ╰─────────────╯ ╰─────────────╯ */
 
-#define LEADER(NAME, TIMEOUT, KEYS, BINDINGS, LAYERS) \
+#define LEADER(NAME, KEYS, BINDINGS, LAYERS) \
     leader_##NAME { \
         key-positions = <KEYS>; \
         bindings = <BINDINGS>; \
-        timeout-ms = <TIMEOUT>; \
         layers = <LAYERS>; \
     };
 
