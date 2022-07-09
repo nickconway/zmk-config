@@ -18,8 +18,6 @@ MACRO(mparen, 0, 20, &macro_tap &kp LPAR &kp RPAR &kp LEFT)
 MACRO(mbracket, 0, 20, &macro_tap &kp LBKT &kp RBKT &kp LEFT)
 MACRO(mbrace, 0, 20, &macro_tap &kp LBRC &kp RBRC &kp LEFT)
 
-MACRO(mleaderlayer, 0, 20, &ssl NAV &leader)
-
 dm1: dm1 {
     compatible = "zmk,behavior-dynamic-macro";
     label = "dynamic-macro-1";

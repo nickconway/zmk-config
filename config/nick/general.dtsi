@@ -24,7 +24,7 @@
 #define QUICK_TAP_TERM 300
 
 &leader {
-    timeout-ms = <0>;
+    timeout-ms = <500>;
 };
 
 &lt {
