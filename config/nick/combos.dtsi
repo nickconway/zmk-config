@@ -41,4 +41,5 @@ combos {
     COMBO(steno, COMBO_TERM, LH2 RH0, &tog STENO, BASE STENO)
 
     COMBO(leader, COMBO_TERM, RM1 RM2, &leader, BASE)
+    COMBO(leader2, COMBO_TERM, LB3 RB1, &mleaderlayer, BASE)
 };

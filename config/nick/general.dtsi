@@ -23,6 +23,10 @@
 #define TAPPING_TERM_PINKY 275
 #define QUICK_TAP_TERM 300
 
+&leader {
+    timeout-ms = <0>;
+};
+
 &lt {
     tapping-term-ms = <TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_TERM>;
