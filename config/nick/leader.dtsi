@@ -25,6 +25,4 @@ leader_sequences {
 
     LEADER(reset, LM1, &reset, BASE)
     LEADER(bootloader, LT4 RT1, &bootloader, BASE)
-
-    LEADER(nav_test, LM1, &kp W, NAV)
 };

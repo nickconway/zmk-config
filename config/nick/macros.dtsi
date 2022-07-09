@@ -9,10 +9,7 @@
 };
 
 MACRO(m1, 0, 20, &macro_tap &kp LA(SPC))
-
-#ifdef GAME
 MACRO(m2, 0, 20, &macro_tap &kp RET &tog GAME &tog GAMET)
-#endif
 
 MACRO(mparen, 0, 20, &macro_tap &kp LPAR &kp RPAR &kp LEFT)
 MACRO(mbracket, 0, 20, &macro_tap &kp LBKT &kp RBKT &kp LEFT)

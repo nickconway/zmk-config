@@ -174,11 +174,3 @@ none_enc: none_enc {
     #sensor-binding-cells = <0>;
     bindings = <&none>, <&none>;
 };
-
-ssl: slow_release_sticky_layer {
-    compatible = "zmk,behavior-sticky-key";
-    label = "SLOW_STICKY_LAYER";
-    #binding-cells = <1>;
-    release-after-ms = <1000>;
-    bindings = <&mo>;
-};
