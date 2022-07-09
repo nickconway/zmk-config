@@ -23,4 +23,7 @@ leader_sequences {
     LEADER(discord, LB3, &kp LG(N2), BASE)
     LEADER(spotify, LM2, &kp LG(N3), BASE)
 
+    LEADER(reset, LM1, &reset, BASE)
+    LEADER(bootloader, LT4 RT1, &bootloader, BASE)
+
 };
