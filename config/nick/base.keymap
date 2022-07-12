@@ -51,7 +51,7 @@
         default_layer {
             label = "BASE";
             bindings = <
-                ETL &wing  AS(W) AS(F) AS(P)   AS(B)               AS(J)   AS(L)   AS(U)       AS(Y)   AS(QUOT)  ETR
+                ETL AS(Q)  AS(W) AS(F) AS(P)   AS(B)               AS(J)   AS(L)   AS(U)       AS(Y)   AS(QUOT)  ETR
                 EML HRA    HRR   HRS   HRT     AS(G)               AS(M)   HRN     HRE         HRI     HRO       EMR
                 EBL AS(Z)  AS(X) AS(C) AS(D)   AS(V)               AS(K)   AS(H)   AS(CMMA)    AS(DOT) AS(SLASH) EBR
                             TTL &lt NUM BKSP &leader               &lt MEDIA RET &lt NAV SPC TTR

@@ -42,30 +42,6 @@ tht: tap_hold_tap {
     bindings = <&kp>, <&kp>;
 };
 
-wing: wing {
-    compatible = "zmk,behavior-mod-morph";
-    label = "WIN_GRAVE";
-    #binding-cells = <0>;
-    bindings = <&asmmQ>, <&kp GRAVE>;
-    mods = <(MOD_LGUI)>;
-};
-
-dcv: dcv {
-    compatible = "zmk,behavior-mod-morph";
-    label = "D_C_V";
-    #binding-cells = <0>;
-    bindings = <&asmmD>, <&asmmV>;
-    mods = <(MOD_LCTL)>;
-};
-
-vcd: vcd {
-    compatible = "zmk,behavior-mod-morph";
-    label = "V_C_D";
-    #binding-cells = <0>;
-    bindings = <&asmmV>, <&asmmD>;
-    mods = <(MOD_LCTL)>;
-};
-
 as: auto_shift {
     compatible = "zmk,behavior-hold-tap";
     label = "AUTO_SHIFT";

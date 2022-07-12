@@ -27,4 +27,5 @@ leader_sequences {
     LEADER(bootloader, LT4 RT1, &bootloader, BASE)
 
     LEADER(delete, LH2, &kp DEL, BASE)
+    LEADER(close, LT0, &kp LA(F4), BASE)
 };
