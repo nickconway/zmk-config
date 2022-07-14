@@ -8,12 +8,12 @@
         bindings = <BINDINGS>; \
 };
 
-MACRO(m1, 0, 20, &macro_tap &kp LA(SPC))
-MACRO(m2, 0, 20, &macro_tap &kp RET &tog GAME &tog GAMET)
+MACRO(m1, MACRO_WAIT_TERM, MACRO_TAP_TERM, &kp LA(SPC))
+MACRO(m2, MACRO_WAIT_TERM, MACRO_TAP_TERM, &kp RET &tog GAME &tog GAMET)
 
-MACRO(mparen, 0, 20, &macro_tap &kp LPAR &kp RPAR &kp LEFT)
-MACRO(mbracket, 0, 20, &macro_tap &kp LBKT &kp RBKT &kp LEFT)
-MACRO(mbrace, 0, 20, &macro_tap &kp LBRC &kp RBRC &kp LEFT)
+MACRO(mparen, MACRO_WAIT_TERM, MACRO_TAP_TERM, &kp LPAR &kp RPAR &kp LEFT)
+MACRO(mbracket, MACRO_WAIT_TERM, MACRO_TAP_TERM, &kp LBKT &kp RBKT &kp LEFT)
+MACRO(mbrace, MACRO_WAIT_TERM, MACRO_TAP_TERM, &kp LBRC &kp RBRC &kp LEFT)
 
 dm1: dm1 {
     compatible = "zmk,behavior-dynamic-macro";

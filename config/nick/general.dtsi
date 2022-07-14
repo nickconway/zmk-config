@@ -23,6 +23,9 @@
 #define TAPPING_TERM_PINKY 275
 #define QUICK_TAP_TERM 300
 
+#define MACRO_TAP_TERM 10
+#define MACRO_WAIT_TERM 0
+
 &leader {
     timeout-ms = <200>;
 };
