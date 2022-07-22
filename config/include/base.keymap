@@ -41,7 +41,6 @@
     #include "macros.dtsi"
     #include "combos.dtsi"
     #include "leader.dtsi"
-    #include "leader-secret.dtsi"
 
     CHOSEN
 
