@@ -96,6 +96,7 @@ swap: swap {
     label = "SWAPPER";
     #binding-cells = <0>;
     bindings = <&kt LALT>, <ASB(TAB)>, <&kt LALT>;
+    shared-key-positions = <LT2 LM1 LM2 LM3>;
 };
 
 arrow_enc: arrow_enc {
