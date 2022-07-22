@@ -42,6 +42,10 @@
     #include "combos.dtsi"
     #include "leader.dtsi"
 
+    #if __has_include("leader-secret.dtsi")
+    #include "leader-secret.dtsi"
+    #endif
+
     CHOSEN
 
     keymap {
