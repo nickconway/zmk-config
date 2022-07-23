@@ -1,13 +1,13 @@
 #define SK(KEY) &nk KEY KEY
 
-#define HRA &hrm LSHIFT A
+#define HRA &hrmhwu LSHIFT A
 #define HRR &hrm LGUI R
-#define HRS &hrm LALT S
-#define HRT &hrm LCTL T
-#define HRN &hrm LCTL N
-#define HRE &hrm LALT E
+#define HRS &hrmhwu LALT S
+#define HRT &hrmhwu LCTL T
+#define HRN &hrmhwu LCTL N
+#define HRE &hrmhwu LALT E
 #define HRI &hrm LGUI I
-#define HRO &hrm LSHIFT O
+#define HRO &hrmhwu LSHIFT O
 
 bht: balanced_hold_tap {
     compatible = "zmk,behavior-hold-tap";
@@ -89,6 +89,18 @@ hrm: hrm {
     tapping-term-ms = <TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_TERM>;
     bindings = <&kp>, <&kp>;
+};
+
+hrmhwu: hrmhwu {
+    compatible = "zmk,behavior-hold-tap";
+    label = "HOME_ROW_MOD_HWU";
+    #binding-cells = <2>;
+    flavor = "balanced";
+    tapping-term-ms = <TAPPING_TERM>;
+    quick-tap-ms = <QUICK_TAP_TERM>;
+    bindings = <&kp>, <&kp>;
+    hold-while-undecided;
+    retro-tap;
 };
 
 swap: swap {
