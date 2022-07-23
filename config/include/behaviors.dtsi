@@ -101,6 +101,9 @@ hrmhwu: hrmhwu {
     bindings = <&kp>, <&kp>;
     hold-while-undecided;
     retro-tap;
+    retro-tap-behavior = "NONE";
+    retro-tap-param1 = <0>;
+    retro-tap-param2 = <0>;
 };
 
 swap: swap {
