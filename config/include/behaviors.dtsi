@@ -100,8 +100,6 @@ hrmhwu: hrmhwu {
     quick-tap-ms = <QUICK_TAP_TERM>;
     bindings = <&kp>, <&kp>;
     hold-while-undecided;
-    retro-tap;
-    retro-tap-behavior = "NONE";
 };
 
 swap: swap {
