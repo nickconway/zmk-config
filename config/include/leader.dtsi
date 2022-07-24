@@ -18,15 +18,18 @@ leader_sequences {
 
     compatible = "zmk,leader-sequences";
 
-    LEADER(terminal, LM3, &kp LG(GRAVE), BASE)
+    LEADER(close, LT0, &kp LA(F4), BASE)
+    LEADER(bootloader, LT2, &bootloader, BASE)
     LEADER(browser, LT4, &kp LG(N1), BASE)
-    LEADER(discord, LB3, &kp LG(N2), BASE)
-    LEADER(spotify, LM2, &kp LG(N3), BASE)
+    LEADER(btclear, RT4, &bt BT_CLR, BASE)
 
     LEADER(reset, LM1, &reset, BASE)
-    LEADER(bootloader, LT4 RT1, &bootloader, BASE)
+    LEADER(spotify, LM2, &kp LG(N3), BASE)
+    LEADER(terminal, LM3, &kp LG(GRAVE), BASE)
+    LEADER(output, RM4, &out OUT_TOG, BASE)
+
+    LEADER(discord, LB3, &kp LG(N2), BASE)
 
     LEADER(delete, LH2, &kp DEL, BASE)
-    LEADER(close, LT0, &kp LA(F4), BASE)
 
 };

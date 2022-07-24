@@ -88,10 +88,10 @@
         nav {
             label = "NAV";
             bindings = <
-                ETL AS(PG_UP)   AS(HOME)  AS(UP)         AS(END)     AS(INSERT)            &reset      &swap             &trans            &trans      &bootloader  ETR
-                EML AS(PG_DN)   AS(LEFT)  AS(DOWN)       AS(RIGHT)   &caps_word             &kp CAPS    SK(LCTL)          SK(LALT)          SK(LGUI)    SK(LSHIFT)   EMR
-                EBL &kp LC(Z)    &kp LC(X)  &kp LC(C)       &kp LC(V)    &kp INSERT             &trans      &kp LG(LC(RIGHT)) &ext_power EP_TOG &trans      &trans       EBR
-                                                                   TTL &trans &trans            &trans &trans TTR
+                ETL AS(PG_UP)   AS(HOME)  AS(UP)         AS(END)     AS(INSERT)            &trans      &swap             &trans            &trans      &trans       ETR
+                EML AS(PG_DN)   AS(LEFT)  AS(DOWN)       AS(RIGHT)   &caps_word            &kp CAPS    SK(LCTL)          SK(LALT)          SK(LGUI)    SK(LSHIFT)   EMR
+                EBL &kp LC(Z)   &kp LC(X) &kp LC(C)      &kp LC(V)   &kp INSERT            &trans      &kp LG(LC(RIGHT)) &ext_power EP_TOG &trans      &trans       EBR
+                                                              TTL &trans &trans            &trans &trans TTR
             >;
             sensor-bindings = <&inc_dec_kp LG(LC(LEFT)) LG(LC(RIGHT)) &none_enc>;
         };
@@ -110,9 +110,9 @@
         media {
             label = "MEDIA";
             bindings = <
-                ETL &trans          &trans          &kp C_VOL_UP    &trans          &trans                       &trans  &trans  &kp C_BRI_UP   &trans  &bt BT_CLR  ETR
-                EML &out OUT_TOG    &kp C_PREV      &kp C_VOL_DN    &kp C_NEXT      &trans                       &trans  &trans  &kp C_BRI_DN   &trans  &trans      EMR
-                EBL &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                 &trans  &trans  &trans         &trans  &trans      EBR
+                ETL &trans          &trans          &kp C_VOL_UP    &trans          &trans                       &trans  &trans  &kp C_BRI_UP   &trans  &trans  ETR
+                EML &trans          &kp C_PREV      &kp C_VOL_DN    &kp C_NEXT      &trans                       &trans  &trans  &kp C_BRI_DN   &trans  &trans  EMR
+                EBL &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                 &trans  &trans  &trans         &trans  &trans  EBR
                                                                          TTL &kp C_PP &kp C_STOP                 &trans  &trans  TTR
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &none_enc>;
@@ -121,7 +121,7 @@
         number {
             label = "NUMBER";
             bindings = <
-                ETL &bootloader &trans      &dm1 RECORD &dm1 PLAY           &reset                 AS(LBKT)     AS(N7)  AS(N8)  AS(N9)  AS(RBKT)    ETR
+                ETL &trans      &trans      &dm1 RECORD &dm1 PLAY           &trans                 AS(LBKT)     AS(N7)  AS(N8)  AS(N9)  AS(RBKT)    ETR
                 EML SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)           &trans                 AS(EQUAL)    AS(N4)  AS(N5)  AS(N6)  AS(SEMI)    EMR
                 EBL &trans      &trans      &kt RIGHT   &kp LG(LC(LEFT))    &trans                 AS(GRAVE)    AS(N1)  AS(N2)  AS(N3)  AS(BSLH)    EBR
                                                                TTL  &trans  &trans                 AS(DOT) AS(N0)  TTR
