@@ -21,7 +21,7 @@ combos {
 
     compatible = "zmk,combos";
 
-    COMBO(perc, COMBO_TERM, LT1 LT2, &kp PERCENT, BASE NUM)
+    COMBO(equa, COMBO_TERM, LT1 LT2, ASB(EQUAL), BASE NUM)
     COMBO(doll, COMBO_TERM, LT2 LT3, &kp DOLLAR, BASE NUM)
     COMBO(dash, COMBO_TERM, RT1 RT2, ASB(MINUS), BASE NUM)
     COMBO(semi, COMBO_TERM, RT2 RT3, ASB(SEMI), BASE NUM)
