@@ -7,7 +7,7 @@
   ╰───────╮ LH0 LH1 LH2 │ │ RH0 RH1 RH2 ╭───────╯
           ╰─────────────╯ ╰─────────────╯ */
 
-#define COMBO_TERM 50
+#define COMBO_TERM 30
 
 #define COMBO(NAME, TIMEOUT, KEYS, BINDINGS, LAYERS) \
     combo_##NAME { \
