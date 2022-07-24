@@ -68,4 +68,4 @@
         zephyr,display = &oled; \
     };
 
-#include "include/base.keymap"
+#include "include/base.dtsi"
