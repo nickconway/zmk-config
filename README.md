@@ -12,4 +12,4 @@ OS shortcuts for Windows:
 - `Next Window`: <kbd>Alt</kbd><kbd>Tab</kbd> (hold Alt while layer active)
 - `Previous Window`: <kbd>Alt</kbd><kbd>Shift</kbd><kbd>Tab</kbd> (hold Alt while layer active)
 
-![layout](****)
+![layout](./layout.png)
