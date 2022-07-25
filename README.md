@@ -1,6 +1,6 @@
 # ZMK Config
 
-[ZMK](https://zmk.dev) config repo for my 34-36 key split keyboards.
+[ZMK](https://zmk.dev) config repo for 34-36 key split keyboards.
 
 OS shortcuts for Windows:
 - `Close Window`: <kbd>Alt</kbd><kbd>F4</kbdy>
