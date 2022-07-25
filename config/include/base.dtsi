@@ -1,35 +1,5 @@
 #include "general.dtsi"
 
-#ifndef ETL
-#define ETL
-#endif
-#ifndef EML
-#define EML
-#endif
-#ifndef EBL
-#define EBL
-#endif
-#ifndef ETR
-#define ETR
-#endif
-#ifndef EMR
-#define EMR
-#endif
-#ifndef EBR
-#define EBR
-#endif
-#ifndef TTL
-#define TTL
-#endif
-#ifndef TTR
-#define TTR
-#endif
-#ifndef TTLG
-#define TTLG
-#endif
-#ifndef TTRG
-#define TTRG
-#endif
 #ifndef CHOSEN
 #define CHOSEN
 #endif
@@ -52,13 +22,14 @@
 
         compatible = "zmk,keymap";
 
+        LABEL(default, )
         default_layer {
             label = "BASE";
             bindings = <
-                ETL AS(Q)  AS(W) AS(F) AS(P)   AS(B)               AS(J)   AS(L)   AS(U)       AS(Y)   AS(QUOT)  ETR
-                EML HRA    HRR   HRS   HRT     AS(G)               AS(M)   HRN     HRE         HRI     HRO       EMR
-                EBL AS(Z)  AS(X) AS(C) AS(D)   AS(V)               AS(K)   AS(H)   AS(CMMA)    AS(DOT) AS(SLASH) EBR
-                            TTL &lt NUM BKSP &leader               &lt MEDIA RET &lt NAV SPC TTR
+                &none AS(Q)  AS(W) AS(F) AS(P)   AS(B)               AS(J)   AS(L)   AS(U)       AS(Y)   AS(QUOT)  &none
+                &none HRA    HRR   HRS   HRT     AS(G)               AS(M)   HRN     HRE         HRI     HRO       &none
+                &none AS(Z)  AS(X) AS(C) AS(D)   AS(V)               AS(K)   AS(H)   AS(CMMA)    AS(DOT) AS(SLASH) &none
+                      &lt FUN ESC &lt NUM BKSP &leader               &lt MEDIA RET &lt NAV SPC &lt MOUSE TAB
             >;
             sensor-bindings = <&arrow_enc &arrow_enc2>;
         };
@@ -66,10 +37,10 @@
         game {
             label = "GAME";
             bindings = <
-                ETL &kp Q  &kp W  &kp F  &kp P  &kp B          &trans  &trans  &trans  &trans  &trans ETR
-                EML &kp A  &kp R  &kp S  &kp T  &kp G          &trans  &trans  &trans  &trans  &trans EMR
-                EBL &kp Z  &kp X  &kp C  &kp D  &kp V          &trans  &trans  &trans  &trans  &trans EBR
-                                TTLG &kp SPC &kp LALT          &m2  &trans  TTRG
+                &none &kp Q  &kp W  &kp F  &kp P  &kp B          &trans  &trans  &trans  &trans  &trans &none
+                &none &kp A  &kp R  &kp S  &kp T  &kp G          &trans  &trans  &trans  &trans  &trans &none
+                &none &kp Z  &kp X  &kp C  &kp D  &kp V          &trans  &trans  &trans  &trans  &trans &none
+                              &kp LCTL &kp SPC &kp LALT          &m2 &trans &trans
             >;
             sensor-bindings = <&arrow_enc &arrow_enc2>;
         };
@@ -77,10 +48,10 @@
         gametype {
             label = "GAMETYPE";
             bindings = <
-                ETL &trans  &trans   &trans   &trans   &trans               &trans &trans &trans &trans &trans ETR
-                EML &trans  &trans   &trans   &trans   &trans               &trans &trans &trans &trans &trans EMR
-                EBL &trans  &trans   &trans   &trans   &trans               &trans &trans &trans &trans &trans EBR
-                                        TTL   &trans   &trans               &m2 &trans TTRG
+                &none &trans  &trans   &trans   &trans   &trans               &trans &trans &trans &trans &trans &none
+                &none &trans  &trans   &trans   &trans   &trans               &trans &trans &trans &trans &trans &none
+                &none &trans  &trans   &trans   &trans   &trans               &trans &trans &trans &trans &trans &none
+                                           &trans &trans &trans               &m2 &trans &trans
             >;
             sensor-bindings = <&arrow_enc &arrow_enc2>;
         };
@@ -88,10 +59,10 @@
         nav {
             label = "NAV";
             bindings = <
-                ETL AS(PG_UP)   AS(HOME)  AS(UP)         AS(END)     AS(INSERT)            &trans      &swap             &trans            &trans      &trans       ETR
-                EML AS(PG_DN)   AS(LEFT)  AS(DOWN)       AS(RIGHT)   &caps_word            &kp CAPS    SK(LCTL)          SK(LALT)          SK(LGUI)    SK(LSHIFT)   EMR
-                EBL &kp LC(Z)   &kp LC(X) &kp LC(C)      &kp LC(V)   &kp INSERT            &trans      &kp LG(LC(RIGHT)) &ext_power EP_TOG &trans      &trans       EBR
-                                                              TTL &trans &trans            &trans &trans TTR
+                &none AS(PG_UP)   AS(HOME)  AS(UP)         AS(END)     AS(INSERT)            &trans      &swap             &trans            &trans      &trans       &none
+                &none AS(PG_DN)   AS(LEFT)  AS(DOWN)       AS(RIGHT)   &caps_word            &kp CAPS    SK(LCTL)          SK(LALT)          SK(LGUI)    SK(LSHIFT)   &none
+                &none &kp LC(Z)   &kp LC(X) &kp LC(C)      &kp LC(V)   &kp INSERT            &trans      &kp LG(LC(RIGHT)) &ext_power EP_TOG &trans      &trans       &none
+                                                             &trans &trans &trans            &trans &trans &trans
             >;
             sensor-bindings = <&inc_dec_kp LG(LC(LEFT)) LG(LC(RIGHT)) &none_enc>;
         };
@@ -99,10 +70,10 @@
         mouse {
             label = "MOUSE";
             bindings = <
-                ETL &trans  &trans                  &mmv MOVE_VERT(-3000)   &trans                  &trans                 &trans  &trans           &mwh SCROLL_UP      &trans              &trans ETR
-                EML &trans  &mmv MOVE_HOR(-3000)    &mmv MOVE_VERT(3000)    &mmv MOVE_HOR(3000)     &trans                 &trans  &mwh SCROLL_LEFT &mwh SCROLL_DOWN    &mwh SCROLL_RIGHT   &trans EMR
-                EBL &trans  &trans                  &trans                  &trans                  &trans                 &trans  &trans           &trans              &trans              &trans EBR
-                                                                                 TTL  &mkp LCLK  &mkp RCLK                 &trans  &trans  TTR
+                &none &trans  &trans                  &mmv MOVE_VERT(-3000)   &trans                  &trans                 &trans  &trans           &mwh SCROLL_UP      &trans              &trans &none
+                &none &trans  &mmv MOVE_HOR(-3000)    &mmv MOVE_VERT(3000)    &mmv MOVE_HOR(3000)     &trans                 &trans  &mwh SCROLL_LEFT &mwh SCROLL_DOWN    &mwh SCROLL_RIGHT   &trans &none
+                &none &trans  &trans                  &trans                  &trans                  &trans                 &trans  &trans           &trans              &trans              &trans &none
+                                                                                &trans  &mkp LCLK  &mkp RCLK                 &trans  &trans  &trans
             >;
             sensor-bindings = <&mwh_enc &mwh_enc2>;
         };
@@ -110,10 +81,10 @@
         media {
             label = "MEDIA";
             bindings = <
-                ETL &trans          &trans          &kp C_VOL_UP    &trans          &trans                       &trans  &trans  &kp C_BRI_UP   &trans  &trans  ETR
-                EML &trans          &kp C_PREV      &kp C_VOL_DN    &kp C_NEXT      &trans                       &trans  &trans  &kp C_BRI_DN   &trans  &trans  EMR
-                EBL &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                 &trans  &trans  &trans         &trans  &trans  EBR
-                                                                         TTL &kp C_PP &kp C_STOP                 &trans  &trans  TTR
+                &none &trans          &trans          &kp C_VOL_UP    &trans          &trans                       &trans  &trans  &kp C_BRI_UP   &trans  &trans  &none
+                &none &trans          &kp C_PREV      &kp C_VOL_DN    &kp C_NEXT      &trans                       &trans  &trans  &kp C_BRI_DN   &trans  &trans  &none
+                &none &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4                 &trans  &trans  &trans         &trans  &trans  &none
+                                                                  &trans &kp C_PP &kp C_STOP                       &trans  &trans  &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &none_enc>;
         };
@@ -121,40 +92,40 @@
         number {
             label = "NUMBER";
             bindings = <
-                ETL &trans      &trans      &dm1 RECORD &dm1 PLAY           &trans                 AS(LBKT)     AS(N7)  AS(N8)  AS(N9)  AS(RBKT)    ETR
-                EML SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)           &trans                 AS(EQUAL)    AS(N4)  AS(N5)  AS(N6)  AS(SEMI)    EMR
-                EBL &trans      &trans      &kt RIGHT   &kp LG(LC(LEFT))    &trans                 AS(GRAVE)    AS(N1)  AS(N2)  AS(N3)  AS(BSLH)    EBR
-                                                               TTL  &trans  &trans                 AS(DOT) AS(N0)  TTR
+                &none &trans      &trans      &dm1 RECORD &dm1 PLAY           &trans                 AS(LBKT)     AS(N7)  AS(N8)  AS(N9)  AS(RBKT)    &none
+                &none SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)           &trans                 AS(EQUAL)    AS(N4)  AS(N5)  AS(N6)  AS(SEMI)    &none
+                &none &trans      &trans      &kt RIGHT   &kp LG(LC(LEFT))    &trans                 AS(GRAVE)    AS(N1)  AS(N2)  AS(N3)  AS(BSLH)    &none
+                                                              &trans  &trans  &trans                 AS(MINUS) AS(N0) AS(DOT)
             >;
         };
 
         symbol {
             label = "SYMBOL";
             bindings = <
-                ETL &trans      &trans      &kp C       &trans      &trans                 &trans  &trans       &trans      &trans      &trans  ETR
-                EML SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)   &trans                 &trans  &kp LS(N9)   AS(LBKT)    AS(MINUS)   &trans  EMR
-                EBL &trans      &trans      &trans      &trans      &trans                 &trans  &kp LS(N0)   AS(RBKT)    AS(MINUS)   &trans  EBR
-                                                       TTL  &trans  &trans                 &trans  AS(MINUS)  TTR
+                &none &trans      &trans      &kp C       &trans      &trans                 &trans  &trans       &trans      &trans      &trans  &none
+                &none SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)   &trans                 &trans  &kp LS(N9)   AS(LBKT)    AS(MINUS)   &trans  &none
+                &none &trans      &trans      &trans      &trans      &trans                 &trans  &kp LS(N0)   AS(RBKT)    AS(MINUS)   &trans  &none
+                                                      &trans  &trans  &trans                 &trans  AS(MINUS)  &trans
             >;
         };
 
         function {
             label = "FUNCTION";
             bindings = <
-                ETL &trans      &trans      &trans      &trans      &trans                 &trans  AS(F7)  AS(F8)  AS(F9)  AS(F12)  ETR
-                EML SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)   &trans                 &trans  AS(F4)  AS(F5)  AS(F6)  AS(F11)  EMR
-                EBL &trans      &trans      &trans      &trans      &trans                 &trans  AS(F1)  AS(F2)  AS(F3)  AS(F10)  EBR
-                                                         TTL &trans &trans                 &trans &trans TTR
+                &none &trans      &trans      &trans      &trans      &trans                 &trans  AS(F7)  AS(F8)  AS(F9)  AS(F12)  &none
+                &none SK(LSHIFT)  SK(LGUI)    SK(LALT)    SK(LCTRL)   &trans                 &trans  AS(F4)  AS(F5)  AS(F6)  AS(F11)  &none
+                &none &trans      &trans      &trans      &trans      &trans                 &trans  AS(F1)  AS(F2)  AS(F3)  AS(F10)  &none
+                                                        &trans &trans &trans                 &trans &trans &trans
             >;
         };
 
         nothing {
             label = "NOTHING";
             bindings = <
-                ETL &none   &none   &none   &none   &none                  &none   &none   &none   &none   &none    ETR
-                EML &none   &none   &none   &none   &none                  &none   &none   &none   &none   &none    EMR
-                EBL &none   &none   &none   &none   &none                  &none   &none   &none   &none   &none    EBR
-                                          TTL &none &none                  &none &none TTR
+                &none &none   &none   &none   &none   &none                  &none   &none   &none   &none   &none    &none
+                &none &none   &none   &none   &none   &none                  &none   &none   &none   &none   &none    &none
+                &none &none   &none   &none   &none   &none                  &none   &none   &none   &none   &none    &none
+                                          &none &none &none                  &none &none &none
             >;
             sensor-bindings = <&none_enc &none_enc>;
         };
@@ -162,10 +133,10 @@
         steno {
             label = "STENO";
             bindings = <
-                ETL &kp PLV_SL  &kp PLV_TL  &kp PLV_PL  &kp PLV_HL  &kp PLV_ST          &kp PLV_ST  &kp PLV_FR &kp PLV_PR &kp PLV_LR  &kp PLV_TR  &kp PLV_DR
-                EML &kp PLV_SL  &kp PLV_KL  &kp PLV_WL  &kp PLV_RL  &kp PLV_ST          &kp PLV_ST  &kp PLV_RR &kp PLV_BR &kp PLV_GR  &kp PLV_SR  &kp PLV_ZR
-                                     EBL &none   &none   &none   &none   &none          &none   &none   &none   &none   &none    EBR
-                                                       TTL &kp PLV_A &kp PLV_O          &kp PLV_E &kp PLV_U TTR
+                &none &kp PLV_SL  &kp PLV_TL  &kp PLV_PL  &kp PLV_HL  &kp PLV_ST          &kp PLV_ST  &kp PLV_FR &kp PLV_PR &kp PLV_LR  &kp PLV_TR  &kp PLV_DR
+                &none &kp PLV_SL  &kp PLV_KL  &kp PLV_WL  &kp PLV_RL  &kp PLV_ST          &kp PLV_ST  &kp PLV_RR &kp PLV_BR &kp PLV_GR  &kp PLV_SR  &kp PLV_ZR
+                &none &none       &none       &none       &none       &none               &none       &none      &none      &none       &none       &none
+                                                   &kp PLV_O &kp PLV_A &kp PLV_O          &kp PLV_E &kp PLV_U &kp PLV_E
             >;
             sensor-bindings = <&none_enc &none_enc>;
         };
