@@ -22,39 +22,29 @@
 
         compatible = "zmk,keymap";
 
-        LABEL(default, )
-        default_layer {
-            label = "BASE";
-            bindings = <
-                &none AS(Q)  AS(W) AS(F) AS(P)   AS(B)               AS(J)   AS(L)   AS(U)       AS(Y)   AS(QUOT)  &none
-                &none HRA    HRR   HRS   HRT     AS(G)               AS(M)   HRN     HRE         HRI     HRO       &none
-                &none AS(Z)  AS(X) AS(C) AS(D)   AS(V)               AS(K)   AS(H)   AS(CMMA)    AS(DOT) AS(SLASH) &none
-                      &lt FUN ESC &lt NUM BKSP &leader               &lt MEDIA RET &lt NAV SPC &lt MOUSE TAB
-            >;
-            sensor-bindings = <&arrow_enc &arrow_enc2>;
-        };
+        LAYER(default, BASE,
+            &none, AS(Q),  AS(W), AS(F), AS(P),   AS(B),               AS(J),   AS(L),   AS(U),       AS(Y),   AS(QUOT),  &none,
+            &none, HRA,    HRR,   HRS,   HRT,     AS(G),               AS(M),   HRN,     HRE,         HRI,     HRO,       &none,
+            &none, AS(Z),  AS(X), AS(C), AS(D),   AS(V),               AS(K),   AS(H),   AS(CMMA),    AS(DOT), AS(SLASH), &none,
+                     &lt FUN ESC, &lt NUM BKSP, &leader,               &lt MEDIA RET, &lt NAV SPC, &lt MOUSE TAB,
+                                                   &arrow_enc, &arrow_enc2
+        )
 
-        game {
-            label = "GAME";
-            bindings = <
-                &none &kp Q  &kp W  &kp F  &kp P  &kp B          &trans  &trans  &trans  &trans  &trans &none
-                &none &kp A  &kp R  &kp S  &kp T  &kp G          &trans  &trans  &trans  &trans  &trans &none
-                &none &kp Z  &kp X  &kp C  &kp D  &kp V          &trans  &trans  &trans  &trans  &trans &none
-                              &kp LCTL &kp SPC &kp LALT          &m2 &trans &trans
-            >;
-            sensor-bindings = <&arrow_enc &arrow_enc2>;
-        };
+        LAYER(game, GAME,
+                &none, &kp Q,  &kp W,  &kp F,  &kp P,  &kp B,          &trans,  &trans,  &trans,  &trans,  &trans, &none,
+                &none, &kp A,  &kp R,  &kp S,  &kp T,  &kp G,          &trans,  &trans,  &trans,  &trans,  &trans, &none,
+                &none, &kp Z,  &kp X,  &kp C,  &kp D,  &kp V,          &trans,  &trans,  &trans,  &trans,  &trans, &none,
+                                 &kp LCTL, &kp SPC, &kp LALT,          &m2, &trans, &trans,
+                                                   &arrow_enc, &arrow_enc2
+        )
 
-        gametype {
-            label = "GAMETYPE";
-            bindings = <
-                &none &trans  &trans   &trans   &trans   &trans               &trans &trans &trans &trans &trans &none
-                &none &trans  &trans   &trans   &trans   &trans               &trans &trans &trans &trans &trans &none
-                &none &trans  &trans   &trans   &trans   &trans               &trans &trans &trans &trans &trans &none
-                                           &trans &trans &trans               &m2 &trans &trans
-            >;
-            sensor-bindings = <&arrow_enc &arrow_enc2>;
-        };
+        LAYER(gametype, GAMETYPE,
+            &none,  &trans,   &trans,    &trans,    &trans,    &trans,                &trans,  &trans,  &trans,  &trans,  &trans,  &none,
+            &none,  &trans,   &trans,    &trans,    &trans,    &trans,                &trans,  &trans,  &trans,  &trans,  &trans,  &none,
+            &none,  &trans,   &trans,    &trans,    &trans,    &trans,                &trans,  &trans,  &trans,  &trans,  &trans,  &none,
+                                            &trans,  &trans,  &trans,                &m2,  &trans,  &trans,
+                                                                &arrow_enc, &arrow_enc2
+        )
 
         nav {
             label = "NAV";
