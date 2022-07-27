@@ -1,13 +1,13 @@
 #define SK(KEY) &nk KEY KEY
 
-#define HRA &hrasA LSHIFT A
-#define HRR &hrasR LGUI R
-#define HRS &hrasS LALT S
-#define HRT &hrasT LCTL T
-#define HRN &hrasN RCTL N
-#define HRE &hrasE RALT E
-#define HRI &hrasI RGUI I
-#define HRO &hrasO RSHIFT O
+#define HRA &hrasA LGUI A
+#define HRR &hrasR LALT R
+#define HRS &hrasS LCTL S
+#define HRT &hrasT LSHIFT T
+#define HRN &hrasN RSHIFT N
+#define HRE &hrasE RCTL E
+#define HRI &hrasI RALT I
+#define HRO &hrasO RGUI O
 
 #define RMODS (MOD_RGUI|MOD_RSFT|MOD_RALT|MOD_RCTL)
 #define LMODS (MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL)
@@ -86,20 +86,40 @@ rightmm: rightmm {
     mods = <LMODS>;
 };
 
-numbspcdel: numbspcdel {
+bspcdel: bspcdel {
     compatible = "zmk,behavior-mod-morph";
-    label = "numbspcdel";
+    label = "bspcdel";
     #binding-cells = <0>;
-    bindings = <&lt NUM BSPC &lt NUM DELETE>;
+    bindings = <&kp BSPC &kp DELETE>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
     masked_mods = <(MOD_RSFT)>;
 };
 
-navspcmin: navspcmin {
+ltnum: ltnum {
+    compatible = "zmk,behavior-hold-tap";
+    label = "ltnum";
+    #binding-cells = <2>;
+    flavor = "balanced";
+    tapping-term-ms = <TAPPING_TERM>;
+    quick-tap-ms = <QUICK_TAP_TERM>;
+    bindings = <&mo &bspcdel>;
+};
+
+ltnav: ltnav {
+    compatible = "zmk,behavior-hold-tap";
+    label = "ltnav";
+    #binding-cells = <2>;
+    flavor = "balanced";
+    tapping-term-ms = <TAPPING_TERM>;
+    quick-tap-ms = <QUICK_TAP_TERM>;
+    bindings = <&mo &spcmin>;
+};
+
+spcmin: spcmin {
     compatible = "zmk,behavior-mod-morph";
     label = "navspcmin";
     #binding-cells = <0>;
-    bindings = <&lt NAV SPC &kp MINUS>;
+    bindings = <&kp SPC &kp MINUS>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
     masked_mods = <(MOD_RSFT)>;
 };

@@ -24,7 +24,7 @@
             &none, ASP(Q),  ASR(W), AS(F), AS(P),   AS(B),               AS(J),   AS(L),   AS(U),       ASR(Y),   ASP(QUOT),  &none,
             &none, HRA,     HRR,    HRS,   HRT,     AS(G),               AS(M),   HRN,     HRE,         HRI,      HRO,        &none,
             &none, ASP(Z),  ASR(X), AS(C), AS(D),   AS(V),               AS(K),   AS(H),   AS(CMMA),    ASR(DOT), ASP(SLASH), &none,
-                        &lt FUN ESC, &numbspcdel, &leader,               &lt MEDIA RET, &navspcmin, &lt MOUSE TAB,
+                       &lt FUN ESC, &ltnum NUM 0, &leader,               &lt MEDIA RET, &ltnav NAV 0, &lt MOUSE TAB,
                                                    &arrow_enc, &arrow_enc2
         )
 
