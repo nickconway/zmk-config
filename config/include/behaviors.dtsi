@@ -4,10 +4,10 @@
 #define HRR &hrm LGUI R
 #define HRS &hrm LALT S
 #define HRT &hrm LCTL T
-#define HRN &hrm LCTL N
-#define HRE &hrm LALT E
-#define HRI &hrm LGUI I
-#define HRO &hrm LSHIFT O
+#define HRN &hrm RCTL N
+#define HRE &hrm RALT E
+#define HRI &hrm RGUI I
+#define HRO &hrm RSHIFT O
 
 bht: balanced_hold_tap {
     compatible = "zmk,behavior-hold-tap";
