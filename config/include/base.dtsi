@@ -46,7 +46,7 @@
 
         LAYER(nav, NAV,
             &none,  AS(PG_UP),    AS(HOME),   AS(UP),      AS(END),     AS(INSERT),             &trans,       &swap,              &trans,             &trans,       &trans,        &none,
-            &none,  AS(PG_DN),    AS(LEFT),   AS(DOWN),    AS(RIGHT),   &caps_word,             &kp CAPS,     SK(LCTL),           SK(LALT),           SK(LGUI),     SK(LSHIFT),    &none,
+            &none,  AS(PG_DN),    AS(LEFT),   AS(DOWN),    AS(RIGHT),   &caps_word,             &kp CAPS,     SK(RSHIFT),         SK(RCTL),           SK(RALT),     SK(RGUI),      &none,
             &none,  &kp LC(Z),    &kp LC(X),  &kp LC(C),   &kp LC(V),   &kp INSERT,             &trans,       &kp LG(LC(RIGHT)),  &ext_power EP_TOG,  &trans,       &trans,        &none,
                                                             &trans, &trans, &trans,             &trans, &trans, &trans,
                                                                 &inc_dec_kp LG(LC(LEFT)) LG(LC(RIGHT)), &none_enc
@@ -70,7 +70,7 @@
 
         LAYER(number, NUMBER,
             &none, &trans,      &trans,      &dm1 RECORD, &dm1 PLAY,           &trans,                 AS(LBKT),     AS(N7),  AS(N8),  AS(N9),  AS(RBKT),    &none,
-            &none, SK(LSHIFT),  SK(LGUI),    SK(LALT),    SK(LCTRL),           &trans,                 AS(EQUAL),    AS(N4),  AS(N5),  AS(N6),  AS(SEMI),    &none,
+            &none, SK(LGUI),    SK(LALT),    SK(LCTL),    SK(LSHIFT),          &trans,                 AS(EQUAL),    AS(N4),  AS(N5),  AS(N6),  AS(SEMI),    &none,
             &none, &trans,      &trans,      &kt RIGHT,   &kp LG(LC(LEFT)),    &trans,                 AS(GRAVE),    AS(N1),  AS(N2),  AS(N3),  AS(BSLH),    &none,
                                                              &trans,  &trans,  &trans,                 AS(MINUS), AS(N0), AS(DOT),
                                                                                   &arrow_enc, &arrow_enc2
