@@ -90,7 +90,7 @@ numbspcdel: numbspcdel {
     compatible = "zmk,behavior-mod-morph";
     label = "numbspcdel";
     #binding-cells = <0>;
-    bindings = <&lt NUM BSPC &kp DELETE>;
+    bindings = <&lt NUM BSPC &lt NUM DELETE>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
     masked_mods = <(MOD_RSFT)>;
 };
