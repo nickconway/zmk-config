@@ -1,6 +1,6 @@
 # ZMK Config
 
-[ZMK](https://zmk.dev) config repo for 34-42 key keyboards.
+[ZMK](https://zmk.dev) config repo for 34-42 key keyboards using [my development branch](https://github.com/nickconway/zmk/tree/dev).
 
 Features:
 - Recording and playing of on-the-fly macros ([#1351](https://github.com/zmkfirmware/zmk/pull/1351))
