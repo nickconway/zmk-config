@@ -33,7 +33,7 @@
                 &none, &kp A,  &kp R,  &kp S,  &kp T,  &kp G,          &trans,  &trans,  &trans,  &trans,  &trans, &none,
                 &none, &kp Z,  &kp X,  &kp C,  &kp D,  &kp V,          &trans,  &trans,  &trans,  &trans,  &trans, &none,
                                  &kp LCTL, &kp SPC, &kp LALT,          &m2, &trans, &trans,
-                                                   &arrow_enc, &arrow_enc2
+                                                     &arrow_enc, &arrow_enc2
         )
 
         LAYER(gametype, GAMETYPE,
