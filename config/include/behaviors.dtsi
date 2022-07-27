@@ -9,38 +9,9 @@
 #define HRI &hrasI RGUI I
 #define HRO &hrasO RSHIFT O
 
-bht: balanced_hold_tap {
-    compatible = "zmk,behavior-hold-tap";
-    label = "BALANCED_HOLD_TAP";
-    #binding-cells = <2>;
-    flavor = "balanced";
-    tapping-term-ms = <TAPPING_TERM>;
-    quick-tap-ms = <QUICK_TAP_TERM>;
-    global-quick-tap;
-    bindings = <&kp>, <&kp>;
-};
-
-hht: hold_hold_tap {
-    compatible = "zmk,behavior-hold-tap";
-    label = "HOLD_HOLD_TAP";
-    #binding-cells = <2>;
-    flavor = "hold-preferred";
-    tapping-term-ms = <TAPPING_TERM>;
-    quick-tap-ms = <QUICK_TAP_TERM>;
-    global-quick-tap;
-    bindings = <&kp>, <&kp>;
-};
-
-tht: tap_hold_tap {
-    compatible = "zmk,behavior-hold-tap";
-    label = "TAP_HOLD_TAP";
-    #binding-cells = <2>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <TAPPING_TERM>;
-    quick-tap-ms = <QUICK_TAP_TERM>;
-    global-quick-tap;
-    bindings = <&kp>, <&kp>;
-};
+#define RMODS (MOD_RGUI|MOD_RSFT|MOD_RALT|MOD_RCTL)
+#define LMODS (MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL)
+#define ALLMODS (MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL|MOD_RGUI|MOD_RSFT|MOD_RALT|MOD_RCTL)
 
 as: auto_shift {
     compatible = "zmk,behavior-hold-tap";
@@ -49,7 +20,7 @@ as: auto_shift {
     flavor = "tap-preferred";
     tapping-term-ms = <TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_TERM>;
-    bindings = <&kp>, <&kp>;
+    bindings = <&kp &kp>;
 };
 
 asr: auto_shift_ring {
@@ -59,7 +30,7 @@ asr: auto_shift_ring {
     tapping-term-ms = <TAPPING_TERM_RING>;
     quick-tap-ms = <QUICK_TAP_TERM>;
     flavor = "tap-preferred";
-    bindings = <&kp>, <&kp>;
+    bindings = <&kp &kp>;
 };
 
 asp: auto_shift_pinky {
@@ -69,7 +40,7 @@ asp: auto_shift_pinky {
     tapping-term-ms = <TAPPING_TERM_PINKY>;
     quick-tap-ms = <QUICK_TAP_TERM>;
     flavor = "tap-preferred";
-    bindings = <&kp>, <&kp>;
+    bindings = <&kp &kp>;
 };
 
 nk: not_so_sticky_key {
@@ -78,7 +49,7 @@ nk: not_so_sticky_key {
     #binding-cells = <2>;
     tapping-term-ms = <TAPPING_TERM>;
     flavor = "tap-preferred";
-    bindings = <&kp>, <&sk>;
+    bindings = <&kp &sk>;
 };
 
 hrm: hrm {
@@ -88,47 +59,70 @@ hrm: hrm {
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM>;
     quick-tap-ms = <QUICK_TAP_TERM>;
-    bindings = <&kp>, <&kp>;
-};
-
-hrmhwu: hrmhwu {
-    compatible = "zmk,behavior-hold-tap";
-    label = "HOME_ROW_MOD_HWU";
-    #binding-cells = <2>;
-    flavor = "balanced";
-    tapping-term-ms = <TAPPING_TERM>;
-    quick-tap-ms = <QUICK_TAP_TERM>;
-    bindings = <&kp>, <&kp>;
-    hold-while-undecided;
+    bindings = <&kp &kp>;
 };
 
 swap: swap {
     compatible = "zmk,behavior-smart-interrupt";
     label = "SWAPPER";
     #binding-cells = <0>;
-    bindings = <&kt LALT>, <AS(TAB)>, <&kt LALT>;
+    bindings = <&kt LALT AS(TAB) &kt LALT>;
     shared-key-positions = <LT2 LM1 LM2 LM3>;
+};
+
+leftmm: leftmm {
+    compatible = "zmk,behavior-mod-morph";
+    label = "leftmm";
+    #binding-cells = <0>;
+    bindings = <&kp LEFT &kp UP>;
+    mods = <RMODS>;
+};
+
+rightmm: rightmm {
+    compatible = "zmk,behavior-mod-morph";
+    label = "rightmm";
+    #binding-cells = <0>;
+    bindings = <&kp RIGHT &kp DOWN>;
+    mods = <LMODS>;
+};
+
+numbspcdel: numbspcdel {
+    compatible = "zmk,behavior-mod-morph";
+    label = "numbspcdel";
+    #binding-cells = <0>;
+    bindings = <&lt NUM BSPC &kp DELETE>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    masked_mods = <(MOD_RSFT)>;
+};
+
+navspcmin: navspcmin {
+    compatible = "zmk,behavior-mod-morph";
+    label = "navspcmin";
+    #binding-cells = <0>;
+    bindings = <&lt NAV SPC &kp MINUS>;
+    mods = <(MOD_LSFT|MOD_RSFT)>;
+    masked_mods = <(MOD_RSFT)>;
 };
 
 arrow_enc: arrow_enc {
     compatible = "zmk,behavior-sensor-rotate";
     label = "ARROW_ENCODER";
     #sensor-binding-cells = <0>;
-    bindings = <&kp RIGHT>, <&kp LEFT>;
+    bindings = <&kp RIGHT &leftmm>;
 };
 
 arrow_enc2: arrow_enc2 {
     compatible = "zmk,behavior-sensor-rotate";
     label = "ARROW_ENCODER2";
     #sensor-binding-cells = <0>;
-    bindings = <&kp DOWN>, <&kp UP>;
+    bindings = <&rightmm &kp UP>;
 };
 
 mmv_enc: mmv_enc {
     compatible = "zmk,behavior-sensor-rotate";
     label = "MMV_ENCODER";
     #sensor-binding-cells = <0>;
-    bindings = <&mmv MOVE_HOR(3000)>, <&mmv MOVE_HOR(-3000)>;
+    bindings = <&mmv MOVE_HOR(3000) &mmv MOVE_HOR(-3000)>;
     tap-ms = <100>;
 };
 
@@ -136,7 +130,7 @@ mmv_enc2: mmv_enc2 {
     compatible = "zmk,behavior-sensor-rotate";
     label = "MMV_ENCODER2";
     #sensor-binding-cells = <0>;
-    bindings = <&mmv MOVE_VERT(3000)>, <&mmv MOVE_VERT(-3000)>;
+    bindings = <&mmv MOVE_VERT(3000) &mmv MOVE_VERT(-3000)>;
     tap-ms = <100>;
 };
 
@@ -144,7 +138,7 @@ mwh_enc: mwh_enc {
     compatible = "zmk,behavior-sensor-rotate";
     label = "MMV_ENCODER";
     #sensor-binding-cells = <0>;
-    bindings = <&mwh SCROLL_RIGHT>, <&mwh SCROLL_LEFT>;
+    bindings = <&mwh SCROLL_RIGHT &mwh SCROLL_LEFT>;
     tap-ms = <100>;
 };
 
@@ -152,7 +146,7 @@ mwh_enc2: mwh_enc2 {
     compatible = "zmk,behavior-sensor-rotate";
     label = "MMV_ENCODER2";
     #sensor-binding-cells = <0>;
-    bindings = <&mwh SCROLL_VERT(-20)>, <&mwh SCROLL_VERT(20)>;
+    bindings = <&mwh SCROLL_VERT(-20) &mwh SCROLL_VERT(20)>;
     tap-ms = <100>;
 };
 
@@ -160,5 +154,5 @@ none_enc: none_enc {
     compatible = "zmk,behavior-sensor-rotate";
     label = "NONE_ENCODER";
     #sensor-binding-cells = <0>;
-    bindings = <&none>, <&none>;
+    bindings = <&none &none>;
 };
