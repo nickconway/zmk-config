@@ -54,11 +54,11 @@
         trigger-each-binding; \
     };
 
-#define ASB(keycode) &as LS(keycode) keycode
-#define ASBR(keycode) &asr LS(keycode) keycode
-#define ASBP(keycode) &asp LS(keycode) keycode
+#define AS(keycode) &as LS(keycode) keycode
+#define ASR(keycode) &asr LS(keycode) keycode
+#define ASP(keycode) &asp LS(keycode) keycode
 
-#define AS(keycode) &asmm##keycode
+/* #define AS(keycode) &asmm##keycode */
 
 ASM(Q, TAPPING_TERM_PINKY)
 ASM(W, TAPPING_TERM_RING)
@@ -131,7 +131,7 @@ ASM(F11, TAPPING_TERM)
 ASM(F12, TAPPING_TERM)
 
 #define HRM(letter, mod, tapping_time) \
-    hr##letter: hr##letter { \
+    hras##letter: hras##letter { \
         compatible = "zmk,behavior-hold-tap"; \
         label = ZMK_MACRO_STRINGIFY(HOME_ROW_##letter); \
         #binding-cells = <2>; \
@@ -149,7 +149,7 @@ ASM(F12, TAPPING_TERM)
         label = ZMK_MACRO_STRINGIFY(hrt##letter); \
         #binding-cells = <0>; \
         tapping-term-ms = <tapping_time>; \
-        bindings = <&hr##letter mod letter>, <&kp letter>; \
+        bindings = <&hras##letter mod letter>, <&kp letter>; \
         trigger-each-binding; \
     };
 
@@ -157,7 +157,7 @@ HRM(A, LSHIFT, TAPPING_TERM_PINKY)
 HRM(R, LGUI, TAPPING_TERM_RING)
 HRM(S, LALT, TAPPING_TERM)
 HRM(T, LCTL, TAPPING_TERM)
-HRM(N, LCTL, TAPPING_TERM)
-HRM(E, LALT, TAPPING_TERM)
-HRM(I, LGUI, TAPPING_TERM_RING)
-HRM(O, LSHIFT, TAPPING_TERM_PINKY)
+HRM(N, RCTL, TAPPING_TERM)
+HRM(E, RALT, TAPPING_TERM)
+HRM(I, RGUI, TAPPING_TERM_RING)
+HRM(O, RSHIFT, TAPPING_TERM_PINKY)

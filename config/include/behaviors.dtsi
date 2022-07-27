@@ -1,13 +1,13 @@
 #define SK(KEY) &nk KEY KEY
 
-#define HRA &hrm LSHIFT A
-#define HRR &hrm LGUI R
-#define HRS &hrm LALT S
-#define HRT &hrm LCTL T
-#define HRN &hrm RCTL N
-#define HRE &hrm RALT E
-#define HRI &hrm RGUI I
-#define HRO &hrm RSHIFT O
+#define HRA &hrasA LSHIFT A
+#define HRR &hrasR LGUI R
+#define HRS &hrasS LALT S
+#define HRT &hrasT LCTL T
+#define HRN &hrasN RCTL N
+#define HRE &hrasE RALT E
+#define HRI &hrasI RGUI I
+#define HRO &hrasO RSHIFT O
 
 bht: balanced_hold_tap {
     compatible = "zmk,behavior-hold-tap";
@@ -106,7 +106,7 @@ swap: swap {
     compatible = "zmk,behavior-smart-interrupt";
     label = "SWAPPER";
     #binding-cells = <0>;
-    bindings = <&kt LALT>, <ASB(TAB)>, <&kt LALT>;
+    bindings = <&kt LALT>, <AS(TAB)>, <&kt LALT>;
     shared-key-positions = <LT2 LM1 LM2 LM3>;
 };
 

@@ -21,9 +21,9 @@
         compatible = "zmk,keymap";
 
         LAYER(default, BASE,
-            &none, AS(Q),  AS(W), AS(F), AS(P),   AS(B),               AS(J),   AS(L),   AS(U),       AS(Y),   AS(QUOT),  &none,
-            &none, HRA,    HRR,   HRS,   HRT,     AS(G),               AS(M),   HRN,     HRE,         HRI,     HRO,       &none,
-            &none, AS(Z),  AS(X), AS(C), AS(D),   AS(V),               AS(K),   AS(H),   AS(CMMA),    AS(DOT), AS(SLASH), &none,
+            &none, ASP(Q),  ASR(W), AS(F), AS(P),   AS(B),               AS(J),   AS(L),   AS(U),       ASR(Y),   ASP(QUOT),  &none,
+            &none, HRA,     HRR,    HRS,   HRT,     AS(G),               AS(M),   HRN,     HRE,         HRI,      HRO,        &none,
+            &none, ASP(Z),  ASR(X), AS(C), AS(D),   AS(V),               AS(K),   AS(H),   AS(CMMA),    ASR(DOT), ASP(SLASH), &none,
                      &lt FUN ESC, &lt NUM BKSP, &leader,               &lt MEDIA RET, &lt NAV SPC, &lt MOUSE TAB,
                                                    &arrow_enc, &arrow_enc2
         )
