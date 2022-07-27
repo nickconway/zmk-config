@@ -10,3 +10,5 @@ Features:
 - Mod morph on encoders ([#1275](https://github.com/zmkfirmware/zmk/pull/1275) and [#1368](https://github.com/zmkfirmware/zmk/pull/1368))
 
 ![layout](./layout.png?)
+
+TODO: finish layout image
