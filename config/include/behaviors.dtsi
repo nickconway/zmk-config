@@ -2,10 +2,10 @@
 
 #define HRA &hrasA LGUI A
 #define HRR &hrasR LALT R
-#define HRS &hrasS LCTL S
-#define HRT &hrasT LSHIFT T
-#define HRN &hrasN RSHIFT N
-#define HRE &hrasE RCTL E
+#define HRS &hrasS LSHIFT S
+#define HRT &hrasT LCTL T
+#define HRN &hrasN RCTL N
+#define HRE &hrasE RSHIFT E
 #define HRI &hrasI RALT I
 #define HRO &hrasO RGUI O
 
