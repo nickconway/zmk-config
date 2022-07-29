@@ -176,3 +176,12 @@ none_enc: none_enc {
     #sensor-binding-cells = <0>;
     bindings = <&none &none>;
 };
+
+ldturbo: ldturbo {
+    compatible = "zmk,behavior-turbo-key";
+    label = "ldturbo";
+    #binding-cells = <0>;
+    wait-ms = <120000>;
+    bindings = <&m3>;
+    toggle-term-ms = <TAPPING_TERM>;
+};
