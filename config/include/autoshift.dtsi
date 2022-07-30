@@ -137,6 +137,7 @@ ASM(F12, TAPPING_TERM)
         #binding-cells = <2>; \
         flavor = "balanced"; \
         tapping-term-ms = <tapping_time>; \
+        global-quick-tap; \
         quick-tap-ms = <QUICK_TAP_TERM>; \
         bindings = <&kp>, <&kp>; \
         retro-tap; \
