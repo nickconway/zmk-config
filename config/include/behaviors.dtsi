@@ -63,7 +63,7 @@ hrm: hrm {
 };
 
 swap: swap {
-    compatible = "zmk,behavior-smart-interrupt";
+    compatible = "zmk,behavior-tri-state";
     label = "SWAPPER";
     #binding-cells = <0>;
     bindings = <&kt LALT AS(TAB) &kt LALT>;
