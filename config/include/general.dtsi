@@ -18,9 +18,9 @@
 #define NOTHING 9
 #define STENO   10
 
-#define TAPPING_TERM 150
-#define TAPPING_TERM_RING 200
-#define TAPPING_TERM_PINKY 250
+#define TAPPING_TERM 200
+#define TAPPING_TERM_RING 250
+#define TAPPING_TERM_PINKY 300
 #define QUICK_TAP_TERM 300
 
 &leader {
