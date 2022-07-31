@@ -90,36 +90,16 @@ bspcdel: bspcdel {
     compatible = "zmk,behavior-mod-morph";
     label = "bspcdel";
     #binding-cells = <0>;
-    bindings = <&kp BSPC &kp DELETE>;
+    bindings = <&lt NUM BSPC &lt NUM DELETE>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
     masked_mods = <(MOD_RSFT)>;
-};
-
-ltnum: ltnum {
-    compatible = "zmk,behavior-hold-tap";
-    label = "ltnum";
-    #binding-cells = <2>;
-    flavor = "balanced";
-    tapping-term-ms = <TAPPING_TERM>;
-    quick-tap-ms = <QUICK_TAP_TERM>;
-    bindings = <&mo &bspcdel>;
-};
-
-ltnav: ltnav {
-    compatible = "zmk,behavior-hold-tap";
-    label = "ltnav";
-    #binding-cells = <2>;
-    flavor = "balanced";
-    tapping-term-ms = <TAPPING_TERM>;
-    quick-tap-ms = <QUICK_TAP_TERM>;
-    bindings = <&mo &spcmin>;
 };
 
 spcmin: spcmin {
     compatible = "zmk,behavior-mod-morph";
     label = "navspcmin";
     #binding-cells = <0>;
-    bindings = <&kp SPC &kp MINUS>;
+    bindings = <&lt NAV SPC &lt NAV MINUS>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
     masked_mods = <(MOD_RSFT)>;
 };
