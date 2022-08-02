@@ -13,7 +13,7 @@
 
 MACRO(m1, MACRO_WAIT_TERM, MACRO_TAP_TERM, &kp LA(SPC))
 MACRO(m2, MACRO_WAIT_TERM, MACRO_TAP_TERM, &kp RET &tog GAME &tog GAMET)
-MACRO(m3, MACRO_WAIT_TERM, MACRO_TAP_TERM, &out OUT_BLE &bt BT_SEL 2 &kp LS(A) &last_dev)
+MACRO(m3, MACRO_WAIT_TERM, MACRO_TAP_TERM, &out OUT_BLE &bt BT_SEL 2 &kp A &last_dev)
 
 dm1: dm1 {
     compatible = "zmk,behavior-dynamic-macro";
