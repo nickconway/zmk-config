@@ -133,7 +133,7 @@ ASM(F12, TAPPING_TERM)
 #define HRM(letter, mod, tapping_time) \
     hras##letter: hras##letter { \
         compatible = "zmk,behavior-hold-tap"; \
-        label = ZMK_MACRO_STRINGIFY(HOME_ROW_##letter); \
+        label = ZMK_MACRO_STRINGIFY(HOME_ROW_AS_##letter); \
         #binding-cells = <2>; \
         flavor = "balanced"; \
         tapping-term-ms = <tapping_time>; \
@@ -161,3 +161,12 @@ HRM(N, RCTL, TAPPING_TERM)
 HRM(E, RALT, TAPPING_TERM)
 HRM(I, RGUI, TAPPING_TERM_RING)
 HRM(O, RSHIFT, TAPPING_TERM_PINKY)
+
+#define HRA &hrasA LSHIFT A
+#define HRR &hrasR LGUI R
+#define HRS &hrasS LALT S
+#define HRT &hrasT LCTL T
+#define HRN &hrasN RCTL N
+#define HRE &hrasE RALT E
+#define HRI &hrasI RGUI I
+#define HRO &hrasO RSHIFT O

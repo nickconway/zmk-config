@@ -1,14 +1,5 @@
 #define SK(KEY) &nk KEY KEY
 
-#define HRA &hrasA LSHIFT A
-#define HRR &hrasR LGUI R
-#define HRS &hrasS LALT S
-#define HRT &hrasT LCTL T
-#define HRN &hrasN RCTL N
-#define HRE &hrasE RALT E
-#define HRI &hrasI RGUI I
-#define HRO &hrasO RSHIFT O
-
 #define RMODS (MOD_RGUI|MOD_RSFT|MOD_RALT|MOD_RCTL)
 #define LMODS (MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL)
 #define ALLMODS (MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL|MOD_RGUI|MOD_RSFT|MOD_RALT|MOD_RCTL)
@@ -108,14 +99,14 @@ arrow_enc: arrow_enc {
     compatible = "zmk,behavior-sensor-rotate";
     label = "ARROW_ENCODER";
     #sensor-binding-cells = <0>;
-    bindings = <&kp RIGHT &leftmm>;
+    bindings = <&kp UP &leftmm>;
 };
 
 arrow_enc2: arrow_enc2 {
     compatible = "zmk,behavior-sensor-rotate";
     label = "ARROW_ENCODER2";
     #sensor-binding-cells = <0>;
-    bindings = <&rightmm &kp UP>;
+    bindings = <&rightmm &kp DOWN>;
 };
 
 mmv_enc: mmv_enc {
@@ -162,6 +153,6 @@ ldturbo: ldturbo {
     label = "ldturbo";
     #binding-cells = <0>;
     wait-ms = <60000>;
-    bindings = <&m3>;
+    bindings = <&work_awake>;
     toggle-term-ms = <TAPPING_TERM>;
 };
