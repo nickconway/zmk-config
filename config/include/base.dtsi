@@ -24,7 +24,7 @@
             &none, ASP(Q),  ASR(W), AS(F), AS(P),   AS(B),               AS(J),   AS(L),   AS(U),       ASR(Y),   ASP(QUOT),  &none,
             &none, HRA,     HRR,    HRS,   HRT,     AS(G),               AS(M),   HRN,     HRE,         HRI,      HRO,        &none,
             &none, ASP(Z),  ASR(X), AS(C), AS(D),   AS(V),               AS(K),   AS(H),   AS(CMMA),    ASR(DOT), ASP(SLASH), &none,
-                           &lt FUN ESC, &bspcdel, &leader,               &lt MEDIA RET, &spcmin, &lt MOUSE TAB,
+                          &lt FUN ESC, &bspcdel, &leaders,               &lt MEDIA RET, &spcmin, &lt MOUSE TAB,
                                                       &arrow_enc, &arrow_enc2
         )
 
@@ -45,9 +45,9 @@
         )
 
         LAYER(nav, NAV,
-            &none,  AS(PG_UP),    AS(HOME),   AS(UP),      AS(END),     AS(INSERT),             &trans,       &swap,              &trans,   &trans,       &trans,             &none,
-            &none,  AS(PG_DN),    AS(LEFT),   AS(DOWN),    AS(RIGHT),   &caps_word,             &kp CAPS,     SK(RCTL),           SK(RALT), SK(RGUI),     SK(RSHIFT),         &none,
-            &none,  &kp LC(Z),    &kp LC(X),  &kp LC(C),   &kp LC(V),   &kp INSERT,             &trans,       &kp LG(LC(RIGHT)),  &trans,   &trans,       &ext_power EP_TOG,  &none,
+            &none,  AS(PG_UP),    AS(HOME),   AS(UP),      AS(END),     AS(INSERT),             &trans,       &swap,              &trans,           &trans,         &trans,             &none,
+            &none,  AS(PG_DN),    AS(LEFT),   AS(DOWN),    AS(RIGHT),   &caps_word,             &kp CAPS,     &hrm RCTL RPAR,     &hrm RALT RBRC,   &hrm RGUI RBKT, &hrm RSHIFT GT,     &none,
+            &none,  &kp LC(Z),    &kp LC(X),  &kp LC(C),   &kp LC(V),   &kp INSERT,             &trans,       &kp LG(LC(RIGHT)),  &trans,           &trans,         &ext_power EP_TOG,  &none,
                                                             &trans, &trans, &trans,             &trans, &trans, &trans,
                                                                  &inc_dec_kp LG(LC(RIGHT)) LG(LC(LEFT)), &none_enc
         )
@@ -69,15 +69,15 @@
         )
 
         LAYER(number, NUMBER,
-            &none, &trans,      &trans,      &dm1 RECORD, &dm1 PLAY,           &trans,                 AS(LBKT),     AS(N7),  AS(N8),  AS(N9),  AS(RBKT),    &none,
-            &none, SK(LSHIFT),  SK(LGUI),    SK(LALT),    SK(LCTL),            &trans,                 AS(EQUAL),    AS(N4),  AS(N5),  AS(N6),  AS(SEMI),    &none,
-            &none, &trans,      &trans,      &kt UP,      &kp LG(LC(LEFT)),    &trans,                 AS(GRAVE),    AS(N1),  AS(N2),  AS(N3),  AS(BSLH),    &none,
-                                                             &trans,  &trans,  &trans,                 AS(MINUS), AS(N0), AS(DOT),
-                                                                                  &arrow_enc, &arrow_enc2
+            &none, &trans,          &trans,         &dm1 RECORD,       &dm1 PLAY,           &trans,                 AS(LBKT),     AS(N7),  AS(N8),  AS(N9),  AS(RBKT),    &none,
+            &none, &hrm LSHIFT LT,  &hrm LGUI LBKT, &hrm LALT LBRC,    &hrm LCTL LPAR,      &trans,                 AS(EQUAL),    AS(N4),  AS(N5),  AS(N6),  AS(SEMI),    &none,
+            &none, &trans,          &trans,         &kt UP,            &kp LG(LC(LEFT)),    &trans,                 AS(GRAVE),    AS(N1),  AS(N2),  AS(N3),  AS(BSLH),    &none,
+                                                                          &trans,  &trans,  &trans,                 AS(MINUS), AS(N0), AS(DOT),
+                                                                                                &arrow_enc, &arrow_enc2
         )
 
         LAYER(symbol, SYMBOL,
-            &none, &trans,      &trans,      &kp C,       &trans,      &trans,                 &trans,  &trans,       &trans,      &trans,      &trans,  &none,
+            &none, &trans,      &trans,      &trans,      &trans,      &trans,                 &trans,  &trans,       &trans,      &trans,      &trans,  &none,
             &none, SK(LSHIFT),  SK(LGUI),    SK(LALT),    SK(LCTRL),   &trans,                 &trans,  &kp LS(N9),   AS(LBKT),    AS(MINUS),   &trans,  &none,
             &none, &trans,      &trans,      &trans,      &trans,      &trans,                 &trans,  &kp LS(N0),   AS(RBKT),    AS(MINUS),   &trans,  &none,
                                                      &trans,  &trans,  &trans,                 &trans,  AS(MINUS),  &trans,
