@@ -162,5 +162,5 @@ leaders: leaders {
     label = "leaders";
     #binding-cells = <0>;
     tapping-term-ms = <QUICK_TAP_TERM>;
-    bindings = <&leader &leader2>;
+    bindings = <&leader &leader2 &leader3>;
 };

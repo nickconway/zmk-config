@@ -22,14 +22,11 @@ leader_sequences {
     LEADER(bootloader, LT2, &bootloader, BASE)
     LEADER(browser, LT4, &kp LG(N1), BASE)
     LEADER(btclear, RT4, &bt BT_CLR, BASE)
-
     LEADER(reset, LM1, &reset, BASE)
     LEADER(spotify, LM2, &kp LG(N3), BASE)
     LEADER(terminal, LM3, &kp LG(GRAVE), BASE)
     LEADER(output, RM4, &out OUT_TOG, BASE)
-
     LEADER(discord, LB3, &kp LG(N2), BASE)
-
     LEADER(delete, LH2, &kp DEL, BASE)
 
     LEADER(bt0, LB0, &bt BT_SEL 0, NUM)
@@ -38,4 +35,7 @@ leader_sequences {
     LEADER(bt3, LB3, &bt BT_SEL 3, NUM)
     LEADER(bt4, LB4, &bt BT_SEL 4, NUM)
 
+    LEADER(test, LM3, &kp A, NAV)
+    LEADER(zoom, LB0, &kp F20, NAV)
+    LEADER(preview, RM1, &kp F24, NAV)
 };
