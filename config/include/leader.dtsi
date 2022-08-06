@@ -35,6 +35,6 @@ leader_sequences {
     LEADER(bt3, LB3, &bt BT_SEL 3, NUM)
     LEADER(bt4, LB4, &bt BT_SEL 4, NUM)
 
-    LEADER(zoom, LB0, &kp KP_N0, NAV)
-    LEADER(preview, RM1, &kp KP_N1, NAV)
+    LEADER(zoom, LB0, &kp F9, NAV)
+    LEADER(preview, RM1, &kp LS(F9), NAV)
 };
