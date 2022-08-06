@@ -83,7 +83,7 @@ bspcdel: bspcdel {
     #binding-cells = <0>;
     bindings = <&lt NUM BSPC &lt NUM DELETE>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
-    masked_mods = <(MOD_RSFT)>;
+    masked-mods = <(MOD_RSFT)>;
 };
 
 spcmin: spcmin {
@@ -92,7 +92,7 @@ spcmin: spcmin {
     #binding-cells = <0>;
     bindings = <&lt NAV SPC &lt NAV MINUS>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
-    masked_mods = <(MOD_RSFT)>;
+    masked-mods = <(MOD_RSFT)>;
 };
 
 arrow_enc: arrow_enc {
