@@ -22,4 +22,5 @@ dm1: dm1 {
     label = "dynamic-macro-1";
     wait-ms = <10>;
     #binding-cells = <1>;
+    no-output;
 };
