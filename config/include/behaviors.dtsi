@@ -61,22 +61,6 @@ swap: swap {
     ignored-key-positions = <LT2 LM1 LM2 LM3>;
 };
 
-leftmm: leftmm {
-    compatible = "zmk,behavior-mod-morph";
-    label = "leftmm";
-    #binding-cells = <0>;
-    bindings = <&kp LEFT &kp UP>;
-    mods = <RMODS>;
-};
-
-rightmm: rightmm {
-    compatible = "zmk,behavior-mod-morph";
-    label = "rightmm";
-    #binding-cells = <0>;
-    bindings = <&kp RIGHT &kp DOWN>;
-    mods = <LMODS>;
-};
-
 bspcdel: bspcdel {
     compatible = "zmk,behavior-mod-morph";
     label = "bspcdel";
@@ -99,14 +83,14 @@ arrow_enc: arrow_enc {
     compatible = "zmk,behavior-sensor-rotate";
     label = "ARROW_ENCODER";
     #sensor-binding-cells = <0>;
-    bindings = <&kp UP &leftmm>;
+    bindings = <&kp RIGHT &kp LEFT>;
 };
 
 arrow_enc2: arrow_enc2 {
     compatible = "zmk,behavior-sensor-rotate";
     label = "ARROW_ENCODER2";
     #sensor-binding-cells = <0>;
-    bindings = <&rightmm &kp DOWN>;
+    bindings = <&kp DOWN &kp UP>;
 };
 
 mmv_enc: mmv_enc {
