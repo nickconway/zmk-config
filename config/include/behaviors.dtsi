@@ -105,8 +105,16 @@ upmm2: upmm2 {
     compatible = "zmk,behavior-mod-morph";
     label = "upmm2";
     #binding-cells = <0>;
-    bindings = <&kp UP &kp C_BRI_DN>;
+    bindings = <&upmm3 &kp C_BRI_DN>;
     mods = <MOD_RALT>;
+};
+
+upmm3: upmm3 {
+    compatible = "zmk,behavior-mod-morph";
+    label = "upmm3";
+    #binding-cells = <0>;
+    bindings = <&kp UP &mwh SCROLL_DOWN>;
+    mods = <MOD_RSFT>;
 };
 
 downmm1: downmm1 {
@@ -121,8 +129,16 @@ downmm2: downmm2 {
     compatible = "zmk,behavior-mod-morph";
     label = "downmm2";
     #binding-cells = <0>;
-    bindings = <&kp DOWN &kp C_BRI_UP>;
+    bindings = <&downmm3 &kp C_BRI_UP>;
     mods = <MOD_RALT>;
+};
+
+downmm3: downmm3 {
+    compatible = "zmk,behavior-mod-morph";
+    label = "downmm3";
+    #binding-cells = <0>;
+    bindings = <&kp DOWN &mwh SCROLL_UP>;
+    mods = <MOD_RSFT>;
 };
 
 bspcdel: bspcdel {
