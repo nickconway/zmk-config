@@ -61,6 +61,54 @@ swap: swap {
     ignored-key-positions = <LT2 LM1 LM2 LM3>;
 };
 
+leftmm1: leftmm1 {
+    compatible = "zmk,behavior-mod-morph";
+    label = "leftmm1";
+    #binding-cells = <0>;
+    bindings = <&leftmm2 &kp C_VOL_DN>;
+    mods = <MOD_LCTL>;
+};
+
+leftmm2: leftmm2 {
+    compatible = "zmk,behavior-mod-morph";
+    label = "leftmm2";
+    #binding-cells = <0>;
+    bindings = <&kp LEFT &kp LG(LC(LEFT))>;
+    mods = <MOD_LALT>;
+};
+
+rightmm1: rightmm1 {
+    compatible = "zmk,behavior-mod-morph";
+    label = "rightmm1";
+    #binding-cells = <0>;
+    bindings = <&rightmm2 &kp C_VOL_UP>;
+    mods = <MOD_LCTL>;
+};
+
+rightmm2: rightmm2 {
+    compatible = "zmk,behavior-mod-morph";
+    label = "rightmm2";
+    #binding-cells = <0>;
+    bindings = <&kp RIGHT &kp LG(LC(RIGHT))>;
+    mods = <MOD_LALT>;
+};
+
+upmm1: upmm1 {
+    compatible = "zmk,behavior-mod-morph";
+    label = "upmm1";
+    #binding-cells = <0>;
+    bindings = <&kp UP &kp UP>;
+    mods = <MOD_LCTL>;
+};
+
+downmm1: downmm1 {
+    compatible = "zmk,behavior-mod-morph";
+    label = "downmm1";
+    #binding-cells = <0>;
+    bindings = <&kp DOWN &kp DOWN>;
+    mods = <MOD_RCTL>;
+};
+
 bspcdel: bspcdel {
     compatible = "zmk,behavior-mod-morph";
     label = "bspcdel";
@@ -79,50 +127,18 @@ spcmin: spcmin {
     masked-mods = <(MOD_RSFT)>;
 };
 
-arrow_enc: arrow_enc {
+enc: enc {
     compatible = "zmk,behavior-sensor-rotate";
-    label = "ARROW_ENCODER";
+    label = "ENCODER";
     #sensor-binding-cells = <0>;
-    bindings = <&kp RIGHT &kp LEFT>;
+    bindings = <&rightmm1 &leftmm1>;
 };
 
-arrow_enc2: arrow_enc2 {
+enc2: enc2 {
     compatible = "zmk,behavior-sensor-rotate";
-    label = "ARROW_ENCODER2";
+    label = "ENCODER2";
     #sensor-binding-cells = <0>;
-    bindings = <&kp DOWN &kp UP>;
-};
-
-mmv_enc: mmv_enc {
-    compatible = "zmk,behavior-sensor-rotate";
-    label = "MMV_ENCODER";
-    #sensor-binding-cells = <0>;
-    bindings = <&mmv MOVE_HOR(3000) &mmv MOVE_HOR(-3000)>;
-    tap-ms = <100>;
-};
-
-mmv_enc2: mmv_enc2 {
-    compatible = "zmk,behavior-sensor-rotate";
-    label = "MMV_ENCODER2";
-    #sensor-binding-cells = <0>;
-    bindings = <&mmv MOVE_VERT(3000) &mmv MOVE_VERT(-3000)>;
-    tap-ms = <100>;
-};
-
-mwh_enc: mwh_enc {
-    compatible = "zmk,behavior-sensor-rotate";
-    label = "MMV_ENCODER";
-    #sensor-binding-cells = <0>;
-    bindings = <&mwh SCROLL_RIGHT &mwh SCROLL_LEFT>;
-    tap-ms = <100>;
-};
-
-mwh_enc2: mwh_enc2 {
-    compatible = "zmk,behavior-sensor-rotate";
-    label = "MMV_ENCODER2";
-    #sensor-binding-cells = <0>;
-    bindings = <&mwh SCROLL_VERT(-20) &mwh SCROLL_VERT(20)>;
-    tap-ms = <100>;
+    bindings = <&downmm1 &upmm1>;
 };
 
 none_enc: none_enc {

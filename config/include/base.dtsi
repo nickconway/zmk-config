@@ -25,7 +25,7 @@
             &none, HRA,     HRR,    HRS,   HRT,     AS(G),               AS(M),   HRN,     HRE,         HRI,      HRO,        &none,
             &none, ASP(Z),  ASR(X), AS(C), AS(D),   AS(V),               AS(K),   AS(H),   AS(CMMA),    ASR(DOT), ASP(SLASH), &none,
                           &lt FUN ESC, &bspcdel, &leaders,               &lt MEDIA RET, &spcmin, &lt MOUSE TAB,
-                                                      &arrow_enc, &arrow_enc2
+                                                            &enc, &enc2
         )
 
         LAYER(game, GAME,
@@ -33,7 +33,7 @@
                 &none, &kp A,  &kp R,  &kp S,  &kp T,  &kp G,          &trans,  &trans,  &trans,  &trans,  &trans, &none,
                 &none, &kp Z,  &kp X,  &kp C,  &kp D,  &kp V,          &trans,  &trans,  &trans,  &trans,  &trans, &none,
                                  &kp LCTL, &kp SPC, &kp LALT,          &tog_gametype, &trans, &trans,
-                                                      &arrow_enc, &arrow_enc2
+                                                            &enc, &enc2
         )
 
         LAYER(gametype, GAMETYPE,
@@ -41,7 +41,7 @@
             &none,  &trans,   &trans,    &trans,    &trans,    &trans,                &trans,  &trans,  &trans,  &trans,  &trans,  &none,
             &none,  &trans,   &trans,    &trans,    &trans,    &trans,                &trans,  &trans,  &trans,  &trans,  &trans,  &none,
                                              &trans,  &trans,  &trans,                &tog_gametype,  &trans,  &trans,
-                                                                  &arrow_enc, &arrow_enc2
+                                                                        &enc, &enc2
         )
 
         LAYER(nav, NAV,
@@ -49,7 +49,7 @@
             &none,  AS(PG_DN),    AS(LEFT),   AS(DOWN),    AS(RIGHT),   &caps_word,             &kp CAPS,     &hrm RCTL RPAR,     &hrm RALT RBRC,   &hrm RGUI RBKT, &hrm RSHIFT GT,     &none,
             &none,  &kp LC(Z),    &kp LC(X),  &kp LC(C),   &kp LC(V),   &kp INSERT,             &trans,       &kp LG(LC(RIGHT)),  &trans,           &trans,         &ext_power EP_TOG,  &none,
                                                             &trans, &trans, &trans,             &trans, &trans, &trans,
-                                                                 &inc_dec_kp LG(LC(RIGHT)) LG(LC(LEFT)), &none_enc
+                                                                                    &enc, &enc2
         )
 
         LAYER(mouse, MOUSE,
@@ -57,7 +57,7 @@
             &none, &trans,  &mmv MOVE_HOR(-3000),    &mmv MOVE_VERT(3000),    &mmv MOVE_HOR(3000),     &trans,                 &trans,  &mwh SCROLL_LEFT, &mwh SCROLL_DOWN,    &mwh SCROLL_RIGHT,   &trans, &none,
             &none, &trans,  &trans,                  &trans,                  &trans,                  &trans,                 &trans,  &trans,           &trans,              &trans,              &trans, &none,
                                                                                  &trans, &mkp LCLK, &mkp RCLK,                 &trans, &trans, &trans,
-                                                                                                             &mwh_enc, &mwh_enc2
+                                                                                                                 &enc, &enc2
         )
 
         LAYER(media, MEDIA,
@@ -65,7 +65,7 @@
             &none, &trans,          &kp C_PREV,      &kp C_VOL_DN,    &kp C_NEXT,      &trans,                       &trans,  &trans,   &kp C_BRI_DN,   &trans,  &trans,  &none,
             &none, &bt BT_SEL 0,    &bt BT_SEL 1,    &bt BT_SEL 2,    &bt BT_SEL 3,    &bt BT_SEL 4,                 &trans,  &trans,   &trans,         &trans,  &trans,  &none,
                                                                  &trans, &kp C_PP, &kp C_STOP,                       &trans,  &trans,   &trans,
-                                                                                     &inc_dec_kp C_VOL_UP C_VOL_DN, &none_enc
+                                                                                                    &enc, &enc2
         )
 
         LAYER(number, NUMBER,
@@ -73,7 +73,7 @@
             &none, &hrm LSHIFT LT,  &hrm LGUI LBKT, &hrm LALT LBRC,    &hrm LCTL LPAR,      &trans,                 AS(EQUAL),    AS(N4),  AS(N5),  AS(N6),  AS(SEMI),    &none,
             &none, &trans,          &trans,         &kt UP,            &kp LG(LC(LEFT)),    &trans,                 AS(GRAVE),    AS(N1),  AS(N2),  AS(N3),  AS(BSLH),    &none,
                                                                           &trans,  &trans,  &trans,                 AS(MINUS), AS(N0), AS(DOT),
-                                                                                                &arrow_enc, &arrow_enc2
+                                                                                                     &enc, &enc2
         )
 
         LAYER(symbol, SYMBOL,
@@ -81,7 +81,7 @@
             &none, SK(LSHIFT),  SK(LGUI),    SK(LALT),    SK(LCTRL),   &trans,                 &trans,  &kp LS(N9),   AS(LBKT),    AS(MINUS),   &trans,  &none,
             &none, &trans,      &trans,      &trans,      &trans,      &trans,                 &trans,  &kp LS(N0),   AS(RBKT),    AS(MINUS),   &trans,  &none,
                                                      &trans,  &trans,  &trans,                 &trans,  AS(MINUS),  &trans,
-                                                                           &arrow_enc, &arrow_enc2
+                                                                                 &enc, &enc2
         )
 
         LAYER(function, FUNCTION,
@@ -89,7 +89,7 @@
             &none, SK(LSHIFT),  SK(LGUI),    SK(LALT),    SK(LCTRL),   &trans,                 &trans,  AS(F4),  AS(F5),  AS(F6),  AS(F11),  &none,
             &none, &trans,      &trans,      &trans,      &trans,      &trans,                 &trans,  AS(F1),  AS(F2),  AS(F3),  AS(F10),  &none,
                                                        &trans, &trans, &trans,                 &trans, &trans, &trans,
-                                                                           &arrow_enc, &arrow_enc2
+                                                                                 &enc, &enc2
         )
 
         LAYER(nothing, NOTHING,
