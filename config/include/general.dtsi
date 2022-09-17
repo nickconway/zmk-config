@@ -25,6 +25,7 @@
 
 &leader {
     timeout-ms = <200>;
+    timerless;
 };
 
 &lt {
