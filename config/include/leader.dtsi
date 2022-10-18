@@ -24,6 +24,7 @@ leader_sequences {
     LEADER(reset, LM1, &reset, BASE)
     LEADER(spotify, LM2, &kp LG(N3), BASE)
     LEADER(terminal, LM3, &kp LG(GRAVE), BASE)
+    LEADER(lastdevice, RT1, &last_dev, BASE)
     LEADER(output, RM4, &out OUT_TOG, BASE)
     LEADER(discord, LB3, &kp LG(N2), BASE)
     LEADER(delete, LH2, &kp DEL, BASE)
