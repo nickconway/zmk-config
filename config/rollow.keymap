@@ -70,9 +70,4 @@ NODE { \
 #define RH1 40
 #define RH2 41
 
-#define CHOSEN \
-    chosen { \
-        zephyr,display = &oled; \
-    };
-
 #include "include/base.dtsi"
