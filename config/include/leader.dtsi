@@ -15,7 +15,6 @@
     };
 
 leader_sequences {
-
     compatible = "zmk,leader-sequences";
 
     LEADER(close, LT0, &kp LA(F4), BASE)
