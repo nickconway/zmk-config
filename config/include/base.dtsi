@@ -8,10 +8,6 @@
     #include "combos.dtsi"
     #include "leader.dtsi"
 
-    #if __has_include("leader-sen.dtsi")
-    #include "leader-sen.dtsi"
-    #endif
-
     #ifdef CHOSEN
     CHOSEN
     #endif
