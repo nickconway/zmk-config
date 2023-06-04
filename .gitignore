@@ -3,3 +3,4 @@
 *.log
 tmp/
 config/include/leader-sen.dtsi
+config/include/macros-sen.dtsi
