@@ -163,10 +163,10 @@ HRM(I, RGUI, TAPPING_TERM_RING)
 HRM(O, RSHIFT, TAPPING_TERM_PINKY)
 
 #define HRA &hrasA LGUI A
-#define HRR &hrasR LCTL R
-#define HRS &hrasS LALT S
-#define HRT &hrasT LSHIFT T
-#define HRN &hrasN RSHIFT N
-#define HRE &hrasE RALT E
-#define HRI &hrasI RCTL I
+#define HRR &hrasR LALT R
+#define HRS &hrasS LSHIFT S
+#define HRT &hrasT LCTL T
+#define HRN &hrasN RCTL N
+#define HRE &hrasE RSHIFT E
+#define HRI &hrasI RALT I
 #define HRO &hrasO RGUI O
