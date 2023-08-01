@@ -13,7 +13,7 @@
 
 MACRO(ptrun, MACRO_WAIT_TERM, MACRO_TAP_TERM, &kp LA(SPC))
 MACRO(tog_gametype, MACRO_WAIT_TERM, MACRO_TAP_TERM, &kp RET &tog GAME &tog GAMET)
-MACRO(work_awake, MACRO_WAIT_TERM, MACRO_TAP_TERM, &out OUT_BLE &bt BT_SEL 2 &kp A &last_dev)
+MACRO(keep_awake, MACRO_WAIT_TERM, MACRO_TAP_TERM, &mmv MOVE_HOR(6000) &mmv MOVE_HOR(-6000))
 MACRO(leader2, MACRO_WAIT_TERM, MACRO_TAP_TERM, &macro_press &mo NUM &macro_tap &leader &macro_release &mo NUM)
 MACRO(leader3, MACRO_WAIT_TERM, MACRO_TAP_TERM, &macro_press &mo NAV &macro_tap &leader &macro_release &mo NAV)
 

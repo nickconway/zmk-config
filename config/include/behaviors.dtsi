@@ -183,7 +183,7 @@ ldturbo: ldturbo {
     label = "ldturbo";
     #binding-cells = <0>;
     wait-ms = <60000>;
-    bindings = <&work_awake>;
+    bindings = <&keep_awake>;
     toggle-term-ms = <TAPPING_TERM>;
 };
 
