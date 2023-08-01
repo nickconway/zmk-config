@@ -57,7 +57,7 @@
         )
 
         LAYER(media, Media,
-            &none, &trans,          &trans,          &kp C_VOL_UP,    &trans,          &trans,                       &trans,  &ldturbo, &kp C_BRI_UP,   &trans,  &trans,  &none,
+            &none, &trans,          &trans,          &kp C_VOL_UP,    &trans,          &trans,                       &trans,  &trans,   &kp C_BRI_UP,   &trans,  &trans,  &none,
             &none, &trans,          &kp C_PREV,      &kp C_VOL_DN,    &kp C_NEXT,      &trans,                       &trans,  &trans,   &kp C_BRI_DN,   &trans,  &trans,  &none,
             &none, &bt BT_SEL 0,    &bt BT_SEL 1,    &bt BT_SEL 2,    &bt BT_SEL 3,    &bt BT_SEL 4,                 &trans,  &trans,   &trans,         &trans,  &trans,  &none,
                                                                  &trans, &kp C_PP, &kp C_STOP,                       &trans,  &trans,   &trans,
@@ -67,7 +67,7 @@
         LAYER(number, Numbers,
             &none, &trans,          &trans,         &dm1 RECORD,       &dm1 PLAY,           &trans,                 AS(LBKT),     AS(N7),  AS(N8),  AS(N9),  AS(RBKT),    &none,
             &none, &kp LGUI,        &kp LALT,       &kp LSHIFT,        &kp LCTL,            &trans,                 AS(EQUAL),    AS(N4),  AS(N5),  AS(N6),  AS(SEMI),    &none,
-            &none, &trans,          &trans,         &kt UP,            &kp LG(LC(LEFT)),    &trans,                 AS(GRAVE),    AS(N1),  AS(N2),  AS(N3),  AS(BSLH),    &none,
+            &none, &trans,          &trans,         &ldturbo,          &kp LG(LC(LEFT)),    &trans,                 AS(GRAVE),    AS(N1),  AS(N2),  AS(N3),  AS(BSLH),    &none,
                                                                           &trans,  &trans,  &trans,                 AS(MINUS), AS(N0), AS(DOT),
                                                                                                      &enc, &enc2
         )
