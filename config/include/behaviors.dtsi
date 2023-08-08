@@ -182,7 +182,7 @@ ldturbo: ldturbo {
     compatible = "zmk,behavior-turbo-key";
     label = "ldturbo";
     #binding-cells = <0>;
-    wait-ms = <60000>;
+    wait-ms = <300000>;
     bindings = <&keep_awake>;
     toggle-term-ms = <TAPPING_TERM>;
 };
