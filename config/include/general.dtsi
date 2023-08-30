@@ -2,8 +2,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/mouse.h>
-#include <dt-bindings/zmk/dynamic-macros.h>
 #include <dt-bindings/zmk/ext_power.h>
 
 #define BASE    0
@@ -17,39 +15,3 @@
 #define FUN     8
 #define NOTHING 9
 #define STENO   10
-
-#define TAPPING_TERM 200
-#define TAPPING_TERM_RING 250
-#define TAPPING_TERM_PINKY 300
-#define QUICK_TAP_TERM 300
-
-&leader {
-    timeout-ms = <200>;
-    timerless;
-};
-
-&lt {
-    tapping-term-ms = <TAPPING_TERM>;
-    quick-tap-ms = <QUICK_TAP_TERM>;
-};
-
-&sk {
-    ignore-modifiers;
-    release-after-ms = <3000>;
-};
-
-&mmv {
-    delay-ms = <0>;
-    acceleration-exponent=<1>;
-    time-to-max-speed-ms = <500>;
-};
-
-&mwh {
-    delay-ms = <0>;
-    acceleration-exponent=<1>;
-    time-to-max-speed-ms = <0>;
-};
-
-&caps_word {
-  continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
-};
