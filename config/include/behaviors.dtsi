@@ -161,21 +161,21 @@ enc: enc {
     compatible = "zmk,behavior-sensor-rotate";
     label = "ENCODER";
     #sensor-binding-cells = <0>;
-    bindings = <&rightmm1 &leftmm1>;
+    bindings = <&rightmm1>, <&leftmm1>;
 };
 
 enc2: enc2 {
     compatible = "zmk,behavior-sensor-rotate";
     label = "ENCODER2";
     #sensor-binding-cells = <0>;
-    bindings = <&downmm1 &upmm1>;
+    bindings = <&downmm1>, <&upmm1>;
 };
 
 none_enc: none_enc {
     compatible = "zmk,behavior-sensor-rotate";
     label = "NONE_ENCODER";
     #sensor-binding-cells = <0>;
-    bindings = <&none &none>;
+    bindings = <&none>, <&none>;
 };
 
 ldturbo: ldturbo {
