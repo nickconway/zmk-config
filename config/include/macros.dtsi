@@ -17,6 +17,12 @@ MACRO(keep_awake, MACRO_WAIT_TERM, 600, &mmv MOVE_HOR(600) &mmv MOVE_HOR(-600))
 MACRO(leader2, MACRO_WAIT_TERM, MACRO_TAP_TERM, &macro_press &mo NUM &macro_tap &leader &macro_release &mo NUM)
 MACRO(leader3, MACRO_WAIT_TERM, MACRO_TAP_TERM, &macro_press &mo NAV &macro_tap &leader &macro_release &mo NAV)
 
+MACRO(switch0, MACRO_WAIT_TERM, MACRO_TAP_TERM, &to 0 &bt BT_SEL 0)
+MACRO(switch1, MACRO_WAIT_TERM, MACRO_TAP_TERM, &to 1 &bt BT_SEL 1)
+MACRO(switch2, MACRO_WAIT_TERM, MACRO_TAP_TERM, &to 2 &bt BT_SEL 2)
+MACRO(switch3, MACRO_WAIT_TERM, MACRO_TAP_TERM, &to 3 &bt BT_SEL 3)
+MACRO(switch4, MACRO_WAIT_TERM, MACRO_TAP_TERM, &to 4 &bt BT_SEL 4)
+
 dm1: dm1 {
     compatible = "zmk,behavior-dynamic-macro";
     label = "dynamic-macro-1";

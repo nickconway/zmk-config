@@ -6,17 +6,22 @@
 #include <dt-bindings/zmk/dynamic-macros.h>
 #include <dt-bindings/zmk/ext_power.h>
 
-#define BASE    0
-#define GAME    1
-#define GAMET   2
-#define NAV     3
-#define MOUSE   4
-#define MEDIA   5
-#define NUM     6
-#define SYM     7
-#define FUN     8
-#define NOTHING 9
-#define STENO   10
+#define BASE    0 1 2 3 4
+#define PC      0
+#define LAPTOP  1
+#define DECK    2
+#define PHONE   3
+#define TV      4
+#define GAME    5
+#define GAMET   6
+#define NAV     7
+#define MOUSE   8
+#define MEDIA   9
+#define NUM     10
+#define SYM     11
+#define FUN     12
+#define NOTHING 13
+#define STENO   14
 
 #define TAPPING_TERM 200
 #define TAPPING_TERM_RING 250
