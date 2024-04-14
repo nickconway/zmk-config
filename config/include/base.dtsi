@@ -8,15 +8,11 @@
     #include "combos.dtsi"
     #include "leader.dtsi"
 
-    #ifdef CHOSEN
-    CHOSEN
-    #endif
-
     keymap {
 
         compatible = "zmk,keymap";
 
-        LAYER(pc, Pc,
+        LAYER(PC,
             &none, ASP(Q),  ASR(W), AS(F), AS(P),   AS(B),               AS(J),   AS(L),   AS(U),       ASR(Y),   ASP(QUOT),  &none,
             &none, HRA,     HRR,    HRS,   HRT,     AS(G),               AS(M),   HRN,     HRE,         HRI,      HRO,        &none,
             &none, ASP(Z),  ASR(X), AS(C), AS(D),   AS(V),               AS(K),   AS(H),   AS(CMMA),    ASR(DOT), ASP(SLASH), &none,
@@ -24,7 +20,7 @@
                                                             &enc, &enc2
         )
 
-        LAYER(laptop, Laptop,
+        LAYER(Laptop,
             &none, ASP(Q),  ASR(W), AS(F), AS(P),   AS(B),               AS(J),   AS(L),   AS(U),       ASR(Y),   ASP(QUOT),  &none,
             &none, HRA,     HRR,    HRS,   HRT,     AS(G),               AS(M),   HRN,     HRE,         HRI,      HRO,        &none,
             &none, ASP(Z),  ASR(X), AS(C), AS(D),   AS(V),               AS(K),   AS(H),   AS(CMMA),    ASR(DOT), ASP(SLASH), &none,
@@ -32,7 +28,7 @@
                                                             &enc, &enc2
         )
 
-        LAYER(deck, Deck,
+        LAYER(Deck,
             &none, ASP(Q),  ASR(W), AS(F), AS(P),   AS(B),               AS(J),   AS(L),   AS(U),       ASR(Y),   ASP(QUOT),  &none,
             &none, HRA,     HRR,    HRS,   HRT,     AS(G),               AS(M),   HRN,     HRE,         HRI,      HRO,        &none,
             &none, ASP(Z),  ASR(X), AS(C), AS(D),   AS(V),               AS(K),   AS(H),   AS(CMMA),    ASR(DOT), ASP(SLASH), &none,
@@ -40,7 +36,7 @@
                                                             &enc, &enc2
         )
 
-        LAYER(phone, Phone,
+        LAYER(Phone,
             &none, ASP(Q),  ASR(W), AS(F), AS(P),   AS(B),               AS(J),   AS(L),   AS(U),       ASR(Y),   ASP(QUOT),  &none,
             &none, HRA,     HRR,    HRS,   HRT,     AS(G),               AS(M),   HRN,     HRE,         HRI,      HRO,        &none,
             &none, ASP(Z),  ASR(X), AS(C), AS(D),   AS(V),               AS(K),   AS(H),   AS(CMMA),    ASR(DOT), ASP(SLASH), &none,
@@ -48,7 +44,7 @@
                                                             &enc, &enc2
         )
 
-        LAYER(tv, Tv,
+        LAYER(TV,
             &none, ASP(Q),  ASR(W), AS(F), AS(P),   AS(B),               AS(J),   AS(L),   AS(U),       ASR(Y),   ASP(QUOT),  &none,
             &none, HRA,     HRR,    HRS,   HRT,     AS(G),               AS(M),   HRN,     HRE,         HRI,      HRO,        &none,
             &none, ASP(Z),  ASR(X), AS(C), AS(D),   AS(V),               AS(K),   AS(H),   AS(CMMA),    ASR(DOT), ASP(SLASH), &none,
@@ -56,7 +52,7 @@
                                                             &enc, &enc2
         )
 
-        LAYER(game, Game,
+        LAYER(Game,
             &none, &kp Q,  &kp W,  &kp F,  &kp P,  &kp B,          &trans,  &trans,  &trans,  &trans,  &trans, &none,
             &none, &kp A,  &kp R,  &kp S,  &kp T,  &kp G,          &trans,  &trans,  &trans,  &trans,  &trans, &none,
             &none, &kp Z,  &kp X,  &kp C,  &kp D,  &kp V,          &trans,  &trans,  &trans,  &trans,  &trans, &none,
@@ -64,7 +60,7 @@
                                                         &enc, &enc2
         )
 
-        LAYER(gametype, GType,
+        LAYER(GameType,
             &none,  &trans,   &trans,    &trans,    &trans,    &trans,                &trans,  &trans,  &trans,  &trans,  &trans,  &none,
             &none,  &trans,   &trans,    &trans,    &trans,    &trans,                &trans,  &trans,  &trans,  &trans,  &trans,  &none,
             &none,  &trans,   &trans,    &trans,    &trans,    &trans,                &trans,  &trans,  &trans,  &trans,  &trans,  &none,
@@ -72,7 +68,7 @@
                                                                         &enc, &enc2
         )
 
-        LAYER(nav, Navigation,
+        LAYER(Navigation,
             &none,  AS(PG_UP),    AS(HOME),   AS(UP),      AS(END),     AS(INSERT),             &trans,       &swap,              &kp LC(LA(DEL)),  &trans,         &trans,             &none,
             &none,  AS(PG_DN),    AS(LEFT),   AS(DOWN),    AS(RIGHT),   &caps_word,             &kp CAPS,     &kp RCTL,           &kp RSHIFT,       &kp RALT,       &kp RGUI,           &none,
             &none,  &kp LC(Z),    &kp LC(X),  &kp LC(C),   &kp LC(V),   &kp INSERT,             &trans,       &kp LG(LC(RIGHT)),  &trans,           &trans,         &ext_power EP_TOG,  &none,
@@ -80,31 +76,34 @@
                                                                                     &enc, &enc2
         )
 
-        LAYER(mouse, Mouse,
-            &none, &trans,  &trans,                  &mmv MOVE_VERT(-3000),   &trans,                  &trans,                 &trans,  &trans,           &mwh SCROLL_UP,      &trans,              &trans, &none,
-            &none, &trans,  &mmv MOVE_HOR(-3000),    &mmv MOVE_VERT(3000),    &mmv MOVE_HOR(3000),     &trans,                 &trans,  &mwh SCROLL_LEFT, &mwh SCROLL_DOWN,    &mwh SCROLL_RIGHT,   &trans, &none,
+        LAYER(Mouse,
+            // &none, &trans,  &trans,                  &mmv MOVE_VERT(-3000),   &trans,                  &trans,                 &trans,  &trans,           &mwh SCROLL_UP,      &trans,              &trans, &none,
+            &none, &trans,  &trans,                  &trans,                  &trans,                  &trans,                 &trans,  &trans,           &trans,              &trans,              &trans, &none,
+            // &none, &trans,  &mmv MOVE_HOR(-3000),    &mmv MOVE_VERT(3000),    &mmv MOVE_HOR(3000),     &trans,                 &trans,  &mwh SCROLL_LEFT, &mwh SCROLL_DOWN,    &mwh SCROLL_RIGHT,   &trans, &none,
+            &none, &trans,  &trans,                  &trans,                  &trans,                  &trans,                 &trans,  &trans,           &trans,              &trans,              &trans, &none,
             &none, &trans,  &trans,                  &trans,                  &trans,                  &trans,                 &trans,  &trans,           &trans,              &trans,              &trans, &none,
                                                                                  &trans, &mkp LCLK, &mkp RCLK,                 &trans, &trans, &trans,
                                                                                                                  &enc, &enc2
         )
 
-        LAYER(media, Media,
-            &none, &trans,          &trans,          &kp C_VOL_UP,    &trans,          &trans,                       &trans,  &trans,   &kp C_BRI_UP,   &trans,  &trans,  &bt BT_CLEAR,
+        LAYER(Media,
+            &none, &trans,          &trans,          &kp C_VOL_UP,    &trans,          &trans,                       &trans,  &trans,   &kp C_BRI_UP,   &trans,  &trans,  &bt BT_CLR,
             &none, &trans,          &kp C_PREV,      &kp C_VOL_DN,    &kp C_NEXT,      &trans,                       &trans,  &trans,   &kp C_BRI_DN,   &trans,  &trans,  &none,
             &none, &switch0,        &switch1,        &switch2,        &switch3,      &switch4,                       &trans,  &trans,   &trans,         &trans,  &trans,  &none,
                                                                  &trans, &kp C_PP, &kp C_STOP,                       &trans,  &trans,   &trans,
                                                                                                     &enc, &enc2
         )
 
-        LAYER(number, Numbers,
+        LAYER(Numbers,
             &none, &trans,          &trans,         &dm1 RECORD,       &dm1 PLAY,           &trans,                 AS(LBKT),     AS(N7),  AS(N8),  AS(N9),  AS(RBKT),    &none,
             &none, &kp LGUI,        &kp LALT,       &kp LSHIFT,        &kp LCTL,            &trans,                 AS(EQUAL),    AS(N4),  AS(N5),  AS(N6),  AS(SEMI),    &none,
-            &none, &trans,          &trans,         &ldturbo,          &kp LG(LC(LEFT)),    &trans,                 AS(GRAVE),    AS(N1),  AS(N2),  AS(N3),  AS(BSLH),    &none,
+            // &none, &trans,          &trans,         &ldturbo,          &kp LG(LC(LEFT)),    &trans,                 AS(GRAVE),    AS(N1),  AS(N2),  AS(N3),  AS(BSLH),    &none,
+            &none, &trans,          &trans,         &trans,            &kp LG(LC(LEFT)),    &trans,                 AS(GRAVE),    AS(N1),  AS(N2),  AS(N3),  AS(BSLH),    &none,
                                                                           &trans,  &trans,  &trans,                 AS(MINUS), AS(N0), AS(DOT),
                                                                                                      &enc, &enc2
         )
 
-        LAYER(symbol, Symbols,
+        LAYER(Symbols,
             &none, &trans,      &trans,      &trans,      &trans,      &trans,                 &trans,  &trans,       &trans,      &trans,      &trans,  &none,
             &none, SK(LSHIFT),  SK(LGUI),    SK(LALT),    SK(LCTRL),   &trans,                 &trans,  &kp LS(N9),   AS(LBKT),    AS(MINUS),   &trans,  &none,
             &none, &trans,      &trans,      &trans,      &trans,      &trans,                 &trans,  &kp LS(N0),   AS(RBKT),    AS(MINUS),   &trans,  &none,
@@ -112,7 +111,7 @@
                                                                                  &enc, &enc2
         )
 
-        LAYER(function, Function,
+        LAYER(Function,
             &none, &trans,      &trans,      &trans,      &trans,      &trans,                 &trans,  AS(F7),  AS(F8),  AS(F9),  AS(F12),  &none,
             &none, SK(LSHIFT),  SK(LGUI),    SK(LALT),    SK(LCTRL),   &trans,                 &trans,  AS(F4),  AS(F5),  AS(F6),  AS(F11),  &none,
             &none, &trans,      &trans,      &trans,      &trans,      &trans,                 &trans,  AS(F1),  AS(F2),  AS(F3),  AS(F10),  &none,
@@ -120,7 +119,7 @@
                                                                                  &enc, &enc2
         )
 
-        LAYER(nothing, Nothing,
+        LAYER(Nothing,
             &none, &none,   &none,   &none,   &none,   &none,                  &none,   &none,   &none,   &none,   &none,    &none,
             &none, &none,   &none,   &none,   &none,   &none,                  &none,   &none,   &none,   &none,   &none,    &none,
             &none, &none,   &none,   &none,   &none,   &none,                  &none,   &none,   &none,   &none,   &none,    &none,
