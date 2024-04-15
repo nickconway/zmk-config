@@ -3,6 +3,13 @@
 
 / {
     keymap {
+        leader_sequences {
+            compatible = "zmk,leader-sequences";
+            leader_a {
+                key-positions = <24>;
+                bindings = <&kp A>;
+            };
+        };
         compatible = "zmk,keymap";
         Base {
             display-name = "Base";
