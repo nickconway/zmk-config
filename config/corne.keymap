@@ -3,29 +3,37 @@
 
 / {
 
-    ZMK_TURBO(
-        turbo,
-        tap-ms = <100>;
-        wait-ms = <300>;
-        bindings = <&kp A>;
-        toggle-term-ms = <200>;
-    )
+    /* ZMK_TURBO( */
+    /*     turbo, */
+    /*     tap-ms = <100>; */
+    /*     wait-ms = <300>; */
+    /*     bindings = <&kp A>; */
+    /*     toggle-term-ms = <200>; */
+    /* ) */
+    /**/
+    /* ZMK_TURBO1( */
+    /*     turbo1, */
+    /*     tap-ms = <100>; */
+    /*     wait-ms = <300>; */
+    /*     bindings = <&turbo_param_1to1>, <&kp TURBO_PLACEHOLDER>; */
+    /*     toggle-term-ms = <200>; */
+    /* ) */
+    /**/
+    /* turbo2: turbo2 { */
+    /*     compatible = "zmk,behavior-turbo-key-two-param"; */
+    /*     #binding-cells = <2>; */
+    /*     tap-ms = <1000>; */
+    /*     wait-ms = <3000>; */
+    /*     bindings = <&turbo_param_1to2>, <&turbo_param_2to1>, <&mt TURBO_PLACEHOLDER TURBO_PLACEHOLDER>; */
+    /*     toggle-term-ms = <200>; */
+    /* }; */
 
-    ZMK_TURBO1(
-        turbo1,
-        tap-ms = <100>;
-        wait-ms = <300>;
-        bindings = <&turbo_param_1to1>, <&kp TURBO_PLACEHOLDER>;
-        toggle-term-ms = <200>;
-    )
-
-    turbo2: turbo2 {
-        compatible = "zmk,behavior-turbo-key-two-param";
-        #binding-cells = <2>;
-        tap-ms = <1000>;
-        wait-ms = <3000>;
-        bindings = <&turbo_param_1to2>, <&turbo_param_2to1>, <&mt TURBO_PLACEHOLDER TURBO_PLACEHOLDER>;
-        toggle-term-ms = <200>;
+    leader_sequences {
+        compatible = "zmk,leader-sequences";
+        seq_esc {
+            key-positions = <1 2>;
+            bindings = <&kp C>;
+        };
     };
 
     keymap {
@@ -36,7 +44,8 @@
             &none &kp Q  &kp W &kp F &kp P   &kp B               &kp J   &kp L   &kp U       &kp Y   &kp QUOT  &none
             &none &kp A  &kp R &kp S &kp T   &kp G               &kp M   &kp N   &kp E       &kp I   &kp O     &none
             &none &kp Z  &kp X &kp C &kp D   &kp V               &kp K   &kp H   &kp CMMA    &kp DOT &kp SLASH &none
-                 &turbo &turbo1 B &turbo2 LSHIFT C               &kp RET &kp SPACE &kp TAB
+                 /* &turbo &turbo1 B &turbo2 LSHIFT C               &kp RET &kp SPACE &kp TAB */
+                          &kp ESC &kp BSPC &leader               &kp RET &kp SPACE &kp TAB
             >;
         };
     };
