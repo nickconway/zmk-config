@@ -1,0 +1,15 @@
+file_format: "1"
+id: rollow
+name: Rollow
+type: shield
+url: https://github.com/barbellboards/Rollow
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+  - encoder
+  - studio
+siblings:
+  - rollow_left
+  - rollow_right
