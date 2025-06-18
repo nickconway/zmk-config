@@ -5,8 +5,8 @@
     #include "autoshift.dtsi"
     #include "behaviors.dtsi"
     #include "macros.dtsi"
-    #include "combos.dtsi"
     #include "leader.dtsi"
+    #include "combos.dtsi"
 
     keymap {
 
@@ -16,7 +16,7 @@
             &none, ASP(Q),  ASR(W), AS(F), AS(P),   AS(B),               AS(J),   AS(L),   AS(U),       ASR(Y),   ASP(QUOT),  &none,
             &none, HRA,     HRR,    HRS,   HRT,     AS(G),               AS(M),   HRN,     HRE,         HRI,      HRO,        &none,
             &none, ASP(Z),  ASR(X), AS(C), AS(D),   AS(V),               AS(K),   AS(H),   AS(CMMA),    ASR(DOT), ASP(SLASH), &none,
-                          &lt FUN ESC, &bspcdel, &leaders,               &lt MEDIA RET, &spcmin, &lt MOUSE TAB,
+                           &lt FUN ESC, &bspcdel, &leader,               &lt MEDIA RET, &spcmin, &lt MOUSE TAB,
                                                             &enc, &enc2
         )
 
@@ -77,13 +77,11 @@
         )
 
         LAYER(Mouse,
-            // &none, &trans,  &trans,                  &mmv MOVE_VERT(-3000),   &trans,                  &trans,                 &trans,  &trans,           &mwh SCROLL_UP,      &trans,              &trans, &none,
-            &none, &trans,  &trans,                  &trans,                  &trans,                  &trans,                 &trans,  &trans,           &trans,              &trans,              &trans, &none,
-            // &none, &trans,  &mmv MOVE_HOR(-3000),    &mmv MOVE_VERT(3000),    &mmv MOVE_HOR(3000),     &trans,                 &trans,  &mwh SCROLL_LEFT, &mwh SCROLL_DOWN,    &mwh SCROLL_RIGHT,   &trans, &none,
-            &none, &trans,  &trans,                  &trans,                  &trans,                  &trans,                 &trans,  &trans,           &trans,              &trans,              &trans, &none,
-            &none, &trans,  &trans,                  &trans,                  &trans,                  &trans,                 &trans,  &trans,           &trans,              &trans,              &trans, &none,
-                                                                                 &trans, &mkp LCLK, &mkp RCLK,                 &trans, &trans, &trans,
-                                                                                                                 &enc, &enc2
+            &none, &trans,  &trans,                  &mmv MOVE_Y(-3000),   &trans,                  &trans,                 &trans,  &trans,           &msc SCRL_UP,        &trans,              &trans, &none,
+            &none, &trans,  &mmv MOVE_X(-3000),      &mmv MOVE_Y(3000),    &mmv MOVE_X(3000),       &trans,                 &trans,  &msc SCRL_LEFT,   &msc SCRL_DOWN,      &msc SCRL_RIGHT,     &trans, &none,
+            &none, &trans,  &trans,                  &trans,               &trans,                  &trans,                 &trans,  &trans,           &trans,              &trans,              &trans, &none,
+                                                                              &trans, &mkp LCLK, &mkp RCLK,                 &trans, &trans, &trans,
+                                                                                                              &enc, &enc2
         )
 
         LAYER(Media,
@@ -97,8 +95,7 @@
         LAYER(Numbers,
             &none, &trans,          &trans,         &dm1 RECORD,       &dm1 PLAY,           &trans,                 AS(LBKT),     AS(N7),  AS(N8),  AS(N9),  AS(RBKT),    &none,
             &none, &kp LGUI,        &kp LALT,       &kp LSHIFT,        &kp LCTL,            &trans,                 AS(EQUAL),    AS(N4),  AS(N5),  AS(N6),  AS(SEMI),    &none,
-            // &none, &trans,          &trans,         &ldturbo,          &kp LG(LC(LEFT)),    &trans,                 AS(GRAVE),    AS(N1),  AS(N2),  AS(N3),  AS(BSLH),    &none,
-            &none, &trans,          &trans,         &trans,            &kp LG(LC(LEFT)),    &trans,                 AS(GRAVE),    AS(N1),  AS(N2),  AS(N3),  AS(BSLH),    &none,
+            &none, &trans,          &trans,         &ldturbo,          &kp LG(LC(LEFT)),    &trans,                 AS(GRAVE),    AS(N1),  AS(N2),  AS(N3),  AS(BSLH),    &none,
                                                                           &trans,  &trans,  &trans,                 AS(MINUS), AS(N0), AS(DOT),
                                                                                                      &enc, &enc2
         )

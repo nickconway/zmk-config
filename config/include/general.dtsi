@@ -2,7 +2,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/mouse.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/dynamic-macros.h>
 #include <dt-bindings/zmk/ext_power.h>
 
@@ -27,11 +27,6 @@
 #define TAPPING_TERM_RING 250
 #define TAPPING_TERM_PINKY 300
 #define QUICK_TAP_TERM 300
-
-&leader {
-    timeout-ms = <200>;
-    timerless;
-};
 
 &lt {
     tapping-term-ms = <TAPPING_TERM>;

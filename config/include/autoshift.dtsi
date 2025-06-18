@@ -134,7 +134,7 @@ ASM(F12, TAPPING_TERM)
         quick-tap-ms = <QUICK_TAP_TERM>; \
         bindings = <&kp>, <&kp>; \
         retro-tap; \
-        retro-tap-behavior = "KEY_PRESS"; \
+        retro-tap-behavior = "key_press"; \
         retro-tap-param1 = <LS(letter)>; \
     }; \
  \
