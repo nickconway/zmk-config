@@ -23,7 +23,7 @@ leader: leader {
     LEADER(reset, LM1, &sys_reset)
     LEADER(spotify, LM2, &kp LG(N3))
     LEADER(terminal, LM3, &kp LG(GRAVE))
-    // LEADER(lastdevice, RT1, &last_dev)
+    LEADER(lastdevice, RT1, &last_dev)
 
     LEADER(mac, RM0, &tog MAC)
     LEADER(output, RM4, &out OUT_TOG)
