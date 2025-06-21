@@ -166,10 +166,3 @@ ldturbo: ldturbo {
     bindings = <&keep_awake>;
     toggle-term-ms = <TAPPING_TERM>;
 };
-
-leaders: leaders {
-    compatible = "zmk,behavior-tap-dance";
-    #binding-cells = <0>;
-    tapping-term-ms = <QUICK_TAP_TERM>;
-    bindings = <&leader &leader2 &leader3>;
-};

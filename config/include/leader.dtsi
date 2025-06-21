@@ -25,29 +25,18 @@ leader: leader {
     LEADER(terminal, LM3, &kp LG(GRAVE))
     // LEADER(lastdevice, RT1, &last_dev)
 
+    LEADER(mac, RM0, &tog MAC)
     LEADER(output, RM4, &out OUT_TOG)
     LEADER(discord, LB3, &kp LG(N2))
     LEADER(delete, LH2, &kp DEL)
-};
 
+    LEADER(btclear, LH2 RT4, &bt BT_CLR)
+    LEADER(bt0, LH2 LB0, &bt BT_SEL 0)
+    LEADER(bt1, LH2 LB1, &bt BT_SEL 1)
+    LEADER(bt2, LH2 LB2, &bt BT_SEL 2)
+    LEADER(bt3, LH2 LB3, &bt BT_SEL 3)
+    LEADER(bt4, LH2 LB4, &bt BT_SEL 4)
 
-leader2: leader2 {
-    compatible = "zmk,behavior-leader-key";
-    #binding-cells = <0>;
-
-    LEADER(btclear, RT4, &bt BT_CLR)
-    LEADER(bt0, LB0, &bt BT_SEL 0)
-    LEADER(bt1, LB1, &bt BT_SEL 1)
-    LEADER(bt2, LB2, &bt BT_SEL 2)
-    LEADER(bt3, LB3, &bt BT_SEL 3)
-    LEADER(bt4, LB4, &bt BT_SEL 4)
-};
-
-
-leader3: leader3 {
-    compatible = "zmk,behavior-leader-key";
-    #binding-cells = <0>;
-
-    LEADER(zoom, LB0, &kp F9)
-    LEADER(preview, RM1, &kp LS(F9))
+    LEADER(zoom, LH2 LH2 LB0, &kp F9)
+    LEADER(preview, LH2 LH2 RM1, &kp LS(F9))
 };

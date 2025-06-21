@@ -16,39 +16,15 @@
             &none, ASP(Q),  ASR(W), AS(F), AS(P),   AS(B),               AS(J),   AS(L),   AS(U),       ASR(Y),   ASP(QUOT),  &none,
             &none, HRA,     HRR,    HRS,   HRT,     AS(G),               AS(M),   HRN,     HRE,         HRI,      HRO,        &none,
             &none, ASP(Z),  ASR(X), AS(C), AS(D),   AS(V),               AS(K),   AS(H),   AS(CMMA),    ASR(DOT), ASP(SLASH), &none,
-                           &lt FUN ESC, &bspcdel, &leader,               &lt MEDIA RET, &spcmin, &lt MOUSE TAB,
+                          &lt FUNC ESC, &bspcdel, &leader,               &lt MEDIA RET, &spcmin, &lt MOUSE TAB,
                                                             &enc, &enc2
         )
 
-        LAYER(Laptop,
-            &none, ASP(Q),  ASR(W), AS(F), AS(P),   AS(B),               AS(J),   AS(L),   AS(U),       ASR(Y),   ASP(QUOT),  &none,
-            &none, HRA,     HRR,    HRS,   HRT,     AS(G),               AS(M),   HRN,     HRE,         HRI,      HRO,        &none,
-            &none, ASP(Z),  ASR(X), AS(C), AS(D),   AS(V),               AS(K),   AS(H),   AS(CMMA),    ASR(DOT), ASP(SLASH), &none,
-                          &lt FUN ESC, &bspcdel, &leaders,               &lt MEDIA RET, &spcmin, &lt MOUSE TAB,
-                                                            &enc, &enc2
-        )
-
-        LAYER(Deck,
-            &none, ASP(Q),  ASR(W), AS(F), AS(P),   AS(B),               AS(J),   AS(L),   AS(U),       ASR(Y),   ASP(QUOT),  &none,
-            &none, HRA,     HRR,    HRS,   HRT,     AS(G),               AS(M),   HRN,     HRE,         HRI,      HRO,        &none,
-            &none, ASP(Z),  ASR(X), AS(C), AS(D),   AS(V),               AS(K),   AS(H),   AS(CMMA),    ASR(DOT), ASP(SLASH), &none,
-                          &lt FUN ESC, &bspcdel, &leaders,               &lt MEDIA RET, &spcmin, &lt MOUSE TAB,
-                                                            &enc, &enc2
-        )
-
-        LAYER(Phone,
-            &none, ASP(Q),  ASR(W), AS(F), AS(P),   AS(B),               AS(J),   AS(L),   AS(U),       ASR(Y),   ASP(QUOT),  &none,
-            &none, HRA,     HRR,    HRS,   HRT,     AS(G),               AS(M),   HRN,     HRE,         HRI,      HRO,        &none,
-            &none, ASP(Z),  ASR(X), AS(C), AS(D),   AS(V),               AS(K),   AS(H),   AS(CMMA),    ASR(DOT), ASP(SLASH), &none,
-                          &lt FUN ESC, &bspcdel, &leaders,               &lt MEDIA RET, &spcmin, &lt MOUSE TAB,
-                                                            &enc, &enc2
-        )
-
-        LAYER(TV,
-            &none, ASP(Q),  ASR(W), AS(F), AS(P),   AS(B),               AS(J),   AS(L),   AS(U),       ASR(Y),   ASP(QUOT),  &none,
-            &none, HRA,     HRR,    HRS,   HRT,     AS(G),               AS(M),   HRN,     HRE,         HRI,      HRO,        &none,
-            &none, ASP(Z),  ASR(X), AS(C), AS(D),   AS(V),               AS(K),   AS(H),   AS(CMMA),    ASR(DOT), ASP(SLASH), &none,
-                          &lt FUN ESC, &bspcdel, &leaders,               &lt MEDIA RET, &spcmin, &lt MOUSE TAB,
+        LAYER(Mac,
+            &none, ASP(Q),  ASR(W), AS(F),  AS(P),  AS(B),               AS(J),   AS(L),   AS(U),       ASR(Y),   ASP(QUOT),  &none,
+            &none, MACHRA,  MACHRR, MACHRS, MACHRT, AS(G),               AS(M),   MACHRN,  MACHRE,      MACHRI,   MACHRO,     &none,
+            &none, ASP(Z),  ASR(X), AS(C),  AS(D),  AS(V),               AS(K),   AS(H),   AS(CMMA),    ASR(DOT), ASP(SLASH), &none,
+                          &lt FUNC ESC, &bspcdel, &leader,               &lt MEDIA RET, &spcmin, &lt MOUSE TAB,
                                                             &enc, &enc2
         )
 
@@ -85,11 +61,11 @@
         )
 
         LAYER(Media,
-            &none, &trans,          &trans,          &kp C_VOL_UP,    &trans,          &trans,                       &trans,  &trans,   &kp C_BRI_UP,   &trans,  &trans,  &bt BT_CLR,
-            &none, &trans,          &kp C_PREV,      &kp C_VOL_DN,    &kp C_NEXT,      &trans,                       &trans,  &trans,   &kp C_BRI_DN,   &trans,  &trans,  &none,
-            &none, &switch0,        &switch1,        &switch2,        &switch3,      &switch4,                       &trans,  &trans,   &trans,         &trans,  &trans,  &none,
-                                                                 &trans, &kp C_PP, &kp C_STOP,                       &trans,  &trans,   &trans,
-                                                                                                    &enc, &enc2
+            &none, &trans,  &trans,     &kp C_VOL_UP,   &trans,     &trans,             &trans,  &trans,   &kp C_BRI_UP,   &trans,  &trans,  &bt BT_CLR,
+            &none, &trans,  &kp C_PREV, &kp C_VOL_DN,   &kp C_NEXT, &trans,             &trans,  &trans,   &kp C_BRI_DN,   &trans,  &trans,  &none,
+            &none, &trans,  &trans,     &trans,         &trans,     &trans,             &trans,  &trans,   &trans,         &trans,  &trans,  &none,
+                                              &trans, &kp C_PP, &kp C_STOP,             &trans,  &trans,   &trans,
+                                                                            &enc, &enc2
         )
 
         LAYER(Numbers,

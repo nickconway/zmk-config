@@ -163,3 +163,12 @@ HRM(O, RSHIFT, TAPPING_TERM_PINKY)
 #define HRE &hrasE RSHIFT E
 #define HRI &hrasI RALT I
 #define HRO &hrasO RGUI O
+
+#define MACHRA &hrasA LCTL A
+#define MACHRR &hrasR LALT R
+#define MACHRS &hrasS LSHIFT S
+#define MACHRT &hrasT LGUI T
+#define MACHRN &hrasN RGUI N
+#define MACHRE &hrasE RSHIFT E
+#define MACHRI &hrasI RALT I
+#define MACHRO &hrasO RCTL O
