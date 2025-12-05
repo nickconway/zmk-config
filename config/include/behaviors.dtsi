@@ -93,17 +93,16 @@ upmm1: upmm1 {
 upmm2: upmm2 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    // bindings = <&upmm3 &kp C_BRI_DN>;
-    bindings = <&kp A &kp C_BRI_DN>;
+    bindings = <&upmm3 &kp C_BRI_DN>;
     mods = <MOD_RALT>;
 };
 
-// upmm3: upmm3 {
-//     compatible = "zmk,behavior-mod-morph";
-//     #binding-cells = <0>;
-//     bindings = <&kp UP &mwh SCROLL_DOWN>;
-//     mods = <MOD_RSFT>;
-// };
+upmm3: upmm3 {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp UP &msc SCRL_UP>;
+    mods = <MOD_RSFT>;
+};
 
 downmm1: downmm1 {
     compatible = "zmk,behavior-mod-morph";
@@ -115,17 +114,16 @@ downmm1: downmm1 {
 downmm2: downmm2 {
     compatible = "zmk,behavior-mod-morph";
     #binding-cells = <0>;
-    // bindings = <&downmm3 &kp C_BRI_UP>;
-    bindings = <&kp A &kp C_BRI_UP>;
+    bindings = <&downmm3 &kp C_BRI_UP>;
     mods = <MOD_RALT>;
 };
 
-// downmm3: downmm3 {
-//     compatible = "zmk,behavior-mod-morph";
-//     #binding-cells = <0>;
-//     bindings = <&kp DOWN &mwh SCROLL_UP>;
-//     mods = <MOD_RSFT>;
-// };
+downmm3: downmm3 {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
+    bindings = <&kp DOWN &msc SCRL_DOWN>;
+    mods = <MOD_RSFT>;
+};
 
 bspcdel: bspcdel {
     compatible = "zmk,behavior-mod-morph";
