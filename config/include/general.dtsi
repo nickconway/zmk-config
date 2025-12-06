@@ -35,18 +35,6 @@
     release-after-ms = <3000>;
 };
 
-// &mmv {
-//     delay-ms = <0>;
-//     acceleration-exponent=<1>;
-//     time-to-max-speed-ms = <500>;
-// };
-//
-// &mwh {
-//     delay-ms = <0>;
-//     acceleration-exponent=<1>;
-//     time-to-max-speed-ms = <0>;
-// };
-
 &caps_word {
   continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
 };
