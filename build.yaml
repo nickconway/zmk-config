@@ -16,10 +16,22 @@ include:
   - board: nice_nano
     shield: corne_left
   - board: nice_nano
+    shield: corne_left
+    snippet: zmk-usb-logging
+  - board: nice_nano
     shield: corne_right
+  - board: nice_nano
+    shield: corne_right
+    snippet: zmk-usb-logging
   - board: nice_nano
     shield: rollow_left nice_view_adapter nice_view
   - board: nice_nano
+    shield: rollow_left nice_view_adapter nice_view
+    snippet: zmk-usb-logging
+  - board: nice_nano
     shield: rollow_right nice_view_adapter nice_view
+  - board: nice_nano
+    shield: rollow_right nice_view_adapter nice_view
+    snippet: zmk-usb-logging
   - board: nice_nano
     shield: settings_reset
