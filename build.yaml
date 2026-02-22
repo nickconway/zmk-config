@@ -26,12 +26,22 @@ include:
   - board: nice_nano
     shield: rollow_left nice_view_adapter nice_view
   - board: nice_nano
+    shield: rollow_left nice_view_adapter nice_view_gem
+  - board: nice_nano
     shield: rollow_left nice_view_adapter nice_view
+    snippet: zmk-usb-logging
+  - board: nice_nano
+    shield: rollow_left nice_view_adapter nice_view_gem
     snippet: zmk-usb-logging
   - board: nice_nano
     shield: rollow_right nice_view_adapter nice_view
   - board: nice_nano
+    shield: rollow_right nice_view_adapter nice_view_gem
+  - board: nice_nano
     shield: rollow_right nice_view_adapter nice_view
+    snippet: zmk-usb-logging
+  - board: nice_nano
+    shield: rollow_right nice_view_adapter nice_view_gem
     snippet: zmk-usb-logging
   - board: nice_nano
     shield: settings_reset
