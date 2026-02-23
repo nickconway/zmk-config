@@ -4,163 +4,165 @@
 #define LMODS (MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL)
 #define ALLMODS (MOD_LGUI|MOD_LSFT|MOD_LALT|MOD_LCTL|MOD_RGUI|MOD_RSFT|MOD_RALT|MOD_RCTL)
 
-as: auto_shift {
-    compatible = "zmk,behavior-hold-tap";
-    #binding-cells = <2>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <TAPPING_TERM>;
-    quick-tap-ms = <QUICK_TAP_TERM>;
-    bindings = <&kp &kp>;
-};
+/ {
+    as: auto_shift {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "tap-preferred";
+        tapping-term-ms = <TAPPING_TERM>;
+        quick-tap-ms = <QUICK_TAP_TERM>;
+        bindings = <&kp &kp>;
+    };
 
-asr: auto_shift_ring {
-    compatible = "zmk,behavior-hold-tap";
-    #binding-cells = <2>;
-    tapping-term-ms = <TAPPING_TERM_RING>;
-    quick-tap-ms = <QUICK_TAP_TERM>;
-    flavor = "tap-preferred";
-    bindings = <&kp &kp>;
-};
+    asr: auto_shift_ring {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        tapping-term-ms = <TAPPING_TERM_RING>;
+        quick-tap-ms = <QUICK_TAP_TERM>;
+        flavor = "tap-preferred";
+        bindings = <&kp &kp>;
+    };
 
-asp: auto_shift_pinky {
-    compatible = "zmk,behavior-hold-tap";
-    #binding-cells = <2>;
-    tapping-term-ms = <TAPPING_TERM_PINKY>;
-    quick-tap-ms = <QUICK_TAP_TERM>;
-    flavor = "tap-preferred";
-    bindings = <&kp &kp>;
-};
+    asp: auto_shift_pinky {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        tapping-term-ms = <TAPPING_TERM_PINKY>;
+        quick-tap-ms = <QUICK_TAP_TERM>;
+        flavor = "tap-preferred";
+        bindings = <&kp &kp>;
+    };
 
-nk: not_so_sticky_key {
-    compatible = "zmk,behavior-hold-tap";
-    #binding-cells = <2>;
-    tapping-term-ms = <TAPPING_TERM>;
-    flavor = "tap-preferred";
-    bindings = <&kp &sk>;
-};
+    nk: not_so_sticky_key {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        tapping-term-ms = <TAPPING_TERM>;
+        flavor = "tap-preferred";
+        bindings = <&kp &sk>;
+    };
 
-hrm: hrm {
-    compatible = "zmk,behavior-hold-tap";
-    #binding-cells = <2>;
-    flavor = "balanced";
-    tapping-term-ms = <TAPPING_TERM>;
-    quick-tap-ms = <QUICK_TAP_TERM>;
-    bindings = <&kp &kp>;
-};
+    hrm: hrm {
+        compatible = "zmk,behavior-hold-tap";
+        #binding-cells = <2>;
+        flavor = "balanced";
+        tapping-term-ms = <TAPPING_TERM>;
+        quick-tap-ms = <QUICK_TAP_TERM>;
+        bindings = <&kp &kp>;
+    };
 
-swap: swap {
-    compatible = "zmk,behavior-tri-state";
-    #binding-cells = <0>;
-    bindings = <&kt LALT AS(TAB) &kt LALT>;
-    ignored-key-positions = <LT2 LM1 LM2 LM3>;
-};
+    swap: swap {
+        compatible = "zmk,behavior-tri-state";
+        #binding-cells = <0>;
+        bindings = <&kt LALT AS(TAB) &kt LALT>;
+        ignored-key-positions = <LT2 LM1 LM2 LM3>;
+    };
 
-leftmm1: leftmm1 {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&leftmm2 &kp C_VOL_DN>;
-    mods = <MOD_LCTL>;
-};
+    leftmm1: leftmm1 {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&leftmm2 &kp C_VOL_DN>;
+        mods = <MOD_LCTL>;
+    };
 
-leftmm2: leftmm2 {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&kp LEFT &kp LG(LC(LEFT))>;
-    mods = <MOD_LALT>;
-};
+    leftmm2: leftmm2 {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp LEFT &kp LG(LC(LEFT))>;
+        mods = <MOD_LALT>;
+    };
 
-rightmm1: rightmm1 {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&rightmm2 &kp C_VOL_UP>;
-    mods = <MOD_LCTL>;
-};
+    rightmm1: rightmm1 {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&rightmm2 &kp C_VOL_UP>;
+        mods = <MOD_LCTL>;
+    };
 
-rightmm2: rightmm2 {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&kp RIGHT &kp LG(LC(RIGHT))>;
-    mods = <MOD_LALT>;
-};
+    rightmm2: rightmm2 {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp RIGHT &kp LG(LC(RIGHT))>;
+        mods = <MOD_LALT>;
+    };
 
-upmm1: upmm1 {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&upmm2 &kp C_PREV>;
-    mods = <MOD_RCTL>;
-};
+    upmm1: upmm1 {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&upmm2 &kp C_PREV>;
+        mods = <MOD_RCTL>;
+    };
 
-upmm2: upmm2 {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&upmm3 &kp C_BRI_DN>;
-    mods = <MOD_RALT>;
-};
+    upmm2: upmm2 {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&upmm3 &kp C_BRI_DN>;
+        mods = <MOD_RALT>;
+    };
 
-upmm3: upmm3 {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&kp UP &msc SCRL_UP>;
-    mods = <MOD_RSFT>;
-};
+    upmm3: upmm3 {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp UP &msc SCRL_UP>;
+        mods = <MOD_RSFT>;
+    };
 
-downmm1: downmm1 {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&downmm2 &kp C_NEXT>;
-    mods = <MOD_RCTL>;
-};
+    downmm1: downmm1 {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&downmm2 &kp C_NEXT>;
+        mods = <MOD_RCTL>;
+    };
 
-downmm2: downmm2 {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&downmm3 &kp C_BRI_UP>;
-    mods = <MOD_RALT>;
-};
+    downmm2: downmm2 {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&downmm3 &kp C_BRI_UP>;
+        mods = <MOD_RALT>;
+    };
 
-downmm3: downmm3 {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&kp DOWN &msc SCRL_DOWN>;
-    mods = <MOD_RSFT>;
-};
+    downmm3: downmm3 {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp DOWN &msc SCRL_DOWN>;
+        mods = <MOD_RSFT>;
+    };
 
-bspcdel: bspcdel {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&lt NUM BSPC &lt NUM DELETE>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-};
+    bspcdel: bspcdel {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&lt NUM BSPC &lt NUM DELETE>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
 
-spcmin: spcmin {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&lt NAV SPC &lt NAV MINUS>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-};
+    spcmin: spcmin {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&lt NAV SPC &lt NAV MINUS>;
+        mods = <(MOD_LSFT|MOD_RSFT)>;
+    };
 
-enc: enc {
-    compatible = "zmk,behavior-sensor-rotate";
-    #sensor-binding-cells = <0>;
-    bindings = <&rightmm1>, <&leftmm1>;
-};
+    enc: enc {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&rightmm1>, <&leftmm1>;
+    };
 
-enc2: enc2 {
-    compatible = "zmk,behavior-sensor-rotate";
-    #sensor-binding-cells = <0>;
-    bindings = <&downmm1>, <&upmm1>;
-};
+    enc2: enc2 {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&downmm1>, <&upmm1>;
+    };
 
-none_enc: none_enc {
-    compatible = "zmk,behavior-sensor-rotate";
-    #sensor-binding-cells = <0>;
-    bindings = <&none>, <&none>;
-};
+    none_enc: none_enc {
+        compatible = "zmk,behavior-sensor-rotate";
+        #sensor-binding-cells = <0>;
+        bindings = <&none>, <&none>;
+    };
 
-ldturbo: ldturbo {
-    compatible = "zmk,behavior-turbo-key";
-    #binding-cells = <0>;
-    wait-ms = <300000>;
-    bindings = <&keep_awake>;
-    toggle-term-ms = <TAPPING_TERM>;
+    ldturbo: ldturbo {
+        compatible = "zmk,behavior-turbo-key";
+        #binding-cells = <0>;
+        wait-ms = <300000>;
+        bindings = <&keep_awake>;
+        toggle-term-ms = <TAPPING_TERM>;
+    };
 };

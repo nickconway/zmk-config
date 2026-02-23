@@ -7,36 +7,39 @@
   ╰───────╮ LH0 LH1 LH2 │ │ RH0 RH1 RH2 ╭───────╯
           ╰─────────────╯ ╰─────────────╯ */
 
-#define LEADER(NAME, KEYS, BINDINGS) \
-    seq_##NAME { \
-        key-positions = <KEYS>; \
-        bindings = <BINDINGS>; \
+#define LEADER(name, leader_sequence, leader_bindings) \
+    / { \
+        behaviors { \
+            leader: leader { \
+                compatible = "zmk,behavior-leader-key"; \
+                #binding-cells = <0>; \
+                leader_seence_##name { \
+                    key-positions = <leader_sequence>; \
+                    bindings = <leader_bindings>; \
+                }; \
+            }; \
+        }; \
     };
 
-leader: leader {
-    compatible = "zmk,behavior-leader-key";
-    #binding-cells = <0>;
+LEADER(close, LT0, &kp LA(F4))
+LEADER(bootloader, LT2, &bootloader)
+LEADER(browser, LT4, &kp LG(N1))
+LEADER(reset, LM1, &sys_reset)
+LEADER(spotify, LM2, &kp LG(N3))
+LEADER(terminal, LM3, &kp LG(GRAVE))
+LEADER(lastdevice, RT1, &last_dev)
 
-    LEADER(close, LT0, &kp LA(F4))
-    LEADER(bootloader, LT2, &bootloader)
-    LEADER(browser, LT4, &kp LG(N1))
-    LEADER(reset, LM1, &sys_reset)
-    LEADER(spotify, LM2, &kp LG(N3))
-    LEADER(terminal, LM3, &kp LG(GRAVE))
-    LEADER(lastdevice, RT1, &last_dev)
+LEADER(mac, RM0, &tog MAC)
+LEADER(output, RM4, &out OUT_TOG)
+LEADER(discord, LB3, &kp LG(N2))
+LEADER(delete, LH2, &kp DEL)
 
-    LEADER(mac, RM0, &tog MAC)
-    LEADER(output, RM4, &out OUT_TOG)
-    LEADER(discord, LB3, &kp LG(N2))
-    LEADER(delete, LH2, &kp DEL)
+LEADER(btclear, LH2 RT4, &bt BT_CLR)
+LEADER(bt0, LH2 LB0, &bt BT_SEL 0)
+LEADER(bt1, LH2 LB1, &bt BT_SEL 1)
+LEADER(bt2, LH2 LB2, &bt BT_SEL 2)
+LEADER(bt3, LH2 LB3, &bt BT_SEL 3)
+LEADER(bt4, LH2 LB4, &bt BT_SEL 4)
 
-    LEADER(btclear, LH2 RT4, &bt BT_CLR)
-    LEADER(bt0, LH2 LB0, &bt BT_SEL 0)
-    LEADER(bt1, LH2 LB1, &bt BT_SEL 1)
-    LEADER(bt2, LH2 LB2, &bt BT_SEL 2)
-    LEADER(bt3, LH2 LB3, &bt BT_SEL 3)
-    LEADER(bt4, LH2 LB4, &bt BT_SEL 4)
-
-    LEADER(zoom, LH2 LH2 LB0, &kp F9)
-    LEADER(preview, LH2 LH2 RM1, &kp LS(F9))
-};
+LEADER(zoom, LH2 LH2 LB0, &kp F9)
+LEADER(preview, LH2 LH2 RM1, &kp LS(F9))

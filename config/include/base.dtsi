@@ -1,13 +1,10 @@
 #include "general.dtsi"
+#include "autoshift.dtsi"
+#include "behaviors.dtsi"
+#include "leader.dtsi"
+#include "macros.dtsi"
+#include "combos.dtsi"
 
-/ {
-
-    #include "autoshift.dtsi"
-    #include "behaviors.dtsi"
-    #include "macros.dtsi"
-    #include "leader.dtsi"
-    #include "combos.dtsi"
-};
 LAYER(Main,
     &none, ASP(Q),  ASR(W), AS(F), AS(P),   AS(B),               AS(J),   AS(L),   AS(U),       ASR(Y),   ASP(QUOT),  &none,
     &none, HRA,     HRR,    HRS,   HRT,     AS(G),               AS(M),   HRN,     HRE,         HRI,      HRO,        &none,
