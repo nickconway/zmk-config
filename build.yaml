@@ -1,34 +1,44 @@
 ---
 include:
-  - board: nice_nano//zmk
-    shield: corne_left
-  - board: nice_nano//zmk
-    shield: corne_left
-    snippet: zmk-usb-logging
-  - board: nice_nano//zmk
-    shield: corne_right
-  - board: nice_nano//zmk
-    shield: corne_right
-    snippet: zmk-usb-logging
-  - board: nice_nano//zmk
-    shield: rollow_left nice_view_adapter nice_view
-  - board: nice_nano//zmk
-    shield: rollow_left nice_view_adapter nice_view_gem
-  - board: nice_nano//zmk
-    shield: rollow_left nice_view_adapter nice_view
-    snippet: zmk-usb-logging
-  - board: nice_nano//zmk
-    shield: rollow_left nice_view_adapter nice_view_gem
-    snippet: zmk-usb-logging
-  - board: nice_nano//zmk
-    shield: rollow_right nice_view_adapter nice_view
-  - board: nice_nano//zmk
-    shield: rollow_right nice_view_adapter nice_view_gem
-  - board: nice_nano//zmk
-    shield: rollow_right nice_view_adapter nice_view
-    snippet: zmk-usb-logging
-  - board: nice_nano//zmk
-    shield: rollow_right nice_view_adapter nice_view_gem
-    snippet: zmk-usb-logging
-  - board: nice_nano//zmk
-    shield: settings_reset
+    - board: nice_nano//zmk
+      shield: corne_left
+    - board: nice_nano//zmk
+      shield: corne_left
+      snippet: zmk-usb-logging
+    - board: nice_nano//zmk
+      shield: corne_right
+    - board: nice_nano//zmk
+      shield: corne_right
+      snippet: zmk-usb-logging
+    - board: nice_nano//zmk
+      shield: rollow_left nice_view_adapter nice_view
+    - board: nice_nano//zmk
+      shield: rollow_left nice_view_adapter nice_view_gem
+    - board: nice_nano//zmk
+      shield: rollow_left nice_view_adapter nice_view
+      snippet: zmk-usb-logging
+    - board: nice_nano//zmk
+      shield: rollow_left nice_view_adapter nice_view_gem
+      snippet: zmk-usb-logging
+    - board: nice_nano//zmk
+      shield: rollow_right nice_view_adapter nice_view
+    - board: nice_nano//zmk
+      shield: rollow_right nice_view_adapter nice_view_gem
+    - board: nice_nano//zmk
+      shield: rollow_right nice_view_adapter nice_view
+      snippet: zmk-usb-logging
+    - board: nice_nano//zmk
+      shield: rollow_right nice_view_adapter nice_view_gem
+      snippet: zmk-usb-logging
+    - board: xiao_ble//zmk
+      shield: toucan_left rgbled_adapter nice_view_gem_sharp
+    - board: xiao_ble//zmk
+      shield: toucan_left rgbled_adapter nice_view_gem_sharp
+      snippet: zmk-usb-logging
+    - board: xiao_ble//zmk
+      shield: toucan_right rgbled_adapter
+    - board: xiao_ble//zmk
+      shield: toucan_right rgbled_adapter
+      snippet: zmk-usb-logging
+    - board: nice_nano//zmk
+      shield: settings_reset
