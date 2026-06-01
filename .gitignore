@@ -8,3 +8,4 @@ modules/
 optional/
 zephyr/
 zmk/
+.zmk
