@@ -165,4 +165,11 @@
         bindings = <&keep_awake>;
         toggle-term-ms = <TAPPING_TERM>;
     };
+
+    media_control: media_control {
+        compatible = "zmk,input-processor-behaviors";
+        #input-processor-cells = <0>;
+        codes = <INPUT_BTN_0 INPUT_BTN_1 INPUT_BTN_2>;
+        bindings = <&kp A &kp B &kp C>;
+    };
 };

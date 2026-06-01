@@ -100,3 +100,23 @@ LAYER(Nothing,
 //                                            &kp PLV_O, &kp PLV_A, &kp PLV_O,          &kp PLV_E, &kp PLV_U, &kp PLV_E,
 //                                                                      &none_enc, &none_enc
 // )
+
+#ifdef TRACKPAD_LISTENER
+TRACKPAD_LISTENER {
+    input-processors = <&zip_xy_scaler 250 100>;
+
+    scroller {
+        layers = <NUM MOUSE>;
+        input-processors = <
+            &zip_xy_to_scroll_mapper
+            &zip_scroll_scaler 1 10
+            &zip_scroll_transform INPUT_TRANSFORM_X_INVERT
+        >;
+    };
+
+    media {
+        layers = <BASE MEDIA>;
+        input-processors = <&media_control>;
+    };
+};
+#endif
