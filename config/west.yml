@@ -19,9 +19,21 @@ manifest:
           remote: m165437
           revision: main
           path: extra-modules/nice-view-gem
+        - name: zmk-rgbled-widget
+          remote: caksoylar
+          revision: main
+          path: extra-modules/zmk-rgbled-widget
         - name: zmk-keyboard-rollow
           remote: nickconway
           revision: main
           path: extra-modules/rollow
+        - name: zmk-keyboard-toucan
+          remote: nickconway
+          revision: main
+          path: extra-modules/toucan
+        - name: zmk-component-nice-view-gem-sharp
+          remote: nickconway
+          revision: main
+          path: extra-modules/nice-view-gem-sharp
     self:
         path: config
