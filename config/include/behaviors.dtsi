@@ -56,70 +56,70 @@
         ignored-key-positions = <LT2 LM1 LM2 LM3>;
     };
 
-    leftmm1: leftmm1 {
+    left_enc_mm_1: left_enc_mm_1 {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&leftmm2 &kp C_VOL_DN>;
+        bindings = <&left_enc_mm_2 &kp C_VOL_DN>;
         mods = <MOD_LCTL>;
     };
 
-    leftmm2: leftmm2 {
+    left_enc_mm_2: left_enc_mm_2 {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&kp LEFT &kp LG(LC(LEFT))>;
         mods = <MOD_LALT>;
     };
 
-    rightmm1: rightmm1 {
+    right_enc_mm_1: right_enc_mm_1 {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&rightmm2 &kp C_VOL_UP>;
+        bindings = <&right_enc_mm_2 &kp C_VOL_UP>;
         mods = <MOD_LCTL>;
     };
 
-    rightmm2: rightmm2 {
+    right_enc_mm_2: right_enc_mm_2 {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&kp RIGHT &kp LG(LC(RIGHT))>;
         mods = <MOD_LALT>;
     };
 
-    upmm1: upmm1 {
+    up_enc_mm_1: up_enc_mm_1 {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&upmm2 &kp C_PREV>;
+        bindings = <&up_enc_mm_2 &kp C_PREV>;
         mods = <MOD_RCTL>;
     };
 
-    upmm2: upmm2 {
+    up_enc_mm_2: up_enc_mm_2 {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&upmm3 &kp C_BRI_DN>;
+        bindings = <&up_enc_mm_3 &kp C_BRI_DN>;
         mods = <MOD_RALT>;
     };
 
-    upmm3: upmm3 {
+    up_enc_mm_3: up_enc_mm_3 {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&kp UP &msc SCRL_UP>;
         mods = <MOD_RSFT>;
     };
 
-    downmm1: downmm1 {
+    down_enc_mm_1: down_enc_mm_1 {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&downmm2 &kp C_NEXT>;
+        bindings = <&down_enc_mm_2 &kp C_NEXT>;
         mods = <MOD_RCTL>;
     };
 
-    downmm2: downmm2 {
+    down_enc_mm_2: down_enc_mm_2 {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&downmm3 &kp C_BRI_UP>;
+        bindings = <&down_enc_mm_3 &kp C_BRI_UP>;
         mods = <MOD_RALT>;
     };
 
-    downmm3: downmm3 {
+    down_enc_mm_3: down_enc_mm_3 {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
         bindings = <&kp DOWN &msc SCRL_DOWN>;
@@ -143,13 +143,13 @@
     enc: enc {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
-        bindings = <&rightmm1>, <&leftmm1>;
+        bindings = <&right_enc_mm_1>, <&left_enc_mm_1>;
     };
 
     enc2: enc2 {
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
-        bindings = <&downmm1>, <&upmm1>;
+        bindings = <&down_enc_mm_1>, <&up_enc_mm_1>;
     };
 
     none_enc: none_enc {
@@ -166,10 +166,24 @@
         toggle-term-ms = <TAPPING_TERM>;
     };
 
+    swipe_up_mm_1: swipe_up_mm_1 {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp C_VOL_UP &kp C_BRI_UP>;
+        mods = <MOD_LCTL>;
+    };
+
+    swipe_down_mm_1: swipe_down_mm_1 {
+        compatible = "zmk,behavior-mod-morph";
+        #binding-cells = <0>;
+        bindings = <&kp C_VOL_DN &kp C_BRI_DN>;
+        mods = <MOD_LCTL>;
+    };
+
     media_control: media_control {
-        compatible = "zmk,input-processor-behaviors";
+        compatible = "zmk,input-processor-direction-to-behaviors";
         #input-processor-cells = <0>;
-        codes = <INPUT_BTN_0 INPUT_BTN_1 INPUT_BTN_2>;
-        bindings = <&kp A &kp B &kp C>;
+        codes = <INPUT_REL_Y>;
+        bindings = <&kp C_VOL_UP &kp C_VOL_DN>;
     };
 };

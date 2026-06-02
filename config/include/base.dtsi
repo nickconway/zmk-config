@@ -103,7 +103,7 @@ LAYER(Nothing,
 
 #ifdef TRACKPAD_LISTENER
 TRACKPAD_LISTENER {
-    input-processors = <&zip_xy_scaler 250 100>;
+    input-processors = <&zip_xy_scaler 10 4>;
 
     scroller {
         layers = <NUM MOUSE>;
@@ -115,8 +115,11 @@ TRACKPAD_LISTENER {
     };
 
     media {
-        layers = <BASE MEDIA>;
-        input-processors = <&media_control>;
+        layers = <MEDIA>;
+        input-processors = <
+            &zip_xy_scaler 1 2
+            &media_control
+        >;
     };
 };
 #endif
