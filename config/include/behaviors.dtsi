@@ -186,4 +186,11 @@
         codes = <INPUT_REL_Y>;
         bindings = <&kp C_VOL_UP &kp C_VOL_DN>;
     };
+
+    auto_layer: auto_layer {
+        compatible = "zmk,input-processor-temp-layer";
+        #input-processor-cells = <2>;
+        require-prior-idle-ms = <1000>;
+        excluded-positions = <LT0 LT1 LT2 LT3 LT4 RT0 RT1 RT2 RT3 RT4 LM0 LM1 LM2 LM3 LM4 RM0 RM1 RM2 RM3 RM4 LB0 LB1 LB2 LB3 LB4 RB0 RB1 RB2 RB3 RB4 LH0 LH1 LH2 RH0 RH1 RH2>;
+    };
 };

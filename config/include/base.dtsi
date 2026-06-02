@@ -103,10 +103,13 @@ LAYER(Nothing,
 
 #ifdef TRACKPAD_LISTENER
 TRACKPAD_LISTENER {
-    input-processors = <&zip_xy_scaler 10 4>;
+    input-processors = <
+        &zip_xy_scaler 10 4
+        &auto_layer MOUSE 250
+    >;
 
     scroller {
-        layers = <NUM MOUSE>;
+        layers = <NUM>;
         input-processors = <
             &zip_xy_to_scroll_mapper
             &zip_scroll_scaler 1 10
