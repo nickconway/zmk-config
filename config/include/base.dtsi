@@ -121,7 +121,16 @@ TRACKPAD_LISTENER {
         layers = <MEDIA>;
         input-processors = <
             &zip_xy_scaler 1 2
-            &media_control
+            &media_swipe
+        >;
+    };
+
+    navigation {
+        layers = <NAV>;
+        input-processors = <
+            &zip_xy_scaler 1 16
+            &zip_xy_transform INPUT_TRANSFORM_X_INVERT
+            &workspace_swipe
         >;
     };
 };

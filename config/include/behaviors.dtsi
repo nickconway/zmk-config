@@ -180,11 +180,18 @@
         mods = <MOD_LCTL>;
     };
 
-    media_control: media_control {
+    media_swipe: media_swipe {
         compatible = "zmk,input-processor-direction-to-behaviors";
         #input-processor-cells = <0>;
         codes = <INPUT_REL_Y>;
         bindings = <&kp C_VOL_UP &kp C_VOL_DN>;
+    };
+
+    workspace_swipe: workspace_swipe {
+        compatible = "zmk,input-processor-direction-to-behaviors";
+        #input-processor-cells = <0>;
+        codes = <INPUT_REL_X>;
+        bindings = <&kp LG(LC(LEFT)) &kp LG(LC(RIGHT))>;
     };
 
     auto_layer: auto_layer {
