@@ -192,6 +192,7 @@
         #input-processor-cells = <0>;
         codes = <INPUT_REL_X>;
         bindings = <&kp LG(LC(LEFT)) &kp LG(LC(RIGHT))>;
+        invoke-every-ms = <250>;
     };
 
     auto_layer: auto_layer {
