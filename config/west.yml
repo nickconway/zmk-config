@@ -4,36 +4,20 @@ manifest:
           url-base: https://github.com/zmkfirmware
         - name: nickconway
           url-base: https://github.com/nickconway
-        - name: m165437
-          url-base: https://github.com/M165437
-        - name: caksoylar
-          url-base: https://github.com/caksoylar
-        - name: geeksville
-          url-base: https://github.com/geeksville
     projects:
         - name: zmk
           remote: nickconway
           revision: dev
           import: app/west.yml
-        - name: nice-view-gem
-          remote: m165437
-          revision: main
-          path: extra-modules/nice-view-gem
-        - name: zmk-rgbled-widget
-          remote: caksoylar
-          revision: main
-          path: extra-modules/zmk-rgbled-widget
         - name: zmk-keyboard-rollow
           remote: nickconway
           revision: main
           path: extra-modules/rollow
+          import: config/west.yml
         - name: zmk-keyboard-toucan
           remote: nickconway
           revision: main
           path: extra-modules/toucan
-        - name: zmk-component-nice-view-gem-sharp
-          remote: nickconway
-          revision: main
-          path: extra-modules/nice-view-gem-sharp
+          import: config/west.yml
     self:
         path: config
