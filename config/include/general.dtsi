@@ -4,7 +4,6 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/dynamic_macros.h>
-#include <dt-bindings/zmk/ext_power.h>
 
 #define BASE    0 1
 #define PC      0

@@ -38,9 +38,9 @@ LAYER(GameType,
 )
 
 LAYER(Navigation,
-    &none,  AS(PG_UP),    AS(HOME),   AS(UP),      AS(END),     AS(INSERT),             &trans,       &swap,              &kp LC(LA(DEL)),  &trans,         &trans,             &none,
-    &none,  AS(PG_DN),    AS(LEFT),   AS(DOWN),    AS(RIGHT),   &caps_word,             &kp CAPS,     &kp RCTL,           &kp RSHIFT,       &kp RALT,       &kp RGUI,           &none,
-    &none,  &kp LC(Z),    &kp LC(X),  &kp LC(C),   &kp LC(V),   &kp INSERT,             &trans,       &kp LG(LC(RIGHT)),  &trans,           &trans,         &ext_power EP_TOG,  &none,
+    &none,  AS(PG_UP),    AS(HOME),   AS(UP),      AS(END),     AS(INSERT),             &trans,       &swap,              &kp LC(LA(DEL)),  &trans,         &trans,     &none,
+    &none,  AS(PG_DN),    AS(LEFT),   AS(DOWN),    AS(RIGHT),   &caps_word,             &kp CAPS,     &kp RCTL,           &kp RSHIFT,       &kp RALT,       &kp RGUI,   &none,
+    &none,  &kp LC(Z),    &kp LC(X),  &kp LC(C),   &kp LC(V),   &kp INSERT,             &trans,       &kp LG(LC(RIGHT)),  &trans,           &trans,         &soft_off,  &none,
                                                     &trans, &trans, &trans,             &trans, &trans, &trans,
                                                                             &enc, &enc2
 )
