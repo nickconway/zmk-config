@@ -4,6 +4,8 @@ manifest:
           url-base: https://github.com/zmkfirmware
         - name: nickconway
           url-base: https://github.com/nickconway
+        - name: amgskobo
+          url-base: https://github.com/amgskobo
     projects:
         - name: zmk
           remote: nickconway
@@ -19,5 +21,9 @@ manifest:
           revision: dynamic-macro-rec-indicator
           path: extra-modules/toucan
           import: config/west.yml
+        - name: zmk-input-inertia
+          remote: nickconway
+          revision: include-fix
+          path: extra-modules/inertia
     self:
         path: config

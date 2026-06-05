@@ -40,7 +40,7 @@ LAYER(GameType,
 LAYER(Navigation,
     &none,  AS(PG_UP),    AS(HOME),   AS(UP),      AS(END),     AS(INSERT),             &trans,       &swap,              &kp LC(LA(DEL)),  &trans,         &trans,     &none,
     &none,  AS(PG_DN),    AS(LEFT),   AS(DOWN),    AS(RIGHT),   &caps_word,             &kp CAPS,     &kp RCTL,           &kp RSHIFT,       &kp RALT,       &kp RGUI,   &none,
-    &none,  &kp LC(Z),    &kp LC(X),  &kp LC(C),   &kp LC(V),   &kp INSERT,             &trans,       &kp LG(LC(RIGHT)),  &trans,           &trans,         &soft_off,  &none,
+    &none,  &kp LC(Z),    &kp LC(X),  &kp LC(C),   &kp LC(V),   &kp INSERT,             &leader2,     &kp LG(LC(RIGHT)),  &trans,           &trans,         &soft_off,  &none,
                                                     &trans, &trans, &trans,             &trans, &trans, &trans,
                                                                             &enc, &enc2
 )
@@ -102,9 +102,28 @@ LAYER(Nothing,
 // )
 
 #ifdef TRACKPAD_LISTENER
+#include <zmk-input-inertia/input/processor/input_inertia.dtsi>
+
+&zip_inertia {
+    trigger-ms = <35>;
+
+    move-decay-factor-int = <95>;
+    move-report-interval-ms = <10>;
+    move-threshold-start = <15>;
+    move-threshold-stop = <1>;
+
+    scroll-decay-factor-int = <95>;
+    scroll-report-interval-ms = <20>;
+    scroll-threshold-start = <2>;
+    scroll-threshold-stop = <0>;
+
+    cancel-scroll-inertia-on-ctrl;
+};
+
 TRACKPAD_LISTENER {
     input-processors = <
         &zip_xy_scaler 10 4
+        &zip_inertia
         &auto_layer MOUSE 250
     >;
 
@@ -113,6 +132,7 @@ TRACKPAD_LISTENER {
         input-processors = <
             &zip_xy_to_scroll_mapper
             &zip_scroll_scaler 1 10
+            &zip_inertia
             &zip_scroll_transform INPUT_TRANSFORM_X_INVERT
         >;
     };
