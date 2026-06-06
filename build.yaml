@@ -42,3 +42,5 @@ include:
       snippet: zmk-usb-logging
     - board: nice_nano//zmk
       shield: settings_reset
+    - board: xiao_ble//zmk
+      shield: settings_reset
