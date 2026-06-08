@@ -102,6 +102,11 @@ LAYER(Nothing,
 // )
 
 #ifdef TRACKPAD_LISTENER
+
+#if IS_ENABLED(CONFIG_ZMK_SPLIT_ROLE_CENTRAL)
+
+#include <input/processors.dtsi>
+#include <behaviors/input_gestures_accel.dtsi>
 #include <zmk-input-inertia/input/processor/input_inertia.dtsi>
 
 &zip_inertia {
@@ -120,9 +125,20 @@ LAYER(Nothing,
     cancel-scroll-inertia-on-ctrl;
 };
 
+&pointer_accel {
+    input-type = <INPUT_EV_REL>;
+    track-remainders;
+    min-factor = <800>;
+    max-factor = <3000>;
+    speed-threshold = <1200>;
+    speed-max = <6000>;
+    acceleration-exponent = <2>;
+};
+
 TRACKPAD_LISTENER {
     input-processors = <
         &zip_xy_scaler 10 4
+        $pointer_accel
         &zip_inertia
         &auto_layer MOUSE 250
     >;
@@ -154,4 +170,7 @@ TRACKPAD_LISTENER {
         >;
     };
 };
+
+#endif
+
 #endif

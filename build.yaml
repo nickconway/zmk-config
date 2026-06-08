@@ -10,6 +10,7 @@ include:
     - board: nice_nano//zmk
       shield: corne_right
       snippet: zmk-usb-logging
+
     - board: nice_nano//zmk
       shield: rollow_left nice_view_adapter nice_view
     - board: nice_nano//zmk
@@ -20,6 +21,7 @@ include:
     - board: nice_nano//zmk
       shield: rollow_left nice_view_adapter nice_view_gem
       snippet: zmk-usb-logging
+
     - board: nice_nano//zmk
       shield: rollow_right nice_view_adapter nice_view
     - board: nice_nano//zmk
@@ -30,16 +32,40 @@ include:
     - board: nice_nano//zmk
       shield: rollow_right nice_view_adapter nice_view_gem
       snippet: zmk-usb-logging
+
     - board: xiao_ble//zmk
       shield: toucan_left rgbled_adapter nice_view_gem_sharp
+      cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
     - board: xiao_ble//zmk
       shield: toucan_left rgbled_adapter nice_view_gem_sharp
+      cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
       snippet: zmk-usb-logging
+    - board: xiao_ble//zmk
+      shield: toucan_left rgbled_adapter toucan_pet
+      cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
+    - board: xiao_ble//zmk
+      shield: toucan_left rgbled_adapter toucan_pet
+      cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
+      snippet: zmk-usb-logging
+
     - board: xiao_ble//zmk
       shield: toucan_right rgbled_adapter
     - board: xiao_ble//zmk
       shield: toucan_right rgbled_adapter
       snippet: zmk-usb-logging
+
+    - board: xiao_ble//zmk
+      shield: toucan_left rgbled_adapter toucan_pet
+    - board: xiao_ble//zmk
+      shield: toucan_left rgbled_adapter toucan_pet
+      snippet: zmk-usb-logging
+
+    - board: xiao_ble//zmk
+      shield: toucan_dongle rgbled_adapter prospector_adapter
+    - board: xiao_ble//zmk
+      shield: toucan_dongle rgbled_adapter prospector_adapter
+      snippet: zmk-usb-logging
+
     - board: nice_nano//zmk
       shield: settings_reset
     - board: xiao_ble//zmk

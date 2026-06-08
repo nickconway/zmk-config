@@ -6,6 +6,10 @@ manifest:
           url-base: https://github.com/nickconway
         - name: amgskobo
           url-base: https://github.com/amgskobo
+        - name: carrefinho
+          url-base: https://github.com/carrefinho
+        - name: oleksandrmaslov
+          url-base: https://github.com/oleksandrmaslov
     projects:
         - name: zmk
           remote: nickconway
@@ -25,5 +29,13 @@ manifest:
           remote: nickconway
           revision: include-fix
           path: extra-modules/inertia
+        - name: prospector-zmk-module
+          remote: carrefinho
+          revision: feat/new-status-screens
+          path: extra-modules/prospector
+        - name: zmk-pointing-acceleration
+          remote: oleksandrmaslov
+          revision: main
+          path: extra-modules/acceleration
     self:
         path: config
