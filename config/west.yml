@@ -22,7 +22,7 @@ manifest:
           import: config/west.yml
         - name: zmk-keyboard-toucan
           remote: nickconway
-          revision: dynamic-macro-rec-indicator
+          revision: main
           path: extra-modules/toucan
           import: config/west.yml
         - name: zmk-input-inertia

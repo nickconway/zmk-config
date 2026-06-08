@@ -34,10 +34,10 @@ include:
       snippet: zmk-usb-logging
 
     - board: xiao_ble//zmk
-      shield: toucan_left rgbled_adapter nice_view_gem_sharp
+      shield: toucan_left rgbled_adapter sharp_display
       cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
     - board: xiao_ble//zmk
-      shield: toucan_left rgbled_adapter nice_view_gem_sharp
+      shield: toucan_left rgbled_adapter sharp_display
       cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
       snippet: zmk-usb-logging
     - board: xiao_ble//zmk
