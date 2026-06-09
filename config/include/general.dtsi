@@ -4,6 +4,9 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/dynamic_macros.h>
+#include <input/processors.dtsi>
+#include <behaviors/input_gestures_accel.dtsi>
+#include <zmk-input-inertia/input/processor/input_inertia.dtsi>
 
 #define BASE    0 1
 #define PC      0
@@ -37,3 +40,30 @@
 &caps_word {
   continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
 };
+
+&zip_inertia {
+    trigger-ms = <35>;
+
+    move-decay-factor-int = <95>;
+    move-report-interval-ms = <10>;
+    move-threshold-start = <15>;
+    move-threshold-stop = <1>;
+
+    scroll-decay-factor-int = <95>;
+    scroll-report-interval-ms = <20>;
+    scroll-threshold-start = <2>;
+    scroll-threshold-stop = <0>;
+
+    cancel-scroll-inertia-on-ctrl;
+};
+
+&pointer_accel {
+    input-type = <INPUT_EV_REL>;
+    track-remainders;
+    min-factor = <800>;
+    max-factor = <3000>;
+    speed-threshold = <1200>;
+    speed-max = <6000>;
+    acceleration-exponent = <2>;
+};
+
