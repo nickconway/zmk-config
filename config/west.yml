@@ -37,5 +37,9 @@ manifest:
           remote: oleksandrmaslov
           revision: main
           path: extra-modules/acceleration
+        - name: zmk-snippet-ble-low-latency
+          remote: nickconway
+          revision: main
+          path: extra-modules/zmk-ble-low-latency
     self:
         path: config

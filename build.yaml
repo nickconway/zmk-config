@@ -35,16 +35,16 @@ include:
 
     - board: xiao_ble//zmk
       shield: toucan_left rgbled_adapter sharp_display
-      snippet: toucan-left-central
+      snippet: toucan-central
     - board: xiao_ble//zmk
       shield: toucan_left rgbled_adapter sharp_display
-      snippet: toucan-left-central zmk-usb-logging
+      snippet: toucan-central zmk-usb-logging
     - board: xiao_ble//zmk
       shield: toucan_left rgbled_adapter toucan_pet
-      snippet: toucan-left-central
+      snippet: toucan-central
     - board: xiao_ble//zmk
       shield: toucan_left rgbled_adapter toucan_pet
-      snippet: toucan-left-central zmk-usb-logging
+      snippet: toucan-central zmk-usb-logging
 
     - board: xiao_ble//zmk
       shield: toucan_right rgbled_adapter
@@ -54,15 +54,17 @@ include:
 
     - board: xiao_ble//zmk
       shield: toucan_left rgbled_adapter toucan_pet
+      snippet: ble-low-latency-peripheral
     - board: xiao_ble//zmk
       shield: toucan_left rgbled_adapter toucan_pet
-      snippet: zmk-usb-logging
+      snippet: ble-low-latency-peripheral zmk-usb-logging
 
     - board: xiao_ble//zmk
       shield: toucan_dongle rgbled_adapter prospector_adapter
+      snippet: ble-low-latency-central
     - board: xiao_ble//zmk
       shield: toucan_dongle rgbled_adapter prospector_adapter
-      snippet: zmk-usb-logging
+      snippet: ble-low-latency-central zmk-usb-logging
 
     - board: nice_nano//zmk
       shield: settings_reset
