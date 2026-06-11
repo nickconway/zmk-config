@@ -105,8 +105,8 @@ LAYER(Nothing,
 
 TRACKPAD_LISTENER {
     input-processors = <
-        &zip_xy_scaler 10 4
         &pointer_accel
+        &zip_xy_scaler 10 4
         &zip_inertia
         &auto_layer MOUSE 250
     >;
