@@ -23,8 +23,10 @@
 
 LEADER(leader, close, LT0, &kp LA(F4))
 LEADER(leader, bootloader, LT2, &bootloader)
+LEADER(leader, bootloader_split, RT2, &bootloader)
 LEADER(leader, browser, LT4, &kp LG(N1))
 LEADER(leader, reset, LM1, &sys_reset)
+LEADER(leader, reset_split, RM3, &sys_reset)
 LEADER(leader, spotify, LM2, &kp LG(N3))
 LEADER(leader, terminal, LM3, &kp LG(GRAVE))
 LEADER(leader, lastdevice, RT1, &last_dev)
@@ -43,5 +45,3 @@ LEADER(leader, bt4, LH2 LB4, &bt BT_SEL 4)
 
 LEADER(leader, zoom, LH2 LH2 LB0, &kp F9)
 LEADER(leader, preview, LH2 LH2 RM1, &kp LS(F9))
-
-LEADER(leader2, reset_split, RM3, &sys_reset)
