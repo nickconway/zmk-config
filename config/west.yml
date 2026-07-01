@@ -30,7 +30,7 @@ manifest:
           revision: include-fix
           path: extra-modules/inertia
         - name: prospector-zmk-module
-          remote: carrefinho
+          remote: nickconway
           revision: feat/new-status-screens
           path: extra-modules/prospector
         - name: zmk-pointing-acceleration
